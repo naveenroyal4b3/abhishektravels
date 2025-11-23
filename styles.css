@@ -779,6 +779,346 @@ section {
     }
 }
 
+/* Statistics Section */
+.statistics {
+    background: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 1rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Features Section */
+.features-section {
+    background: white;
+    padding: 3rem 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-color);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.feature-box i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-box h4 {
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+
+/* Packages Section */
+.packages {
+    background: var(--light-color);
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.package-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.package-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-content {
+    padding: 1.5rem;
+}
+
+.package-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.package-code,
+.package-duration {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.package-content h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.package-route {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--light-color);
+    border-radius: 8px;
+}
+
+.package-route strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.package-route p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.package-includes {
+    margin-bottom: 1rem;
+}
+
+.package-includes strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.package-includes ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.package-includes li {
+    padding: 0.3rem 0;
+    color: var(--text-color);
+}
+
+.package-note {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: #fff3cd;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.package-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Car Rentals Section */
+.car-rentals {
+    background: white;
+}
+
+.vehicles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.vehicle-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.vehicle-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.vehicle-content {
+    padding: 1.5rem;
+}
+
+.vehicle-content h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.vehicle-pricing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--light-color);
+    border-radius: 8px;
+}
+
+.pricing-section {
+    text-align: center;
+}
+
+.pricing-section strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+
+.pricing-section p {
+    margin: 0.3rem 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.vehicle-note {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: var(--light-color);
+    padding: 5rem 0;
+}
+
+.rating-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.rating-stars {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.testimonial-rating {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-review {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.testimonial-author strong {
+    color: var(--dark-color);
+}
+
+.testimonial-author span {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Payment Info */
+.payment-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--light-color);
+    border-radius: 10px;
+}
+
+.payment-info h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.payment-info p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-menu {
@@ -819,7 +1159,22 @@ section {
     }
 
     .destinations-grid,
-    .rooms-grid {
+    .rooms-grid,
+    .packages-grid,
+    .vehicles-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vehicle-pricing {
         grid-template-columns: 1fr;
     }
 
@@ -844,6 +1199,18 @@ section {
     .filter-btn {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 2rem;
     }
 }
 

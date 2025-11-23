@@ -291,6 +291,234 @@ const rooms = [
     }
 ];
 
+// Tour Packages Data
+const tourPackages = [
+    {
+        id: 1,
+        code: "PKG0001",
+        title: "Bangalore City Tour Package",
+        duration: "8 Hours",
+        route: "👉 Vidhana Soudha, Cubbon Park, Lalbagh Botanical Garden, ISKCON Temple 🔙 Return Drop at Bangalore",
+        includes: ["Toll Charges", "Parking Fees", "Driver Bata"],
+        price: 2500,
+        image: "https://images.unsplash.com/photo-1587330979470-3585a3b0e0a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 2,
+        code: "PKG0002",
+        title: "Mysore Palace & Coorg Package",
+        duration: "1 Day",
+        route: "👉 Mysore Palace, Chamundi Hills, Coorg Coffee Plantations 🔙 Return Drop at Bangalore",
+        includes: ["Toll Charges", "Tax & Permit Fees", "Parking Fees", "Driver Bata"],
+        price: 4500,
+        image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 3,
+        code: "PKG0003",
+        title: "Hampi Heritage Tour Package",
+        duration: "2 Days",
+        route: "Day 1 👉 Virupaksha Temple, Hampi Bazaar, Vittala Temple (Night Halt) Day 2 👉 Lotus Palace, Elephant Stables, Royal Enclosure 🔙 Return Drop at Bangalore",
+        includes: ["Toll Charges", "Tax & Permit Fees", "Parking Fees", "Driver Bata"],
+        price: 8000,
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 4,
+        code: "PKG0004",
+        title: "Ooty & Coonoor Hill Station Package",
+        duration: "1 Day",
+        route: "👉 Ooty Lake, Botanical Gardens, Doddabetta Peak, Coonoor Tea Gardens 🔙 Return Drop at Coimbatore",
+        includes: ["Toll Charges", "Tax & Permit Fees", "Parking Fees", "Driver Bata"],
+        price: 4000,
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 5,
+        code: "PKG0005",
+        title: "Munnar Tea Gardens Package",
+        duration: "1 Day",
+        route: "👉 Tea Museum, Mattupetty Dam, Echo Point, Top Station 🔙 Return Drop at Kochi",
+        includes: ["Toll Charges", "Tax & Permit Fees", "Parking Fees", "Driver Bata"],
+        price: 3500,
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 6,
+        code: "PKG0006",
+        title: "Alleppey Backwaters Package",
+        duration: "1 Day",
+        route: "👉 Alleppey Backwaters, Houseboat Cruise, Marari Beach 🔙 Return Drop at Kochi",
+        includes: ["Toll Charges", "Tax & Permit Fees", "Boat Charges", "Driver Bata"],
+        price: 5000,
+        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 7,
+        code: "PKG0007",
+        title: "Chennai to Mahabalipuram Package",
+        duration: "8 Hours",
+        route: "👉 Mahabalipuram Temples, Shore Temple, Crocodile Bank, DakshinaChitra 🔙 Return Drop at Chennai",
+        includes: ["Toll Charges", "Parking Fees", "Driver Bata"],
+        price: 3000,
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 8,
+        code: "PKG0008",
+        title: "Hyderabad City Tour Package",
+        duration: "1 Day",
+        route: "👉 Charminar, Golconda Fort, Salar Jung Museum, Hussain Sagar Lake 🔙 Return Drop at Hyderabad",
+        includes: ["Toll Charges", "Parking Fees", "Driver Bata"],
+        price: 3500,
+        image: "https://images.unsplash.com/photo-1587330979470-3585a3b0e0a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+];
+
+// Vehicles Data
+const vehicles = [
+    {
+        id: 1,
+        name: "Etios / Swift Dzire",
+        localPrice: 2000,
+        outstationPrice: 15,
+        fuelEfficiency: "10km per 1 liter diesel",
+        capacity: 4,
+        minKm: 300,
+        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 2,
+        name: "Maruti Suzuki Ertiga",
+        localPrice: 2500,
+        outstationPrice: 19,
+        fuelEfficiency: "10km per 1 liter diesel",
+        capacity: 6,
+        minKm: 300,
+        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 3,
+        name: "Innova Crysta",
+        localPrice: 3500,
+        outstationPrice: 23,
+        fuelEfficiency: "10km per 1 liter diesel",
+        capacity: 7,
+        minKm: 300,
+        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 4,
+        name: "Fortuner",
+        localPrice: 8500,
+        outstationPrice: 45,
+        fuelEfficiency: "8km per 1 liter diesel",
+        capacity: 7,
+        minKm: 300,
+        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 5,
+        name: "Urbania",
+        localPrice: 10000,
+        outstationPrice: 50,
+        fuelEfficiency: "5km per 1 liter diesel",
+        capacity: 12,
+        minKm: 350,
+        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 6,
+        name: "Tempo 12 Seater",
+        localPrice: 4500,
+        outstationPrice: 26,
+        fuelEfficiency: "8km per 1 liter diesel",
+        capacity: 12,
+        minKm: 350,
+        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 7,
+        name: "Tempo 17 Seater",
+        localPrice: 6000,
+        outstationPrice: 35,
+        fuelEfficiency: "6km per 1 liter diesel",
+        capacity: 17,
+        minKm: 350,
+        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 8,
+        name: "Tempo 20 Seater",
+        localPrice: 8000,
+        outstationPrice: 45,
+        fuelEfficiency: "5km per 1 liter diesel",
+        capacity: 20,
+        minKm: 350,
+        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 9,
+        name: "27 Seater Mini Bus",
+        localPrice: 10000,
+        outstationPrice: 55,
+        fuelEfficiency: "4km per 1 liter diesel",
+        capacity: 27,
+        minKm: 350,
+        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 10,
+        name: "40 Seater AC Bus",
+        localPrice: 15000,
+        outstationPrice: 65,
+        fuelEfficiency: "3km per 1 liter diesel",
+        capacity: 40,
+        minKm: 350,
+        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+];
+
+// Testimonials Data
+const testimonials = [
+    {
+        name: "Rajesh Kumar",
+        date: "15 June 2024",
+        rating: 5,
+        review: "Great experience with Abhishek Travels. The driver was professional and the vehicle was clean and comfortable. Highly recommended!"
+    },
+    {
+        name: "Priya Sharma",
+        date: "13 June 2024",
+        rating: 5,
+        review: "Excellent service! The driver was extremely kind and friendly. We felt very safe throughout the journey. The car was clean and comfortable."
+    },
+    {
+        name: "Mohammed Ali",
+        date: "10 June 2024",
+        rating: 5,
+        review: "I had booked a cab for Bangalore to Mysore trip. Our driver was very nice and adjusted everything according to us. Wonderful journey!"
+    },
+    {
+        name: "Anita Reddy",
+        date: "8 June 2024",
+        rating: 5,
+        review: "Great experience with the cab service. The vehicle was clean and well-maintained. The driver was extremely polite and professional."
+    },
+    {
+        name: "Suresh Patel",
+        date: "7 June 2024",
+        rating: 5,
+        review: "Comfortable ride and good communication. The driver ensured we were comfortable and drove safely. Highly recommended!"
+    },
+    {
+        name: "Lakshmi Nair",
+        date: "6 June 2024",
+        rating: 5,
+        review: "Super service! Will comfortably ride in this taxi service again. Good communication and excellent driver."
+    }
+];
+
 // DOM Elements
 const navLinks = document.querySelectorAll('.nav-link');
 const hamburger = document.querySelector('.hamburger');
@@ -429,7 +657,7 @@ function displayRooms(filterLocation = '') {
                         </span>
                     `).join('')}
                 </div>
-                <button class="btn btn-primary btn-block" onclick="openBookingModal(${room.id})">Book Now</button>
+                <button class="btn btn-primary btn-block" onclick="openBookingModal('room', ${room.id})">Book Now</button>
             </div>
         </div>
     `).join('');
@@ -445,25 +673,11 @@ roomSearchForm.addEventListener('submit', (e) => {
     document.getElementById('rooms').scrollIntoView({ behavior: 'smooth' });
 });
 
-// Booking Modal
+// Booking Modal (for rooms - keeping for backward compatibility)
 function openBookingModal(roomId) {
-    selectedRoom = rooms.find(r => r.id === roomId);
-    if (!selectedRoom) return;
-
-    document.getElementById('modalRoomName').value = selectedRoom.name + ' - ' + selectedRoom.location;
-    document.getElementById('modalCheckIn').value = document.getElementById('checkIn').value || '';
-    document.getElementById('modalCheckOut').value = document.getElementById('checkOut').value || '';
-    
-    // Calculate price
-    const checkIn = new Date(document.getElementById('modalCheckIn').value);
-    const checkOut = new Date(document.getElementById('modalCheckOut').value);
-    const nights = checkIn && checkOut && checkOut > checkIn 
-        ? Math.ceil((checkOut - checkIn) / (1000 * 60 * 60 * 24))
-        : 1;
-    const totalPrice = selectedRoom.price * nights;
-    document.getElementById('modalPrice').value = `₹${totalPrice} (${nights} night${nights > 1 ? 's' : ''})`;
-
-    bookingModal.style.display = 'block';
+    if (typeof roomId === 'number') {
+        openBookingModal('room', roomId);
+    }
 }
 
 closeModal.addEventListener('click', () => {
@@ -520,18 +734,191 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', (e) => {
     e.target.querySelector('input').value = '';
 });
 
+// Display Tour Packages
+function displayPackages() {
+    const packagesGrid = document.getElementById('packagesGrid');
+    if (!packagesGrid) return;
+    
+    packagesGrid.innerHTML = tourPackages.map(pkg => `
+        <div class="package-card">
+            <img src="${pkg.image}" alt="${pkg.title}" class="package-image">
+            <div class="package-content">
+                <div class="package-header">
+                    <span class="package-code">Package Code: <strong>${pkg.code}</strong></span>
+                    <span class="package-duration">Duration: <strong>${pkg.duration}</strong></span>
+                </div>
+                <h3>${pkg.title}</h3>
+                <div class="package-route">
+                    <strong>Route Plan:</strong>
+                    <p>${pkg.route}</p>
+                </div>
+                <div class="package-includes">
+                    <strong>Package Includes:</strong>
+                    <ul>
+                        ${pkg.includes.map(item => `<li>– ${item}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="package-note">
+                    <em><strong>Note:</strong> Only the driver's food has to be provided by the customer.</em>
+                </div>
+                <div class="package-price">Starting from ₹${pkg.price}</div>
+                <button class="btn btn-primary btn-block" onclick="openBookingModal('package', ${pkg.id})">Book Now</button>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Display Vehicles
+function displayVehicles() {
+    const vehiclesGrid = document.getElementById('vehiclesGrid');
+    if (!vehiclesGrid) return;
+    
+    vehiclesGrid.innerHTML = vehicles.map(vehicle => `
+        <div class="vehicle-card">
+            <img src="${vehicle.image}" alt="${vehicle.name}" class="vehicle-image">
+            <div class="vehicle-content">
+                <h3>${vehicle.name}</h3>
+                <div class="vehicle-pricing">
+                    <div class="pricing-section">
+                        <strong>Local</strong>
+                        <p>Day rent ₹${vehicle.localPrice}/-</p>
+                        <p>${vehicle.fuelEfficiency}</p>
+                    </div>
+                    <div class="pricing-section">
+                        <strong>Out Station</strong>
+                        <p>₹${vehicle.outstationPrice}/- per km</p>
+                        <p>${vehicle.capacity} persons allowed</p>
+                    </div>
+                </div>
+                <div class="vehicle-note">
+                    <em>*Minimum ${vehicle.minKm}km</em>
+                </div>
+                <button class="btn btn-primary btn-block" onclick="openBookingModal('vehicle', ${vehicle.id})">Book Now</button>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Display Testimonials
+function displayTestimonials() {
+    const testimonialsGrid = document.getElementById('testimonialsGrid');
+    if (!testimonialsGrid) return;
+    
+    testimonialsGrid.innerHTML = testimonials.map(testimonial => `
+        <div class="testimonial-card">
+            <div class="testimonial-rating">
+                ${'★'.repeat(testimonial.rating)}
+            </div>
+            <p class="testimonial-review">"${testimonial.review}"</p>
+            <div class="testimonial-author">
+                <strong>${testimonial.name}</strong>
+                <span>${testimonial.date}</span>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Statistics Counter Animation
+function animateStatistics() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    const observerOptions = {
+        threshold: 0.5
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = parseInt(entry.target.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        entry.target.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        entry.target.textContent = Math.floor(current);
+                    }
+                }, 16);
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    statNumbers.forEach(stat => observer.observe(stat));
+}
+
+// Updated Booking Modal Function
+function openBookingModal(type, id) {
+    let serviceData = null;
+    let serviceName = '';
+    let price = 0;
+    
+    if (type === 'package') {
+        serviceData = tourPackages.find(p => p.id === id);
+        serviceName = serviceData.title;
+        price = serviceData.price;
+    } else if (type === 'vehicle') {
+        serviceData = vehicles.find(v => v.id === id);
+        serviceName = serviceData.name;
+        price = serviceData.localPrice;
+    } else if (type === 'room') {
+        serviceData = rooms.find(r => r.id === id);
+        serviceName = serviceData.name + ' - ' + serviceData.location;
+        price = serviceData.price;
+    }
+    
+    if (!serviceData) return;
+    
+    selectedRoom = serviceData;
+    selectedRoom.type = type;
+    
+    document.getElementById('modalServiceName').value = serviceName;
+    document.getElementById('modalPrice').value = `₹${price}`;
+    
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('modalTravelDate').setAttribute('min', today);
+    
+    bookingModal.style.display = 'block';
+}
+
+// Update booking form handler
+const originalBookingHandler = bookingForm?.onsubmit;
+if (bookingForm) {
+    bookingForm.onsubmit = null;
+    bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('bookingName').value;
+        const email = document.getElementById('bookingEmail').value;
+        const phone = document.getElementById('bookingPhone').value;
+        const serviceName = document.getElementById('modalServiceName').value;
+        
+        alert(`Thank you ${name}! Your booking request for ${serviceName} has been received. We will contact you at ${email} or ${phone} shortly.`);
+        
+        bookingModal.style.display = 'none';
+        bookingForm.reset();
+    });
+}
+
 // Set minimum date for check-in
 const today = new Date().toISOString().split('T')[0];
 document.getElementById('checkIn')?.setAttribute('min', today);
 document.getElementById('checkOut')?.setAttribute('min', today);
-document.getElementById('modalCheckIn')?.setAttribute('min', today);
-document.getElementById('modalCheckOut')?.setAttribute('min', today);
+document.getElementById('modalTravelDate')?.setAttribute('min', today);
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     displayDestinations();
     displayRooms();
+    displayPackages();
+    displayVehicles();
+    displayTestimonials();
+    animateStatistics();
     
     // Set footer links
     document.querySelectorAll('.footer-section a[data-state]').forEach(link => {
