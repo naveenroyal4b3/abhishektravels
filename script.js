@@ -777,7 +777,13 @@ function displayRooms(filterLocation = '', filterCategory = 'all') {
                         </span>
                     `).join('')}
                 </div>
-                <button class="btn btn-primary btn-block" onclick="openBookingModal('room', ${room.id})">${room.official ? 'Book via TTD Website' : 'Book Now'}</button>
+                <div class="action-buttons">
+                    ${room.official ? 
+                        `<a href="https://tirupatibalaji.ap.gov.in" target="_blank" class="btn btn-primary">Book via TTD</a>` :
+                        `<a href="tel:+919912325325" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+                         <a href="https://wa.me/919912325325?text=Hi, I'm interested in booking ${encodeURIComponent(room.name)}" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>`
+                    }
+                </div>
             </div>
         </div>
     `).join('');
@@ -893,7 +899,10 @@ function displayPackages() {
                     <em><strong>Note:</strong> Only the driver's food has to be provided by the customer.</em>
                 </div>
                 <div class="package-price">Starting from ₹${pkg.price}</div>
-                <button class="btn btn-primary btn-block" onclick="openBookingModal('package', ${pkg.id})">Book Now</button>
+                <div class="action-buttons">
+                    <a href="tel:+919912325325" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/919912325325?text=Hi, I'm interested in ${encodeURIComponent(pkg.title)} (${pkg.code})" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
             </div>
         </div>
     `).join('');
@@ -924,7 +933,10 @@ function displayVehicles() {
                 <div class="vehicle-note">
                     <em>*Minimum ${vehicle.minKm}km</em>
                 </div>
-                <button class="btn btn-primary btn-block" onclick="openBookingModal('vehicle', ${vehicle.id})">Book Now</button>
+                <div class="action-buttons">
+                    <a href="tel:+919912325325" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/919912325325?text=Hi, I'm interested in renting ${encodeURIComponent(vehicle.name)}" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
             </div>
         </div>
     `).join('');
@@ -1085,7 +1097,7 @@ function initMobileOptimizations() {
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     displayDestinations();
-    displayRooms('Tirupati', 'all'); // Default to Tirupati
+    displayRooms('Tirupati', 'all'); // Default to Tirupati & Other Cities
     displayPackages();
     displayVehicles();
     displayTestimonials();
