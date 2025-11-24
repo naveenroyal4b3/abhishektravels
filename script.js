@@ -4,42 +4,42 @@ const destinations = [
     {
         name: "Bangalore",
         state: "karnataka",
-        image: "https://images.unsplash.com/photo-1587330979470-3585a3b0e0a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "The Silicon Valley of India, known for its gardens, parks, and vibrant tech culture.",
         features: ["Tech Hub", "Gardens", "Nightlife"]
     },
     {
         name: "Mysore",
         state: "karnataka",
-        image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Famous for the magnificent Mysore Palace and rich cultural heritage.",
         features: ["Palace", "Heritage", "Culture"]
     },
     {
         name: "Coorg",
         state: "karnataka",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Scotland of India, known for coffee plantations and misty hills.",
         features: ["Coffee", "Hills", "Nature"]
     },
     {
         name: "Hampi",
         state: "karnataka",
-        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "UNESCO World Heritage Site with ancient ruins and temples.",
         features: ["Heritage", "Ruins", "Temples"]
     },
     {
         name: "Gokarna",
         state: "karnataka",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Beach paradise with pristine shores and spiritual vibes.",
         features: ["Beaches", "Spiritual", "Relaxation"]
     },
     {
         name: "Chikmagalur",
         state: "karnataka",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Coffee land with scenic mountains and waterfalls.",
         features: ["Coffee", "Mountains", "Waterfalls"]
     },
@@ -48,42 +48,42 @@ const destinations = [
     {
         name: "Chennai",
         state: "tamil-nadu",
-        image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Cultural capital of Tamil Nadu with beautiful beaches and temples.",
         features: ["Beaches", "Temples", "Culture"]
     },
     {
         name: "Ooty",
         state: "tamil-nadu",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Queen of Hill Stations with tea gardens and cool climate.",
         features: ["Hill Station", "Tea Gardens", "Cool Climate"]
     },
     {
         name: "Kodaikanal",
         state: "tamil-nadu",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Princess of Hill Stations with beautiful lakes and forests.",
         features: ["Lake", "Forests", "Scenic"]
     },
     {
         name: "Madurai",
         state: "tamil-nadu",
-        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Ancient city famous for Meenakshi Temple and rich history.",
         features: ["Temples", "History", "Architecture"]
     },
     {
         name: "Rameswaram",
         state: "tamil-nadu",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Sacred island town with beautiful beaches and temples.",
         features: ["Spiritual", "Beaches", "Pilgrimage"]
     },
     {
         name: "Kanyakumari",
         state: "tamil-nadu",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Southernmost tip of India with stunning sunrise and sunset views.",
         features: ["Sunrise", "Sunset", "Beaches"]
     },
@@ -92,42 +92,42 @@ const destinations = [
     {
         name: "Munnar",
         state: "kerala",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Tea country with rolling hills and misty valleys.",
         features: ["Tea Gardens", "Hills", "Nature"]
     },
     {
         name: "Alleppey",
         state: "kerala",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Venice of the East with beautiful backwaters and houseboats.",
         features: ["Backwaters", "Houseboats", "Canals"]
     },
     {
         name: "Kochi",
         state: "kerala",
-        image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Port city with colonial architecture and spice markets.",
         features: ["Port", "Colonial", "Spices"]
     },
     {
         name: "Wayanad",
         state: "kerala",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Green paradise with dense forests and wildlife.",
         features: ["Forests", "Wildlife", "Adventure"]
     },
     {
         name: "Thekkady",
         state: "kerala",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Wildlife sanctuary and spice plantations.",
         features: ["Wildlife", "Spices", "Nature"]
     },
     {
         name: "Kovalam",
         state: "kerala",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Famous beach destination with golden sands.",
         features: ["Beaches", "Resorts", "Relaxation"]
     },
@@ -136,28 +136,28 @@ const destinations = [
     {
         name: "Visakhapatnam",
         state: "andhra-pradesh",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Jewel of the East Coast with beautiful beaches and hills.",
         features: ["Beaches", "Hills", "Port"]
     },
     {
         name: "Tirupati",
         state: "andhra-pradesh",
-        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Famous pilgrimage destination with ancient temples.",
         features: ["Pilgrimage", "Temples", "Spiritual"]
     },
     {
         name: "Araku Valley",
         state: "andhra-pradesh",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Scenic hill station with coffee plantations and waterfalls.",
         features: ["Hill Station", "Coffee", "Waterfalls"]
     },
     {
         name: "Vijayawada",
         state: "andhra-pradesh",
-        image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Commercial hub on the banks of Krishna River.",
         features: ["River", "Temples", "Culture"]
     },
@@ -166,14 +166,14 @@ const destinations = [
     {
         name: "Hyderabad",
         state: "telangana",
-        image: "https://images.unsplash.com/photo-1587330979470-3585a3b0e0a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "City of Pearls with rich history and delicious biryani.",
         features: ["History", "Food", "Culture"]
     },
     {
         name: "Warangal",
         state: "telangana",
-        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Ancient city with historic forts and temples.",
         features: ["Forts", "Temples", "History"]
     }
@@ -187,7 +187,7 @@ const rooms = [
         name: "TTD Srinivasam Complex",
         type: "TTD Guest House",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 200,
         features: ["Non-AC Rooms", "Basic Amenities", "Near RTC Bus Stand", "TTD Official", "Prasadam Available"],
         description: "Official TTD accommodation complex located opposite RTC Bus Stand. Clean and affordable rooms perfect for pilgrims. Book through TTD website.",
@@ -199,7 +199,7 @@ const rooms = [
         name: "TTD Srinivasam Complex - AC Rooms",
         type: "TTD Guest House",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 400,
         features: ["AC Rooms", "Clean Facilities", "Near Bus Stand", "TTD Official", "24/7 Security"],
         description: "Air-conditioned rooms at TTD Srinivasam Complex. Official accommodation with modern amenities. Advance booking available.",
@@ -211,7 +211,7 @@ const rooms = [
         name: "TTD Srinivasam Complex - AC Deluxe",
         type: "TTD Guest House",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 600,
         features: ["AC Deluxe Rooms", "Spacious", "Modern Amenities", "TTD Official", "Temple Shuttle"],
         description: "Deluxe air-conditioned rooms at TTD Srinivasam Complex. Comfortable stay with all modern facilities for pilgrims.",
@@ -223,7 +223,7 @@ const rooms = [
         name: "TTD Madhavam Guest House",
         type: "TTD Guest House",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 800,
         features: ["AC Ordinary Suites", "Spacious Rooms", "Adjacent to Srinivasam", "TTD Official", "Restaurant"],
         description: "TTD Madhavam Guest House adjacent to Srinivasam Complex. AC suites with comfortable accommodation for families.",
@@ -235,7 +235,7 @@ const rooms = [
         name: "TTD Madhavam Guest House - Deluxe",
         type: "TTD Guest House",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 1000,
         features: ["AC Deluxe Suites", "Premium Rooms", "Modern Facilities", "TTD Official", "Temple Services"],
         description: "Deluxe AC suites at TTD Madhavam Guest House. Premium accommodation with excellent facilities for pilgrims.",
@@ -247,7 +247,7 @@ const rooms = [
         name: "TTD Vishnu Nivasam",
         type: "TTD Guest House",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 300,
         features: ["Non-AC Rooms", "Near Railway Station", "Basic Amenities", "TTD Official", "Easy Access"],
         description: "TTD Vishnu Nivasam located opposite Tirupati Railway Station. Convenient location for train travelers.",
@@ -259,7 +259,7 @@ const rooms = [
         name: "TTD Vishnu Nivasam - AC Rooms",
         type: "TTD Guest House",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 800,
         features: ["AC Rooms", "Near Railway Station", "Clean Rooms", "TTD Official", "Parking"],
         description: "Air-conditioned rooms at TTD Vishnu Nivasam. Perfect for pilgrims arriving by train with modern amenities.",
@@ -271,7 +271,7 @@ const rooms = [
         name: "TTD Vishnu Nivasam - AC Suites",
         type: "TTD Guest House",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 1300,
         features: ["AC Suites", "Spacious", "Premium Facilities", "TTD Official", "Near Station"],
         description: "Premium AC suites at TTD Vishnu Nivasam. Luxurious accommodation with excellent facilities near railway station.",
@@ -283,7 +283,7 @@ const rooms = [
         name: "Sri Venkateswara Dharmasala",
         type: "Dharmashala",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 50,
         features: ["Single Room", "Basic Facilities", "Very Affordable", "TTD Official", "Spiritual Atmosphere"],
         description: "Most affordable TTD accommodation. Single rooms at Sri Venkateswara Dharmasala opposite railway station. Perfect for budget pilgrims.",
@@ -295,7 +295,7 @@ const rooms = [
         name: "Sri Venkateswara Dharmasala - Double Room",
         type: "Dharmashala",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 100,
         features: ["Double Room", "Shared Facilities", "Budget Friendly", "TTD Official", "Clean Rooms"],
         description: "Double rooms at Sri Venkateswara Dharmasala. Very affordable accommodation for couples or friends traveling together.",
@@ -309,7 +309,7 @@ const rooms = [
         name: "Luxury Hotel - Near Padmavathi Temple",
         type: "Hotel",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 4500,
         features: ["WiFi", "AC", "Breakfast", "Parking", "Temple Shuttle", "Restaurant", "Spa"],
         description: "5-star luxury hotel near Padmavathi Temple with modern amenities, perfect for pilgrims and tourists seeking comfort.",
@@ -321,7 +321,7 @@ const rooms = [
         name: "Deluxe Hotel - City Center",
         type: "Hotel",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 3000,
         features: ["WiFi", "AC", "Breakfast", "Restaurant", "24/7 Service", "Near ISKCON"],
         description: "Comfortable deluxe hotel in city center, walking distance to Padmavathi Temple and ISKCON Temple.",
@@ -333,7 +333,7 @@ const rooms = [
         name: "Budget Hotel - Near Railway Station",
         type: "Hotel",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 1500,
         features: ["WiFi", "AC", "Hot Water", "Parking", "24/7 Reception"],
         description: "Affordable budget hotel near railway station, ideal for budget-conscious pilgrims and tourists.",
@@ -347,7 +347,7 @@ const rooms = [
         name: "Cozy Homestay - Family Friendly",
         type: "Homestay",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 2000,
         features: ["WiFi", "AC", "Home Cooked Meals", "Family Atmosphere", "Local Guide", "Vegetarian Food"],
         description: "Warm and welcoming homestay offering authentic local experience with home-cooked vegetarian meals. Perfect for families.",
@@ -359,7 +359,7 @@ const rooms = [
         name: "Premium Homestay - Near Temples",
         type: "Homestay",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 2800,
         features: ["WiFi", "AC", "Breakfast", "Dinner", "Temple Guidance", "Pickup Service", "Cultural Experience"],
         description: "Premium homestay with personalized service, temple visit assistance, and traditional South Indian hospitality.",
@@ -373,7 +373,7 @@ const rooms = [
         name: "Budget Lodge - Clean & Simple",
         type: "Lodge",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 1000,
         features: ["Clean Rooms", "Hot Water", "Fan", "24/7 Reception", "Near Temples", "Basic Amenities"],
         description: "Clean and simple budget lodge offering basic accommodation at very affordable rates for pilgrims.",
@@ -385,7 +385,7 @@ const rooms = [
         name: "AC Lodge - Value for Money",
         type: "Lodge",
         location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=800",
         price: 1800,
         features: ["AC", "WiFi", "Hot Water", "TV", "Parking", "24/7 Service"],
         description: "Air-conditioned lodge offering great value for money with all essential amenities.",
@@ -404,7 +404,7 @@ const tourPackages = [
         route: "👉 Vidhana Soudha, Cubbon Park, Lalbagh Botanical Garden, ISKCON Temple 🔙 Return Drop at Bangalore",
         includes: ["Toll Charges", "Parking Fees", "Driver Bata"],
         price: 2500,
-        image: "https://images.unsplash.com/photo-1587330979470-3585a3b0e0a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 2,
@@ -414,7 +414,7 @@ const tourPackages = [
         route: "👉 Mysore Palace, Chamundi Hills, Coorg Coffee Plantations 🔙 Return Drop at Bangalore",
         includes: ["Toll Charges", "Tax & Permit Fees", "Parking Fees", "Driver Bata"],
         price: 4500,
-        image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 3,
@@ -424,7 +424,7 @@ const tourPackages = [
         route: "Day 1 👉 Virupaksha Temple, Hampi Bazaar, Vittala Temple (Night Halt) Day 2 👉 Lotus Palace, Elephant Stables, Royal Enclosure 🔙 Return Drop at Bangalore",
         includes: ["Toll Charges", "Tax & Permit Fees", "Parking Fees", "Driver Bata"],
         price: 8000,
-        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 4,
@@ -434,7 +434,7 @@ const tourPackages = [
         route: "👉 Ooty Lake, Botanical Gardens, Doddabetta Peak, Coonoor Tea Gardens 🔙 Return Drop at Coimbatore",
         includes: ["Toll Charges", "Tax & Permit Fees", "Parking Fees", "Driver Bata"],
         price: 4000,
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 5,
@@ -444,7 +444,7 @@ const tourPackages = [
         route: "👉 Tea Museum, Mattupetty Dam, Echo Point, Top Station 🔙 Return Drop at Kochi",
         includes: ["Toll Charges", "Tax & Permit Fees", "Parking Fees", "Driver Bata"],
         price: 3500,
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 6,
@@ -454,7 +454,7 @@ const tourPackages = [
         route: "👉 Alleppey Backwaters, Houseboat Cruise, Marari Beach 🔙 Return Drop at Kochi",
         includes: ["Toll Charges", "Tax & Permit Fees", "Boat Charges", "Driver Bata"],
         price: 5000,
-        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 7,
@@ -464,7 +464,7 @@ const tourPackages = [
         route: "👉 Mahabalipuram Temples, Shore Temple, Crocodile Bank, DakshinaChitra 🔙 Return Drop at Chennai",
         includes: ["Toll Charges", "Parking Fees", "Driver Bata"],
         price: 3000,
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 8,
@@ -474,7 +474,7 @@ const tourPackages = [
         route: "👉 Charminar, Golconda Fort, Salar Jung Museum, Hussain Sagar Lake 🔙 Return Drop at Hyderabad",
         includes: ["Toll Charges", "Parking Fees", "Driver Bata"],
         price: 3500,
-        image: "https://images.unsplash.com/photo-1587330979470-3585a3b0e0a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
 ];
 
@@ -488,7 +488,7 @@ const vehicles = [
         fuelEfficiency: "10km per 1 liter diesel",
         capacity: 4,
         minKm: 300,
-        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 2,
@@ -498,7 +498,7 @@ const vehicles = [
         fuelEfficiency: "10km per 1 liter diesel",
         capacity: 6,
         minKm: 300,
-        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 3,
@@ -508,7 +508,7 @@ const vehicles = [
         fuelEfficiency: "10km per 1 liter diesel",
         capacity: 7,
         minKm: 300,
-        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 4,
@@ -518,7 +518,7 @@ const vehicles = [
         fuelEfficiency: "8km per 1 liter diesel",
         capacity: 7,
         minKm: 300,
-        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 5,
@@ -528,7 +528,7 @@ const vehicles = [
         fuelEfficiency: "5km per 1 liter diesel",
         capacity: 12,
         minKm: 350,
-        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 6,
@@ -538,7 +538,7 @@ const vehicles = [
         fuelEfficiency: "8km per 1 liter diesel",
         capacity: 12,
         minKm: 350,
-        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 7,
@@ -548,7 +548,7 @@ const vehicles = [
         fuelEfficiency: "6km per 1 liter diesel",
         capacity: 17,
         minKm: 350,
-        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 8,
@@ -558,7 +558,7 @@ const vehicles = [
         fuelEfficiency: "5km per 1 liter diesel",
         capacity: 20,
         minKm: 350,
-        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 9,
@@ -568,7 +568,7 @@ const vehicles = [
         fuelEfficiency: "4km per 1 liter diesel",
         capacity: 27,
         minKm: 350,
-        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
         id: 10,
@@ -578,7 +578,7 @@ const vehicles = [
         fuelEfficiency: "3km per 1 liter diesel",
         capacity: 40,
         minKm: 350,
-        image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
 ];
 
