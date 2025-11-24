@@ -373,6 +373,50 @@ img[loading="lazy"].loaded {
     background: white;
 }
 
+.accommodation-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn-accommodation {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--border-color);
+    background: white;
+    color: var(--text-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.filter-btn-accommodation:hover,
+.filter-btn-accommodation.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.accommodation-type-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 10;
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
 .booking-form-wrapper {
     margin-bottom: 3rem;
 }
@@ -446,6 +490,7 @@ img[loading="lazy"].loaded {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .room-card:hover {
@@ -1329,10 +1374,16 @@ input, select, textarea {
         padding: 0 1rem;
     }
 
-    .filter-btn {
+    .filter-btn,
+    .filter-btn-accommodation {
         padding: 0.6rem 1rem;
         font-size: 0.85rem;
         min-height: 40px;
+    }
+    
+    .accommodation-filters {
+        gap: 0.5rem;
+        padding: 0 1rem;
     }
 
     .stats-grid {
@@ -1442,9 +1493,19 @@ input, select, textarea {
         font-size: 1.6rem;
     }
     
-    .filter-btn {
+    .filter-btn,
+    .filter-btn-accommodation {
         padding: 0.5rem 0.8rem;
         font-size: 0.8rem;
+    }
+    
+    .accommodation-filters {
+        gap: 0.4rem;
+    }
+    
+    .accommodation-type-badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
     }
     
     .stat-number {

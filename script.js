@@ -179,115 +179,187 @@ const destinations = [
     }
 ];
 
-// Rooms Data
+// Rooms Data - Tirupati Accommodations
 const rooms = [
+    // Luxury Hotels
     {
         id: 1,
-        name: "Luxury Suite",
-        location: "Bangalore",
+        name: "Luxury Hotel - Near Tirumala",
+        type: "Hotel",
+        location: "Tirupati",
         image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 3500,
-        features: ["WiFi", "AC", "Breakfast", "Pool"],
-        description: "Spacious suite with modern amenities and city view."
+        price: 4500,
+        features: ["WiFi", "AC", "Breakfast", "Parking", "Temple Shuttle"],
+        description: "5-star luxury hotel near Tirumala with modern amenities, perfect for pilgrims and tourists. Close to temple and city center.",
+        category: "luxury"
     },
     {
         id: 2,
-        name: "Deluxe Room",
-        location: "Mysore",
+        name: "Deluxe Hotel - City Center",
+        type: "Hotel",
+        location: "Tirupati",
         image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 2500,
-        features: ["WiFi", "AC", "Breakfast"],
-        description: "Comfortable room with heritage view."
+        price: 3000,
+        features: ["WiFi", "AC", "Breakfast", "Restaurant", "24/7 Service"],
+        description: "Comfortable deluxe hotel in city center, walking distance to Padmavathi Temple and ISKCON Temple.",
+        category: "deluxe"
     },
     {
         id: 3,
-        name: "Beach Resort",
-        location: "Gokarna",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 4000,
-        features: ["WiFi", "AC", "Breakfast", "Beach Access"],
-        description: "Beachfront resort with stunning ocean views."
+        name: "Budget Hotel - Near Railway Station",
+        type: "Hotel",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 1500,
+        features: ["WiFi", "AC", "Hot Water", "Parking"],
+        description: "Affordable budget hotel near railway station, ideal for budget-conscious pilgrims and tourists.",
+        category: "budget"
     },
+    
+    // Homestays
     {
         id: 4,
-        name: "Hill View Cottage",
-        location: "Coorg",
+        name: "Cozy Homestay - Family Friendly",
+        type: "Homestay",
+        location: "Tirupati",
         image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 3000,
-        features: ["WiFi", "Fireplace", "Breakfast", "Garden"],
-        description: "Cozy cottage surrounded by coffee plantations."
+        price: 2000,
+        features: ["WiFi", "AC", "Home Cooked Meals", "Family Atmosphere", "Local Guide"],
+        description: "Warm and welcoming homestay offering authentic local experience with home-cooked vegetarian meals.",
+        category: "homestay"
     },
     {
         id: 5,
-        name: "Heritage Hotel",
-        location: "Hampi",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        name: "Premium Homestay - Near Temples",
+        type: "Homestay",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         price: 2800,
-        features: ["WiFi", "AC", "Breakfast", "Heritage"],
-        description: "Traditional hotel near ancient ruins."
+        features: ["WiFi", "AC", "Breakfast", "Dinner", "Temple Guidance", "Pickup Service"],
+        description: "Premium homestay with personalized service, temple visit assistance, and traditional South Indian hospitality.",
+        category: "homestay"
     },
+    
+    // Guest Houses
     {
         id: 6,
-        name: "Backwater Houseboat",
-        location: "Alleppey",
-        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 5000,
-        features: ["WiFi", "AC", "Meals", "Cruise"],
-        description: "Traditional houseboat experience in backwaters."
+        name: "Guest House - Peaceful Stay",
+        type: "Guest House",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 1800,
+        features: ["WiFi", "AC", "Hot Water", "Parking", "Quiet Location"],
+        description: "Peaceful guest house away from city noise, perfect for spiritual seekers and families.",
+        category: "guesthouse"
     },
     {
         id: 7,
-        name: "Tea Estate Bungalow",
-        location: "Munnar",
-        image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 3200,
-        features: ["WiFi", "Fireplace", "Breakfast", "Tea Garden"],
-        description: "Colonial bungalow in tea estate."
+        name: "Executive Guest House",
+        type: "Guest House",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 2500,
+        features: ["WiFi", "AC", "Breakfast", "Business Facilities", "Conference Room"],
+        description: "Executive guest house with business facilities, suitable for corporate travelers and groups.",
+        category: "guesthouse"
     },
+    
+    // Dharmashalas (Pilgrim Accommodation)
     {
         id: 8,
-        name: "Beach Villa",
-        location: "Kovalam",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 4500,
-        features: ["WiFi", "AC", "Breakfast", "Pool", "Beach"],
-        description: "Luxury villa with private beach access."
+        name: "Dharmashala - Traditional Stay",
+        type: "Dharmashala",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 800,
+        features: ["Basic Amenities", "Shared Facilities", "Prasadam", "Temple Proximity", "Spiritual Atmosphere"],
+        description: "Traditional dharmashala offering basic accommodation for pilgrims at affordable rates. Simple and clean rooms.",
+        category: "dharmashala"
     },
     {
         id: 9,
-        name: "City Hotel",
-        location: "Chennai",
-        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 3000,
-        features: ["WiFi", "AC", "Breakfast", "Gym"],
-        description: "Modern hotel in city center."
+        name: "AC Dharmashala - Comfortable",
+        type: "Dharmashala",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 1200,
+        features: ["AC", "Hot Water", "Clean Rooms", "Prasadam", "Temple Shuttle"],
+        description: "Air-conditioned dharmashala with modern facilities while maintaining traditional spiritual atmosphere.",
+        category: "dharmashala"
     },
+    
+    // Service Apartments
     {
         id: 10,
-        name: "Hill Station Resort",
-        location: "Ooty",
-        image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        name: "Service Apartment - Extended Stay",
+        type: "Service Apartment",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         price: 3500,
-        features: ["WiFi", "Heating", "Breakfast", "Garden"],
-        description: "Resort with panoramic mountain views."
+        features: ["WiFi", "AC", "Kitchen", "Living Room", "Washing Machine", "Long Stay Discount"],
+        description: "Fully furnished service apartment perfect for extended stays, families, or groups visiting Tirupati.",
+        category: "apartment"
     },
     {
         id: 11,
-        name: "Temple View Hotel",
-        location: "Madurai",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        name: "Studio Apartment - Self Catering",
+        type: "Service Apartment",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         price: 2200,
-        features: ["WiFi", "AC", "Breakfast"],
-        description: "Hotel with view of Meenakshi Temple."
+        features: ["WiFi", "AC", "Kitchenette", "Refrigerator", "Parking"],
+        description: "Compact studio apartment with kitchen facilities, ideal for independent travelers and small families.",
+        category: "apartment"
     },
+    
+    // Budget Lodges
     {
         id: 12,
-        name: "Beach Resort",
-        location: "Visakhapatnam",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 3800,
-        features: ["WiFi", "AC", "Breakfast", "Beach", "Pool"],
-        description: "Resort on RK Beach with modern amenities."
+        name: "Budget Lodge - Clean & Simple",
+        type: "Lodge",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 1000,
+        features: ["Clean Rooms", "Hot Water", "Fan", "24/7 Reception", "Near Temples"],
+        description: "Clean and simple budget lodge offering basic accommodation at very affordable rates for pilgrims.",
+        category: "budget"
+    },
+    {
+        id: 13,
+        name: "AC Lodge - Value for Money",
+        type: "Lodge",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 1800,
+        features: ["AC", "WiFi", "Hot Water", "TV", "Parking"],
+        description: "Air-conditioned lodge offering great value for money with all essential amenities.",
+        category: "budget"
+    },
+    
+    // Heritage Properties
+    {
+        id: 14,
+        name: "Heritage Hotel - Traditional Architecture",
+        type: "Heritage Hotel",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 4000,
+        features: ["WiFi", "AC", "Breakfast", "Heritage Architecture", "Cultural Experience", "Temple Tours"],
+        description: "Beautifully restored heritage property offering traditional architecture with modern comforts.",
+        category: "heritage"
+    },
+    
+    // Resorts
+    {
+        id: 15,
+        name: "Resort - Hill View",
+        type: "Resort",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 5000,
+        features: ["WiFi", "AC", "Breakfast", "Pool", "Garden", "Spa", "Restaurant", "Hill View"],
+        description: "Luxury resort with hill views, swimming pool, and spa facilities. Perfect for relaxation after temple visits.",
+        category: "resort"
     }
 ];
 
@@ -532,8 +604,10 @@ const bookingModal = document.getElementById('bookingModal');
 const closeModal = document.querySelector('.close-modal');
 const bookingForm = document.getElementById('bookingForm');
 const contactForm = document.getElementById('contactForm');
+const accommodationFilters = document.querySelectorAll('.filter-btn-accommodation');
 
 let selectedRoom = null;
+let currentCategoryFilter = 'all';
 
 // Navigation
 function initNavigation() {
@@ -621,18 +695,31 @@ filterButtons.forEach(btn => {
 });
 
 // Display Rooms
-function displayRooms(filterLocation = '') {
-    const filteredRooms = filterLocation 
-        ? rooms.filter(room => room.location.toLowerCase() === filterLocation.toLowerCase())
-        : rooms;
+function displayRooms(filterLocation = '', filterCategory = 'all') {
+    let filteredRooms = rooms;
+    
+    // Filter by location
+    if (filterLocation) {
+        filteredRooms = filteredRooms.filter(room => 
+            room.location.toLowerCase() === filterLocation.toLowerCase()
+        );
+    }
+    
+    // Filter by category
+    if (filterCategory !== 'all') {
+        filteredRooms = filteredRooms.filter(room => 
+            room.category === filterCategory
+        );
+    }
 
     if (filteredRooms.length === 0) {
-        roomsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem;">No rooms available for this destination. Please try another location.</p>';
+        roomsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem; font-size: 1.1rem;">No accommodations available for the selected filters. Please try different options.</p>';
         return;
     }
 
     roomsGrid.innerHTML = filteredRooms.map(room => `
         <div class="room-card">
+            <div class="accommodation-type-badge">${room.type}</div>
             <img src="${room.image}" alt="${room.name}" class="room-image">
             <div class="room-content">
                 <div class="room-header">
@@ -663,11 +750,22 @@ function displayRooms(filterLocation = '') {
     `).join('');
 }
 
+// Accommodation Category Filters
+accommodationFilters.forEach(btn => {
+    btn.addEventListener('click', () => {
+        accommodationFilters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategoryFilter = btn.getAttribute('data-category');
+        const destination = roomDestination.value;
+        displayRooms(destination, currentCategoryFilter);
+    });
+});
+
 // Room Search
 roomSearchForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const destination = roomDestination.value;
-    displayRooms(destination);
+    displayRooms(destination, currentCategoryFilter);
     
     // Scroll to rooms grid
     document.getElementById('rooms').scrollIntoView({ behavior: 'smooth' });
@@ -954,7 +1052,7 @@ function initMobileOptimizations() {
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     displayDestinations();
-    displayRooms();
+    displayRooms('Tirupati', 'all'); // Default to Tirupati
     displayPackages();
     displayVehicles();
     displayTestimonials();
