@@ -416,6 +416,45 @@ img[loading="lazy"].loaded {
     letter-spacing: 0.5px;
 }
 
+.accommodation-type-badge.ttd-official {
+    background: var(--accent-color);
+}
+
+.ttd-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #ff6b35;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 10;
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+}
+
+.ttd-note {
+    background: #e8f5e9;
+    border-left: 4px solid var(--accent-color);
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.ttd-note a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ttd-note a:hover {
+    text-decoration: underline;
+}
+
 
 .booking-form-wrapper {
     margin-bottom: 3rem;

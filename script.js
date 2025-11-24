@@ -179,187 +179,218 @@ const destinations = [
     }
 ];
 
-// Rooms Data - Tirupati Accommodations
+// Rooms Data - Tirupati Accommodations (Real Available Options)
 const rooms = [
-    // Luxury Hotels
+    // TTD (Tirumala Tirupati Devasthanams) Accommodations
     {
         id: 1,
-        name: "Luxury Hotel - Near Tirumala",
+        name: "TTD Srinivasam Complex",
+        type: "TTD Guest House",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 200,
+        features: ["Non-AC Rooms", "Basic Amenities", "Near RTC Bus Stand", "TTD Official", "Prasadam Available"],
+        description: "Official TTD accommodation complex located opposite RTC Bus Stand. Clean and affordable rooms perfect for pilgrims. Book through TTD website.",
+        category: "dharmashala",
+        official: true
+    },
+    {
+        id: 2,
+        name: "TTD Srinivasam Complex - AC Rooms",
+        type: "TTD Guest House",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 400,
+        features: ["AC Rooms", "Clean Facilities", "Near Bus Stand", "TTD Official", "24/7 Security"],
+        description: "Air-conditioned rooms at TTD Srinivasam Complex. Official accommodation with modern amenities. Advance booking available.",
+        category: "guesthouse",
+        official: true
+    },
+    {
+        id: 3,
+        name: "TTD Srinivasam Complex - AC Deluxe",
+        type: "TTD Guest House",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 600,
+        features: ["AC Deluxe Rooms", "Spacious", "Modern Amenities", "TTD Official", "Temple Shuttle"],
+        description: "Deluxe air-conditioned rooms at TTD Srinivasam Complex. Comfortable stay with all modern facilities for pilgrims.",
+        category: "guesthouse",
+        official: true
+    },
+    {
+        id: 4,
+        name: "TTD Madhavam Guest House",
+        type: "TTD Guest House",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 800,
+        features: ["AC Ordinary Suites", "Spacious Rooms", "Adjacent to Srinivasam", "TTD Official", "Restaurant"],
+        description: "TTD Madhavam Guest House adjacent to Srinivasam Complex. AC suites with comfortable accommodation for families.",
+        category: "guesthouse",
+        official: true
+    },
+    {
+        id: 5,
+        name: "TTD Madhavam Guest House - Deluxe",
+        type: "TTD Guest House",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 1000,
+        features: ["AC Deluxe Suites", "Premium Rooms", "Modern Facilities", "TTD Official", "Temple Services"],
+        description: "Deluxe AC suites at TTD Madhavam Guest House. Premium accommodation with excellent facilities for pilgrims.",
+        category: "guesthouse",
+        official: true
+    },
+    {
+        id: 6,
+        name: "TTD Vishnu Nivasam",
+        type: "TTD Guest House",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 300,
+        features: ["Non-AC Rooms", "Near Railway Station", "Basic Amenities", "TTD Official", "Easy Access"],
+        description: "TTD Vishnu Nivasam located opposite Tirupati Railway Station. Convenient location for train travelers.",
+        category: "dharmashala",
+        official: true
+    },
+    {
+        id: 7,
+        name: "TTD Vishnu Nivasam - AC Rooms",
+        type: "TTD Guest House",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 800,
+        features: ["AC Rooms", "Near Railway Station", "Clean Rooms", "TTD Official", "Parking"],
+        description: "Air-conditioned rooms at TTD Vishnu Nivasam. Perfect for pilgrims arriving by train with modern amenities.",
+        category: "guesthouse",
+        official: true
+    },
+    {
+        id: 8,
+        name: "TTD Vishnu Nivasam - AC Suites",
+        type: "TTD Guest House",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 1300,
+        features: ["AC Suites", "Spacious", "Premium Facilities", "TTD Official", "Near Station"],
+        description: "Premium AC suites at TTD Vishnu Nivasam. Luxurious accommodation with excellent facilities near railway station.",
+        category: "guesthouse",
+        official: true
+    },
+    {
+        id: 9,
+        name: "Sri Venkateswara Dharmasala",
+        type: "Dharmashala",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 50,
+        features: ["Single Room", "Basic Facilities", "Very Affordable", "TTD Official", "Spiritual Atmosphere"],
+        description: "Most affordable TTD accommodation. Single rooms at Sri Venkateswara Dharmasala opposite railway station. Perfect for budget pilgrims.",
+        category: "dharmashala",
+        official: true
+    },
+    {
+        id: 10,
+        name: "Sri Venkateswara Dharmasala - Double Room",
+        type: "Dharmashala",
+        location: "Tirupati",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        price: 100,
+        features: ["Double Room", "Shared Facilities", "Budget Friendly", "TTD Official", "Clean Rooms"],
+        description: "Double rooms at Sri Venkateswara Dharmasala. Very affordable accommodation for couples or friends traveling together.",
+        category: "dharmashala",
+        official: true
+    },
+    
+    // Private Hotels
+    {
+        id: 11,
+        name: "Luxury Hotel - Near Padmavathi Temple",
         type: "Hotel",
         location: "Tirupati",
         image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         price: 4500,
-        features: ["WiFi", "AC", "Breakfast", "Parking", "Temple Shuttle"],
-        description: "5-star luxury hotel near Tirumala with modern amenities, perfect for pilgrims and tourists. Close to temple and city center.",
-        category: "luxury"
+        features: ["WiFi", "AC", "Breakfast", "Parking", "Temple Shuttle", "Restaurant", "Spa"],
+        description: "5-star luxury hotel near Padmavathi Temple with modern amenities, perfect for pilgrims and tourists seeking comfort.",
+        category: "hotel",
+        official: false
     },
     {
-        id: 2,
+        id: 12,
         name: "Deluxe Hotel - City Center",
         type: "Hotel",
         location: "Tirupati",
         image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         price: 3000,
-        features: ["WiFi", "AC", "Breakfast", "Restaurant", "24/7 Service"],
+        features: ["WiFi", "AC", "Breakfast", "Restaurant", "24/7 Service", "Near ISKCON"],
         description: "Comfortable deluxe hotel in city center, walking distance to Padmavathi Temple and ISKCON Temple.",
-        category: "deluxe"
+        category: "hotel",
+        official: false
     },
     {
-        id: 3,
+        id: 13,
         name: "Budget Hotel - Near Railway Station",
         type: "Hotel",
         location: "Tirupati",
         image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         price: 1500,
-        features: ["WiFi", "AC", "Hot Water", "Parking"],
+        features: ["WiFi", "AC", "Hot Water", "Parking", "24/7 Reception"],
         description: "Affordable budget hotel near railway station, ideal for budget-conscious pilgrims and tourists.",
-        category: "budget"
+        category: "hotel",
+        official: false
     },
     
     // Homestays
     {
-        id: 4,
+        id: 14,
         name: "Cozy Homestay - Family Friendly",
         type: "Homestay",
         location: "Tirupati",
         image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         price: 2000,
-        features: ["WiFi", "AC", "Home Cooked Meals", "Family Atmosphere", "Local Guide"],
-        description: "Warm and welcoming homestay offering authentic local experience with home-cooked vegetarian meals.",
-        category: "homestay"
+        features: ["WiFi", "AC", "Home Cooked Meals", "Family Atmosphere", "Local Guide", "Vegetarian Food"],
+        description: "Warm and welcoming homestay offering authentic local experience with home-cooked vegetarian meals. Perfect for families.",
+        category: "homestay",
+        official: false
     },
     {
-        id: 5,
+        id: 15,
         name: "Premium Homestay - Near Temples",
         type: "Homestay",
         location: "Tirupati",
         image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         price: 2800,
-        features: ["WiFi", "AC", "Breakfast", "Dinner", "Temple Guidance", "Pickup Service"],
+        features: ["WiFi", "AC", "Breakfast", "Dinner", "Temple Guidance", "Pickup Service", "Cultural Experience"],
         description: "Premium homestay with personalized service, temple visit assistance, and traditional South Indian hospitality.",
-        category: "homestay"
-    },
-    
-    // Guest Houses
-    {
-        id: 6,
-        name: "Guest House - Peaceful Stay",
-        type: "Guest House",
-        location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 1800,
-        features: ["WiFi", "AC", "Hot Water", "Parking", "Quiet Location"],
-        description: "Peaceful guest house away from city noise, perfect for spiritual seekers and families.",
-        category: "guesthouse"
-    },
-    {
-        id: 7,
-        name: "Executive Guest House",
-        type: "Guest House",
-        location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 2500,
-        features: ["WiFi", "AC", "Breakfast", "Business Facilities", "Conference Room"],
-        description: "Executive guest house with business facilities, suitable for corporate travelers and groups.",
-        category: "guesthouse"
-    },
-    
-    // Dharmashalas (Pilgrim Accommodation)
-    {
-        id: 8,
-        name: "Dharmashala - Traditional Stay",
-        type: "Dharmashala",
-        location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 800,
-        features: ["Basic Amenities", "Shared Facilities", "Prasadam", "Temple Proximity", "Spiritual Atmosphere"],
-        description: "Traditional dharmashala offering basic accommodation for pilgrims at affordable rates. Simple and clean rooms.",
-        category: "dharmashala"
-    },
-    {
-        id: 9,
-        name: "AC Dharmashala - Comfortable",
-        type: "Dharmashala",
-        location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 1200,
-        features: ["AC", "Hot Water", "Clean Rooms", "Prasadam", "Temple Shuttle"],
-        description: "Air-conditioned dharmashala with modern facilities while maintaining traditional spiritual atmosphere.",
-        category: "dharmashala"
-    },
-    
-    // Service Apartments
-    {
-        id: 10,
-        name: "Service Apartment - Extended Stay",
-        type: "Service Apartment",
-        location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 3500,
-        features: ["WiFi", "AC", "Kitchen", "Living Room", "Washing Machine", "Long Stay Discount"],
-        description: "Fully furnished service apartment perfect for extended stays, families, or groups visiting Tirupati.",
-        category: "apartment"
-    },
-    {
-        id: 11,
-        name: "Studio Apartment - Self Catering",
-        type: "Service Apartment",
-        location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 2200,
-        features: ["WiFi", "AC", "Kitchenette", "Refrigerator", "Parking"],
-        description: "Compact studio apartment with kitchen facilities, ideal for independent travelers and small families.",
-        category: "apartment"
+        category: "homestay",
+        official: false
     },
     
     // Budget Lodges
     {
-        id: 12,
+        id: 16,
         name: "Budget Lodge - Clean & Simple",
         type: "Lodge",
         location: "Tirupati",
         image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         price: 1000,
-        features: ["Clean Rooms", "Hot Water", "Fan", "24/7 Reception", "Near Temples"],
+        features: ["Clean Rooms", "Hot Water", "Fan", "24/7 Reception", "Near Temples", "Basic Amenities"],
         description: "Clean and simple budget lodge offering basic accommodation at very affordable rates for pilgrims.",
-        category: "budget"
+        category: "lodge",
+        official: false
     },
     {
-        id: 13,
+        id: 17,
         name: "AC Lodge - Value for Money",
         type: "Lodge",
         location: "Tirupati",
         image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         price: 1800,
-        features: ["AC", "WiFi", "Hot Water", "TV", "Parking"],
+        features: ["AC", "WiFi", "Hot Water", "TV", "Parking", "24/7 Service"],
         description: "Air-conditioned lodge offering great value for money with all essential amenities.",
-        category: "budget"
-    },
-    
-    // Heritage Properties
-    {
-        id: 14,
-        name: "Heritage Hotel - Traditional Architecture",
-        type: "Heritage Hotel",
-        location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 4000,
-        features: ["WiFi", "AC", "Breakfast", "Heritage Architecture", "Cultural Experience", "Temple Tours"],
-        description: "Beautifully restored heritage property offering traditional architecture with modern comforts.",
-        category: "heritage"
-    },
-    
-    // Resorts
-    {
-        id: 15,
-        name: "Resort - Hill View",
-        type: "Resort",
-        location: "Tirupati",
-        image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: 5000,
-        features: ["WiFi", "AC", "Breakfast", "Pool", "Garden", "Spa", "Restaurant", "Hill View"],
-        description: "Luxury resort with hill views, swimming pool, and spa facilities. Perfect for relaxation after temple visits.",
-        category: "resort"
+        category: "lodge",
+        official: false
     }
 ];
 
@@ -719,7 +750,8 @@ function displayRooms(filterLocation = '', filterCategory = 'all') {
 
     roomsGrid.innerHTML = filteredRooms.map(room => `
         <div class="room-card">
-            <div class="accommodation-type-badge">${room.type}</div>
+            <div class="accommodation-type-badge ${room.official ? 'ttd-official' : ''}">${room.type}${room.official ? ' <i class="fas fa-check-circle"></i>' : ''}</div>
+            ${room.official ? '<div class="ttd-badge">TTD Official</div>' : ''}
             <img src="${room.image}" alt="${room.name}" class="room-image">
             <div class="room-content">
                 <div class="room-header">
@@ -736,6 +768,7 @@ function displayRooms(filterLocation = '', filterCategory = 'all') {
                     </div>
                 </div>
                 <p class="room-description">${room.description}</p>
+                ${room.official ? '<p class="ttd-note"><strong>Note:</strong> TTD accommodations can be booked online at <a href="https://tirupatibalaji.ap.gov.in" target="_blank">tirupatibalaji.ap.gov.in</a> up to 60 days in advance. Valid ID required.</p>' : ''}
                 <div class="room-features">
                     ${room.features.map(feature => `
                         <span class="room-feature">
@@ -744,7 +777,7 @@ function displayRooms(filterLocation = '', filterCategory = 'all') {
                         </span>
                     `).join('')}
                 </div>
-                <button class="btn btn-primary btn-block" onclick="openBookingModal('room', ${room.id})">Book Now</button>
+                <button class="btn btn-primary btn-block" onclick="openBookingModal('room', ${room.id})">${room.official ? 'Book via TTD Website' : 'Book Now'}</button>
             </div>
         </div>
     `).join('');
