@@ -21,6 +21,34 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Image optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 .container {
@@ -281,6 +309,17 @@ section {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    background-color: var(--light-color);
+}
+
+/* Lazy loading support */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
 }
 
 .destination-content {
@@ -418,6 +457,7 @@ section {
     width: 100%;
     height: 220px;
     object-fit: cover;
+    background-color: var(--light-color);
 }
 
 .room-content {
@@ -873,6 +913,7 @@ section {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    background-color: var(--light-color);
 }
 
 .package-content {
@@ -984,6 +1025,7 @@ section {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    background-color: var(--light-color);
 }
 
 .vehicle-content {
@@ -1119,7 +1161,45 @@ section {
     color: var(--text-color);
 }
 
+/* Touch-friendly improvements */
+button, .btn, a {
+    -webkit-tap-highlight-color: rgba(37, 99, 235, 0.3);
+    touch-action: manipulation;
+}
+
+input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+}
+
 /* Responsive */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .packages-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    
+    .vehicles-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .contact-wrapper {
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -1181,36 +1261,254 @@ section {
     .features {
         grid-template-columns: 1fr;
     }
+    
+    .package-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .package-content {
+        padding: 1rem;
+    }
+    
+    .vehicle-content {
+        padding: 1rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
+        max-height: 85vh;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+        min-height: 44px; /* Minimum touch target size */
+    }
+    
+    .nav-link {
+        padding: 0.8rem 1rem;
+        display: block;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 2rem;
+        line-height: 1.2;
+        padding: 0 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 
     .section-header h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        padding: 0 1rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
     }
 
     .filter-buttons {
         gap: 0.5rem;
+        padding: 0 1rem;
     }
 
     .filter-btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        min-height: 40px;
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .feature-box {
+        padding: 1.5rem;
+    }
+    
+    .feature-box i {
+        font-size: 2.5rem;
     }
 
     .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+    }
+    
+    .package-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .vehicle-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .destination-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .room-title {
+        font-size: 1.1rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.9rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .contact-item i {
         font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .modal-content {
+        width: 98%;
+        margin: 5% auto;
+        padding: 1.2rem;
+        max-height: 90vh;
+    }
+    
+    .package-route p {
+        font-size: 0.9rem;
+    }
+    
+    .testimonial-review {
+        font-size: 0.95rem;
+    }
+    
+    .price-amount {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+    
+    .hero-content {
+        padding: 2rem 0;
+    }
+    
+    .modal-content {
+        max-height: 95vh;
+    }
+}
+
+/* Tablet specific */
+@media (min-width: 481px) and (max-width: 768px) {
+    .packages-grid,
+    .vehicles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .destinations-grid,
+    .rooms-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .hamburger,
+    .hero-buttons,
+    .btn,
+    .filter-buttons,
+    .social-links,
+    footer {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    .section-header h2 {
+        page-break-after: avoid;
     }
 }
 

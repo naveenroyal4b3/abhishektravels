@@ -910,6 +910,46 @@ document.getElementById('checkIn')?.setAttribute('min', today);
 document.getElementById('checkOut')?.setAttribute('min', today);
 document.getElementById('modalTravelDate')?.setAttribute('min', today);
 
+// Mobile optimizations
+function initMobileOptimizations() {
+    // Improve modal scrolling on mobile
+    const modal = document.getElementById('bookingModal');
+    if (modal) {
+        const modalContent = modal.querySelector('.modal-content');
+        if (modalContent) {
+            // Prevent modal content clicks from closing modal
+            modalContent.addEventListener('touchstart', (e) => {
+                e.stopPropagation();
+            });
+        }
+        
+        // Close modal on outside tap (mobile)
+        modal.addEventListener('touchstart', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+    
+    // Improve form inputs on mobile - ensure minimum touch target size
+    const inputs = document.querySelectorAll('input, select, textarea, button, .btn');
+    inputs.forEach(input => {
+        if (input.offsetHeight < 44) {
+            input.style.minHeight = '44px';
+        }
+    });
+    
+    // Improve hamburger menu touch target
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger && hamburger.offsetHeight < 44) {
+        hamburger.style.minHeight = '44px';
+        hamburger.style.minWidth = '44px';
+        hamburger.style.display = 'flex';
+        hamburger.style.alignItems = 'center';
+        hamburger.style.justifyContent = 'center';
+    }
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
@@ -919,6 +959,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displayVehicles();
     displayTestimonials();
     animateStatistics();
+    initMobileOptimizations();
     
     // Set footer links
     document.querySelectorAll('.footer-section a[data-state]').forEach(link => {
