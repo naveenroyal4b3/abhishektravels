@@ -779,9 +779,9 @@ function displayRooms(filterLocation = '', filterCategory = 'all') {
                 </div>
                 <div class="action-buttons">
                     ${room.official ? 
-                        `<a href="https://tirupatibalaji.ap.gov.in" target="_blank" class="btn btn-primary">Book via TTD</a>` :
+                        `<a href="https://tirupatibalaji.ap.gov.in" target="_blank" class="btn btn-primary btn-block">Book via TTD</a>` :
                         `<a href="tel:+919912325325" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now</a>
-                         <a href="https://wa.me/919912325325?text=Hi, I'm interested in booking ${encodeURIComponent(room.name)}" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>`
+                        <a href="https://wa.me/919912325325?text=Hi, I'm interested in booking ${encodeURIComponent(room.name)}" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>`
                     }
                 </div>
             </div>
