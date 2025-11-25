@@ -5,11 +5,12 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #f59e0b;
-    --accent-color: #10b981;
+    --primary-color: #FF6600;
+    --secondary-color: #FF9933;
+    --accent-color: #FF6600;
+    --saffron-color: #FF9933;
     --dark-color: #1e293b;
-    --light-color: #f8fafc;
+    --light-color: #fff5e6;
     --text-color: #334155;
     --border-color: #e2e8f0;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -23,6 +24,8 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(to bottom, #fff5e6 0%, #ffffff 100%);
+    background-attachment: fixed;
 }
 
 /* Image optimization */
@@ -135,10 +138,11 @@ html {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    background-image: url('https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=2000');
+    background: linear-gradient(135deg, rgba(255, 153, 51, 0.9) 0%, rgba(255, 102, 0, 0.9) 100%), 
+                url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=2000');
     background-size: cover;
     background-position: center;
+    background-blend-mode: overlay;
     position: relative;
     display: flex;
     align-items: center;
@@ -153,7 +157,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(255, 153, 51, 0.7) 0%, rgba(255, 102, 0, 0.8) 100%);
 }
 
 .hero-content {
@@ -213,7 +217,7 @@ html {
 }
 
 .btn-primary:hover {
-    background: #1d4ed8;
+    background: #FF5500;
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
