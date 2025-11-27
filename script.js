@@ -595,7 +595,7 @@ const bikes = [
         minKm: 100,
         features: ["Helmet Provided", "Fuel Efficient", "Easy to Ride", "Insurance"],
         description: "Well-maintained motorcycle perfect for exploring Tirupati and nearby temples. Comfortable ride with excellent fuel efficiency.",
-        image: "https://images.pexels.com/photos/163210/bike-motorcycle-vehicle-two-wheeler-163210.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://images.unsplash.com/photo-1558980664-769d59546b3d?w=800&h=600&fit=crop&auto=format"
     },
     {
         id: 2,
@@ -608,7 +608,7 @@ const bikes = [
         minKm: 100,
         features: ["Helmet Provided", "Very Fuel Efficient", "Easy Handling", "Insurance", "Automatic"],
         description: "Easy-to-ride scooter ideal for city rides and temple visits. Perfect for beginners and those looking for convenience.",
-        image: "https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=800&h=600&fit=crop&auto=format"
     },
     {
         id: 3,
@@ -621,7 +621,7 @@ const bikes = [
         minKm: 150,
         features: ["Helmet Provided", "Premium Model", "Powerful Engine", "Insurance", "Comfortable"],
         description: "Premium motorcycle with powerful engine and superior comfort. Perfect for longer trips and highway rides.",
-        image: "https://images.pexels.com/photos/163210/bike-motorcycle-vehicle-two-wheeler-163210.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://images.unsplash.com/photo-1558980664-769d59546b3d?w=800&h=600&fit=crop&auto=format"
     },
     {
         id: 4,
@@ -634,7 +634,7 @@ const bikes = [
         minKm: 80,
         features: ["Helmet Provided", "Eco-Friendly", "Silent Operation", "Low Maintenance", "Charging Included"],
         description: "Environment-friendly electric scooter perfect for eco-conscious travelers. Silent and smooth ride around Tirupati.",
-        image: "https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=800&h=600&fit=crop&auto=format"
     },
     {
         id: 5,
@@ -647,7 +647,7 @@ const bikes = [
         minKm: 200,
         features: ["Helmet Provided", "High Performance", "Sporty Design", "Insurance", "Premium"],
         description: "High-performance sports bike for adventure enthusiasts. Powerful and stylish, perfect for thrill seekers.",
-        image: "https://images.pexels.com/photos/163210/bike-motorcycle-vehicle-two-wheeler-163210.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://images.unsplash.com/photo-1558980664-769d59546b3d?w=800&h=600&fit=crop&auto=format"
     },
     {
         id: 6,
@@ -660,7 +660,7 @@ const bikes = [
         minKm: 80,
         features: ["Helmet Provided", "Ultra Fuel Efficient", "Budget Friendly", "Insurance", "Reliable"],
         description: "Affordable and reliable standard scooter. Best value for money with excellent fuel economy.",
-        image: "https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=800&h=600&fit=crop&auto=format"
     }
 ];
 

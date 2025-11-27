@@ -1166,6 +1166,21 @@ img[loading="lazy"].loaded {
     height: 250px;
     object-fit: cover;
     background-color: var(--light-color);
+    display: block;
+}
+
+.bike-image[src=""],
+.bike-image:not([src]) {
+    background: linear-gradient(135deg, var(--saffron-color) 0%, var(--primary-color) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bike-image[src=""]::after,
+.bike-image:not([src])::after {
+    content: "🚲";
+    font-size: 4rem;
 }
 
 .bike-content {
