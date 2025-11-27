@@ -580,35 +580,87 @@ const vehicles = [
         minKm: 350,
         image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
+];
+
+// Bikes and Scooters Data
+const bikes = [
     {
-        id: 11,
+        id: 1,
         name: "Motorcycle / Bike",
+        type: "Bike",
         localPrice: 800,
         outstationPrice: 8,
         fuelEfficiency: "40-50km per 1 liter petrol",
         capacity: 2,
         minKm: 100,
+        features: ["Helmet Provided", "Fuel Efficient", "Easy to Ride", "Insurance"],
+        description: "Well-maintained motorcycle perfect for exploring Tirupati and nearby temples. Comfortable ride with excellent fuel efficiency.",
         image: "https://images.pexels.com/photos/163210/bike-motorcycle-vehicle-two-wheeler-163210.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
-        id: 12,
+        id: 2,
         name: "Scooter / Scooty",
+        type: "Scooter",
         localPrice: 600,
         outstationPrice: 6,
         fuelEfficiency: "45-55km per 1 liter petrol",
         capacity: 2,
         minKm: 100,
-        image: "https://images.pexels.com/photos/163210/bike-motorcycle-vehicle-two-wheeler-163210.jpeg?auto=compress&cs=tinysrgb&w=800"
+        features: ["Helmet Provided", "Very Fuel Efficient", "Easy Handling", "Insurance", "Automatic"],
+        description: "Easy-to-ride scooter ideal for city rides and temple visits. Perfect for beginners and those looking for convenience.",
+        image: "https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
-        id: 13,
+        id: 3,
         name: "Premium Bike",
+        type: "Premium Bike",
         localPrice: 1200,
         outstationPrice: 12,
         fuelEfficiency: "35-45km per 1 liter petrol",
         capacity: 2,
         minKm: 150,
+        features: ["Helmet Provided", "Premium Model", "Powerful Engine", "Insurance", "Comfortable"],
+        description: "Premium motorcycle with powerful engine and superior comfort. Perfect for longer trips and highway rides.",
         image: "https://images.pexels.com/photos/163210/bike-motorcycle-vehicle-two-wheeler-163210.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+        id: 4,
+        name: "Electric Scooter",
+        type: "E-Scooter",
+        localPrice: 700,
+        outstationPrice: 7,
+        fuelEfficiency: "Electric - No Fuel",
+        capacity: 2,
+        minKm: 80,
+        features: ["Helmet Provided", "Eco-Friendly", "Silent Operation", "Low Maintenance", "Charging Included"],
+        description: "Environment-friendly electric scooter perfect for eco-conscious travelers. Silent and smooth ride around Tirupati.",
+        image: "https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+        id: 5,
+        name: "Sports Bike",
+        type: "Sports Bike",
+        localPrice: 1500,
+        outstationPrice: 15,
+        fuelEfficiency: "30-40km per 1 liter petrol",
+        capacity: 2,
+        minKm: 200,
+        features: ["Helmet Provided", "High Performance", "Sporty Design", "Insurance", "Premium"],
+        description: "High-performance sports bike for adventure enthusiasts. Powerful and stylish, perfect for thrill seekers.",
+        image: "https://images.pexels.com/photos/163210/bike-motorcycle-vehicle-two-wheeler-163210.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+        id: 6,
+        name: "Standard Scooter",
+        type: "Scooter",
+        localPrice: 550,
+        outstationPrice: 5,
+        fuelEfficiency: "50-60km per 1 liter petrol",
+        capacity: 2,
+        minKm: 80,
+        features: ["Helmet Provided", "Ultra Fuel Efficient", "Budget Friendly", "Insurance", "Reliable"],
+        description: "Affordable and reliable standard scooter. Best value for money with excellent fuel economy.",
+        image: "https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
 ];
 
@@ -972,6 +1024,50 @@ function displayVehicles() {
     `).join('');
 }
 
+// Display Bikes and Scooters
+function displayBikes() {
+    const bikesGrid = document.getElementById('bikesGrid');
+    if (!bikesGrid) return;
+    
+    bikesGrid.innerHTML = bikes.map(bike => `
+        <div class="bike-card">
+            <div class="bike-type-badge">${bike.type}</div>
+            <img src="${bike.image}" alt="${bike.name}" class="bike-image">
+            <div class="bike-content">
+                <h3>${bike.name}</h3>
+                <p class="bike-description">${bike.description}</p>
+                <div class="bike-pricing">
+                    <div class="pricing-section">
+                        <strong>Local</strong>
+                        <p class="price-highlight">₹${bike.localPrice}/- per day</p>
+                        <p>${bike.fuelEfficiency}</p>
+                    </div>
+                    <div class="pricing-section">
+                        <strong>Out Station</strong>
+                        <p class="price-highlight">₹${bike.outstationPrice}/- per km</p>
+                        <p>${bike.capacity} persons</p>
+                    </div>
+                </div>
+                <div class="bike-features">
+                    ${bike.features.map(feature => `
+                        <span class="bike-feature">
+                            <i class="fas fa-check-circle"></i>
+                            ${feature}
+                        </span>
+                    `).join('')}
+                </div>
+                <div class="bike-note">
+                    <em>*Minimum ${bike.minKm}km</em>
+                </div>
+                <div class="action-buttons">
+                    <a href="tel:+919912325325" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/919912325325?text=Hi, I'm interested in renting ${encodeURIComponent(bike.name)}" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
 // Display Testimonials
 function displayTestimonials() {
     const testimonialsGrid = document.getElementById('testimonialsGrid');
@@ -1130,6 +1226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displayRooms('Tirupati', 'all'); // Default to Tirupati & Other Cities
     displayPackages();
     displayVehicles();
+    displayBikes();
     displayTestimonials();
     animateStatistics();
     initMobileOptimizations();
