@@ -579,6 +579,36 @@ const vehicles = [
         capacity: 40,
         minKm: 350,
         image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+        id: 11,
+        name: "Motorcycle / Bike",
+        localPrice: 800,
+        outstationPrice: 8,
+        fuelEfficiency: "40-50km per 1 liter petrol",
+        capacity: 2,
+        minKm: 100,
+        image: "https://images.pexels.com/photos/163210/bike-motorcycle-vehicle-two-wheeler-163210.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+        id: 12,
+        name: "Scooter / Scooty",
+        localPrice: 600,
+        outstationPrice: 6,
+        fuelEfficiency: "45-55km per 1 liter petrol",
+        capacity: 2,
+        minKm: 100,
+        image: "https://images.pexels.com/photos/163210/bike-motorcycle-vehicle-two-wheeler-163210.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+        id: 13,
+        name: "Premium Bike",
+        localPrice: 1200,
+        outstationPrice: 12,
+        fuelEfficiency: "35-45km per 1 liter petrol",
+        capacity: 2,
+        minKm: 150,
+        image: "https://images.pexels.com/photos/163210/bike-motorcycle-vehicle-two-wheeler-163210.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
 ];
 
