@@ -272,7 +272,7 @@ const temples = [
         location: "Sri Kalahasti, Andhra Pradesh",
         deity: "Lord Kalahasteeswara (Shiva)",
         significance: "One of the Pancha Bhoota Stalam",
-        image: "https://picsum.photos/800/600?random=107",
+        image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Srikalahasti_temple_and_Hill.jpg",
         description: "Ancient temple representing Vayu (Air) element. Located near Tirupati, perfect for combined pilgrimage.",
         features: ["Pancha Bhoota", "Near Tirupati", "Darshan", "Rahu-Ketu Puja"],
         timings: "6:00 AM - 9:00 PM",
