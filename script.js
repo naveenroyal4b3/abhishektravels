@@ -230,7 +230,7 @@ const temples = [
         location: "Rameswaram, Tamil Nadu",
         deity: "Lord Ramanathaswamy (Shiva)",
         significance: "One of the 12 Jyotirlinga temples",
-        image: "https://picsum.photos/800/600?random=104",
+        image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Rameshawaram_temple_view_from_the_sea.jpg",
         description: "Sacred Jyotirlinga temple where Lord Rama worshipped Shiva. Important pilgrimage destination for Hindus.",
         features: ["Jyotirlinga", "Pilgrimage", "Sacred Tanks", "Darshan"],
         timings: "5:00 AM - 1:00 PM, 3:00 PM - 9:00 PM",
