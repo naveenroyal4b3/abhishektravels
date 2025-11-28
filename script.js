@@ -328,7 +328,7 @@ const temples = [
         location: "Mahabalipuram, Tamil Nadu",
         deity: "Lord Shiva & Vishnu",
         significance: "UNESCO World Heritage Site",
-        image: "https://picsum.photos/800/600?random=111",
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/83/Mahabalipuram-Shore_Temple-WUS01969.jpg",
         description: "Group of 7th-8th century monuments and temples. Famous for Shore Temple, Pancha Rathas, and rock-cut architecture.",
         features: ["UNESCO Site", "Rock Cut", "Historical", "Architecture"],
         timings: "6:00 AM - 6:00 PM",
