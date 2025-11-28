@@ -258,7 +258,7 @@ const temples = [
         location: "Pathanamthitta, Kerala",
         deity: "Lord Ayyappa",
         significance: "Famous hill shrine temple",
-        image: "https://picsum.photos/800/600?random=106",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Sabarimala_temple_during_Periyar_butterfly_survey_at_Sabarimala%2C_2014_%2812%29.jpg",
         description: "Sacred hill temple dedicated to Lord Ayyappa. Requires 41 days of penance and pilgrimage during Mandala season.",
         features: ["Hill Temple", "Pilgrimage", "Forest Trek", "Darshan"],
         timings: "Seasonal (Nov - Jan)",
