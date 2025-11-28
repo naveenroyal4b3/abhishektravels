@@ -287,6 +287,205 @@ section {
     color: var(--text-color);
 }
 
+/* Temples Section */
+.temples {
+    background: linear-gradient(to bottom, #fff5e6 0%, #ffffff 100%);
+    padding: 5rem 0;
+    position: relative;
+}
+
+.temples::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--saffron-color) 0%, var(--primary-color) 100%);
+}
+
+.temples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.temple-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.temple-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.temple-card.featured-temple {
+    border: 3px solid var(--saffron-color);
+    box-shadow: 0 8px 20px rgba(255, 153, 51, 0.3);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--saffron-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    z-index: 10;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.featured-badge i {
+    font-size: 0.9rem;
+}
+
+.temple-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: var(--light-color);
+}
+
+.temple-content {
+    padding: 1.5rem;
+}
+
+.temple-header {
+    margin-bottom: 1rem;
+}
+
+.temple-header h3 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.temple-location {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.temple-location i {
+    color: var(--primary-color);
+}
+
+.temple-deity {
+    background: var(--light-color);
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--saffron-color);
+}
+
+.temple-deity strong {
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.temple-deity strong i {
+    color: var(--saffron-color);
+}
+
+.temple-description {
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.temple-significance {
+    background: #fff3cd;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.temple-significance strong {
+    color: var(--dark-color);
+}
+
+.temple-timings {
+    padding: 0.8rem;
+    background: var(--light-color);
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.temple-timings strong {
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.temple-timings strong i {
+    color: var(--primary-color);
+}
+
+.temple-special {
+    background: #e8f5e9;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--accent-color);
+    font-size: 0.95rem;
+}
+
+.temple-special strong {
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.temple-special strong i {
+    color: var(--accent-color);
+}
+
+.temple-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.temple-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    flex: 1 1 calc(50% - 0.4rem);
+}
+
+.temple-feature i {
+    color: var(--accent-color);
+    font-size: 0.85rem;
+}
+
 /* Destinations */
 .destinations {
     background: var(--light-color);
@@ -1442,6 +1641,10 @@ input, select, textarea {
     .vehicles-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
+    
+    .temples-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
 }
 
 @media (max-width: 992px) {
@@ -1501,7 +1704,8 @@ input, select, textarea {
     .packages-grid,
     .vehicles-grid,
     .bikes-grid,
-    .testimonials-grid {
+    .testimonials-grid,
+    .temples-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1756,7 +1960,8 @@ input, select, textarea {
 /* Tablet specific */
 @media (min-width: 481px) and (max-width: 768px) {
     .packages-grid,
-    .vehicles-grid {
+    .vehicles-grid,
+    .temples-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     

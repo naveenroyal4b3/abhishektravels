@@ -179,6 +179,178 @@ const destinations = [
     }
 ];
 
+// Temples Data - South India Sacred Temples
+const temples = [
+    {
+        id: 1,
+        name: "Tirumala Venkateswara Temple",
+        location: "Tirumala, Andhra Pradesh",
+        deity: "Lord Venkateswara (Balaji)",
+        significance: "One of the richest and most visited temples in the world",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "The most sacred Vaishnavite temple dedicated to Lord Venkateswara. Millions of devotees visit annually seeking blessings and fulfillment of wishes.",
+        features: ["Most Visited", "Rich Temple", "Darshan Available", "Prasadam", "Accommodation"],
+        timings: "2:30 AM - 1:30 AM (Next Day)",
+        special: "Free Darshan, Special Entry, VIP Darshan available",
+        category: "vaishnavite",
+        featured: true
+    },
+    {
+        id: 2,
+        name: "Padmavathi Temple",
+        location: "Tiruchanur, Tirupati",
+        deity: "Goddess Padmavathi",
+        significance: "Consort of Lord Venkateswara",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "Beautiful temple dedicated to Goddess Padmavathi, the divine consort of Lord Venkateswara. Located near Tirupati.",
+        features: ["Goddess Temple", "Near Tirupati", "Prasadam", "Peaceful"],
+        timings: "6:00 AM - 9:00 PM",
+        special: "Visit after Tirumala Darshan",
+        category: "vaishnavite",
+        featured: false
+    },
+    {
+        id: 3,
+        name: "Meenakshi Amman Temple",
+        location: "Madurai, Tamil Nadu",
+        deity: "Goddess Meenakshi & Lord Sundareswarar",
+        significance: "One of the most famous temples in Tamil Nadu",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "Magnificent temple complex with stunning architecture. Dedicated to Goddess Meenakshi and Lord Shiva.",
+        features: ["Architecture", "Historical", "Darshan", "Prasadam"],
+        timings: "5:00 AM - 12:30 PM, 4:00 PM - 9:30 PM",
+        special: "Thousand Pillar Hall, Golden Lotus Tank",
+        category: "shaivite",
+        featured: true
+    },
+    {
+        id: 4,
+        name: "Ramanathaswamy Temple",
+        location: "Rameswaram, Tamil Nadu",
+        deity: "Lord Ramanathaswamy (Shiva)",
+        significance: "One of the 12 Jyotirlinga temples",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "Sacred Jyotirlinga temple where Lord Rama worshipped Shiva. Important pilgrimage destination for Hindus.",
+        features: ["Jyotirlinga", "Pilgrimage", "Sacred Tanks", "Darshan"],
+        timings: "5:00 AM - 1:00 PM, 3:00 PM - 9:00 PM",
+        special: "22 Sacred Wells (Theerthams) for ritual bath",
+        category: "shaivite",
+        featured: true
+    },
+    {
+        id: 5,
+        name: "Guruvayur Temple",
+        location: "Guruvayur, Kerala",
+        deity: "Lord Krishna (Guruvayurappan)",
+        significance: "Famous Krishna temple in Kerala",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "One of the most important Krishna temples in South India. Known as 'Bhooloka Vaikunta' (Heaven on Earth).",
+        features: ["Krishna Temple", "Kerala", "Darshan", "Prasadam"],
+        timings: "3:00 AM - 9:30 PM",
+        special: "Elephant sanctuary nearby",
+        category: "vaishnavite",
+        featured: false
+    },
+    {
+        id: 6,
+        name: "Sabarimala Temple",
+        location: "Pathanamthitta, Kerala",
+        deity: "Lord Ayyappa",
+        significance: "Famous hill shrine temple",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "Sacred hill temple dedicated to Lord Ayyappa. Requires 41 days of penance and pilgrimage during Mandala season.",
+        features: ["Hill Temple", "Pilgrimage", "Forest Trek", "Darshan"],
+        timings: "Seasonal (Nov - Jan)",
+        special: "Mandala Makaravilakku Festival",
+        category: "shaivite",
+        featured: true
+    },
+    {
+        id: 7,
+        name: "Sri Kalahasti Temple",
+        location: "Sri Kalahasti, Andhra Pradesh",
+        deity: "Lord Kalahasteeswara (Shiva)",
+        significance: "One of the Pancha Bhoota Stalam",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "Ancient temple representing Vayu (Air) element. Located near Tirupati, perfect for combined pilgrimage.",
+        features: ["Pancha Bhoota", "Near Tirupati", "Darshan", "Rahu-Ketu Puja"],
+        timings: "6:00 AM - 9:00 PM",
+        special: "Famous for Rahu-Ketu Dosha Nivarana",
+        category: "shaivite",
+        featured: false
+    },
+    {
+        id: 8,
+        name: "Kanipakam Temple",
+        location: "Kanipakam, Andhra Pradesh",
+        deity: "Lord Ganesha (Varasiddhi Vinayaka)",
+        significance: "Famous Ganesha temple",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "Sacred temple with self-manifested Ganesha idol. The temple tank water is believed to have healing properties.",
+        features: ["Ganesha Temple", "Self-Manifested", "Sacred Tank", "Darshan"],
+        timings: "4:00 AM - 9:00 PM",
+        special: "Water from temple tank never dries",
+        category: "ganesha",
+        featured: false
+    },
+    {
+        id: 9,
+        name: "Golden Temple (Sripuram)",
+        location: "Vellore, Tamil Nadu",
+        deity: "Goddess Lakshmi",
+        significance: "Golden temple with gold-plated structure",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "Magnificent golden temple dedicated to Goddess Lakshmi. Entire structure is gold-plated, creating a stunning visual.",
+        features: ["Golden Structure", "Lakshmi Temple", "Modern", "Darshan"],
+        timings: "4:00 AM - 8:00 PM",
+        special: "Entire temple covered in gold",
+        category: "vaishnavite",
+        featured: true
+    },
+    {
+        id: 10,
+        name: "Kanchipuram Temples",
+        location: "Kanchipuram, Tamil Nadu",
+        deity: "Multiple (Vishnu Kanchi & Shiva Kanchi)",
+        significance: "City of Thousand Temples",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "Ancient temple city with numerous sacred temples including Ekambareswarar, Kamakshi Amman, Varadaraja Perumal temples.",
+        features: ["Multiple Temples", "Historical", "Architecture", "Darshan"],
+        timings: "Varies by temple",
+        special: "Famous for silk sarees and temple architecture",
+        category: "multiple",
+        featured: false
+    },
+    {
+        id: 11,
+        name: "Mahabalipuram Temples",
+        location: "Mahabalipuram, Tamil Nadu",
+        deity: "Lord Shiva & Vishnu",
+        significance: "UNESCO World Heritage Site",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "Group of 7th-8th century monuments and temples. Famous for Shore Temple, Pancha Rathas, and rock-cut architecture.",
+        features: ["UNESCO Site", "Rock Cut", "Historical", "Architecture"],
+        timings: "6:00 AM - 6:00 PM",
+        special: "Shore Temple by the sea",
+        category: "historical",
+        featured: false
+    },
+    {
+        id: 12,
+        name: "Chidambaram Nataraja Temple",
+        location: "Chidambaram, Tamil Nadu",
+        deity: "Lord Nataraja (Shiva as Cosmic Dancer)",
+        significance: "One of the Pancha Sabhai Sthalams",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&auto=format",
+        description: "Famous temple where Shiva is worshipped as Nataraja, the cosmic dancer. Unique architecture with golden roof.",
+        features: ["Nataraja", "Golden Roof", "Architecture", "Darshan"],
+        timings: "6:00 AM - 12:00 PM, 4:30 PM - 9:00 PM",
+        special: "Golden roof (Kanaka Sabha) and Akasa Lingam",
+        category: "shaivite",
+        featured: false
+    }
+];
+
 // Rooms Data - Tirupati Accommodations (Real Available Options)
 const rooms = [
     // TTD (Tirumala Tirupati Devasthanams) Accommodations
@@ -766,6 +938,60 @@ function initNavigation() {
     });
 }
 
+// Display Temples
+function displayTemples() {
+    const templesGrid = document.getElementById('templesGrid');
+    if (!templesGrid) return;
+    
+    // Sort temples - featured first
+    const sortedTemples = [...temples].sort((a, b) => {
+        if (a.featured && !b.featured) return -1;
+        if (!a.featured && b.featured) return 1;
+        return 0;
+    });
+    
+    templesGrid.innerHTML = sortedTemples.map(temple => `
+        <div class="temple-card ${temple.featured ? 'featured-temple' : ''}">
+            ${temple.featured ? '<div class="featured-badge"><i class="fas fa-star"></i> Featured</div>' : ''}
+            <img src="${temple.image}" alt="${temple.name}" class="temple-image">
+            <div class="temple-content">
+                <div class="temple-header">
+                    <h3>${temple.name}</h3>
+                    <p class="temple-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        ${temple.location}
+                    </p>
+                </div>
+                <div class="temple-deity">
+                    <strong><i class="fas fa-om"></i> Deity:</strong> ${temple.deity}
+                </div>
+                <p class="temple-description">${temple.description}</p>
+                <div class="temple-significance">
+                    <strong>Significance:</strong> ${temple.significance}
+                </div>
+                <div class="temple-timings">
+                    <strong><i class="fas fa-clock"></i> Timings:</strong> ${temple.timings}
+                </div>
+                ${temple.special ? `<div class="temple-special">
+                    <strong><i class="fas fa-star"></i> Special:</strong> ${temple.special}
+                </div>` : ''}
+                <div class="temple-features">
+                    ${temple.features.map(feature => `
+                        <span class="temple-feature">
+                            <i class="fas fa-check-circle"></i>
+                            ${feature}
+                        </span>
+                    `).join('')}
+                </div>
+                <div class="action-buttons">
+                    <a href="tel:+919912325325" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/919912325325?text=Hi, I'm interested in visiting ${encodeURIComponent(temple.name)}" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
 // Display Destinations
 function displayDestinations(state = 'all') {
     const filteredDestinations = state === 'all' 
@@ -1222,6 +1448,7 @@ function initMobileOptimizations() {
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
+    displayTemples();
     displayDestinations();
     displayRooms('Tirupati', 'all'); // Default to Tirupati & Other Cities
     displayPackages();
