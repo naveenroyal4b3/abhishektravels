@@ -300,7 +300,7 @@ const temples = [
         location: "Vellore, Tamil Nadu",
         deity: "Goddess Lakshmi",
         significance: "Golden temple with gold-plated structure",
-        image: "https://picsum.photos/800/600?random=109",
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/69/Sripuram_Temple_Full_View.jpg",
         description: "Magnificent golden temple dedicated to Goddess Lakshmi. Entire structure is gold-plated, creating a stunning visual.",
         features: ["Golden Structure", "Lakshmi Temple", "Modern", "Darshan"],
         timings: "4:00 AM - 8:00 PM",
