@@ -355,6 +355,23 @@ section {
     height: 220px;
     object-fit: cover;
     background-color: var(--light-color);
+    display: block;
+}
+
+.temple-image[src=""],
+.temple-image:not([src]),
+.temple-image[src*="undefined"] {
+    background: linear-gradient(135deg, var(--saffron-color) 0%, var(--primary-color) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temple-image[src=""]:after,
+.temple-image:not([src]):after,
+.temple-image[src*="undefined"]:after {
+    content: "🕉️";
+    font-size: 3rem;
 }
 
 .temple-content {
