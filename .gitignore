@@ -1,14 +1,35 @@
-# OS files
-.DS_Store
-Thumbs.db
+# Dependencies
+node_modules/
+package-lock.json
 
-# Editor files
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
+# OS
+.DS_Store
+Thumbs.db
+
 # Logs
 *.log
+npm-debug.log*
 
+# Temporary files
+*.tmp
+*.temp
+
+# Note: Keep favicon and OG image files - they should be committed
+# favicon.ico
+# apple-touch-icon.png
+# og-image.jpg
