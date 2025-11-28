@@ -188,7 +188,7 @@ const temples = [
         location: "Tirumala, Andhra Pradesh",
         deity: "Lord Venkateswara (Balaji)",
         significance: "One of the richest and most visited temples in the world",
-        image: "https://picsum.photos/800/600?random=101",
+        image: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Tirumala_Anand_nilayam09832.jpg",
         description: "The most sacred Vaishnavite temple dedicated to Lord Venkateswara. Millions of devotees visit annually seeking blessings and fulfillment of wishes.",
         features: ["Most Visited", "Rich Temple", "Darshan Available", "Prasadam", "Accommodation"],
         timings: "2:30 AM - 1:30 AM (Next Day)",
