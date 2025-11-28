@@ -342,7 +342,7 @@ const temples = [
         location: "Chidambaram, Tamil Nadu",
         deity: "Lord Nataraja (Shiva as Cosmic Dancer)",
         significance: "One of the Pancha Sabhai Sthalams",
-        image: "https://picsum.photos/800/600?random=112",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Temple_Tank_in_Nataraja_Temple%2C_Chidambaram.jpg",
         description: "Famous temple where Shiva is worshipped as Nataraja, the cosmic dancer. Unique architecture with golden roof.",
         features: ["Nataraja", "Golden Roof", "Architecture", "Darshan"],
         timings: "6:00 AM - 12:00 PM, 4:30 PM - 9:00 PM",
