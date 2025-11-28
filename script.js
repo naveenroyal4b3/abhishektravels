@@ -953,7 +953,7 @@ function displayTemples() {
     templesGrid.innerHTML = sortedTemples.map(temple => `
         <div class="temple-card ${temple.featured ? 'featured-temple' : ''}">
             ${temple.featured ? '<div class="featured-badge"><i class="fas fa-star"></i> Featured</div>' : ''}
-            <img src="${temple.image}" alt="${temple.name}" class="temple-image">
+            <img src="${temple.image}" alt="${temple.name}" class="temple-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600/FF9933/FFFFFF?text=${encodeURIComponent(temple.name)}';">
             <div class="temple-content">
                 <div class="temple-header">
                     <h3>${temple.name}</h3>
