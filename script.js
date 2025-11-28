@@ -244,7 +244,7 @@ const temples = [
         location: "Guruvayur, Kerala",
         deity: "Lord Krishna (Guruvayurappan)",
         significance: "Famous Krishna temple in Kerala",
-        image: "https://picsum.photos/800/600?random=105",
+        image: "https://upload.wikimedia.org/wikipedia/commons/0/04/009392022_Guruvayur_temple%2C_Kerala_004.jpg",
         description: "One of the most important Krishna temples in South India. Known as 'Bhooloka Vaikunta' (Heaven on Earth).",
         features: ["Krishna Temple", "Kerala", "Darshan", "Prasadam"],
         timings: "3:00 AM - 9:30 PM",
