@@ -314,7 +314,7 @@ const temples = [
         location: "Kanchipuram, Tamil Nadu",
         deity: "Multiple (Vishnu Kanchi & Shiva Kanchi)",
         significance: "City of Thousand Temples",
-        image: "https://picsum.photos/800/600?random=110",
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/32/Kailasanathar_Temple._Kanchipuram%2C_TamilNadu.jpg",
         description: "Ancient temple city with numerous sacred temples including Ekambareswarar, Kamakshi Amman, Varadaraja Perumal temples.",
         features: ["Multiple Temples", "Historical", "Architecture", "Darshan"],
         timings: "Varies by temple",
