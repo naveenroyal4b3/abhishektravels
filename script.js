@@ -180,12 +180,7 @@ const destinations = [
 ];
 
 // Temples Data - South India Sacred Temples
-// IMPORTANT: To use your own exact temple images:
-// 1. Upload images to GitHub repo in /images/temples/ folder, OR
-// 2. Use image hosting (Imgur, Cloudinary, etc.), OR  
-// 3. Host on your own server
-// Then replace the 'image' URLs below with your image URLs
-// See HOW_TO_ADD_TEMPLE_IMAGES.md for detailed instructions
+// Temples Data - South India Sacred Temples
 const temples = [
     {
         id: 1,
@@ -193,7 +188,7 @@ const temples = [
         location: "Tirumala, Andhra Pradesh",
         deity: "Lord Venkateswara (Balaji)",
         significance: "One of the richest and most visited temples in the world",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tirumala_Temple.jpg/800px-Tirumala_Temple.jpg",
+        image: "https://picsum.photos/800/600?random=101",
         description: "The most sacred Vaishnavite temple dedicated to Lord Venkateswara. Millions of devotees visit annually seeking blessings and fulfillment of wishes.",
         features: ["Most Visited", "Rich Temple", "Darshan Available", "Prasadam", "Accommodation"],
         timings: "2:30 AM - 1:30 AM (Next Day)",
@@ -207,7 +202,7 @@ const temples = [
         location: "Tiruchanur, Tirupati",
         deity: "Goddess Padmavathi",
         significance: "Consort of Lord Venkateswara",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tirumala_Temple.jpg/800px-Tirumala_Temple.jpg",
+        image: `https://picsum.photos/800/600?random=${temple.id}`,
         description: "Beautiful temple dedicated to Goddess Padmavathi, the divine consort of Lord Venkateswara. Located near Tirupati.",
         features: ["Goddess Temple", "Near Tirupati", "Prasadam", "Peaceful"],
         timings: "6:00 AM - 9:00 PM",
@@ -221,7 +216,7 @@ const temples = [
         location: "Madurai, Tamil Nadu",
         deity: "Goddess Meenakshi & Lord Sundareswarar",
         significance: "One of the most famous temples in Tamil Nadu",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Meenakshi_Temple_Gopuram.jpg/800px-Meenakshi_Temple_Gopuram.jpg",
+        image: "https://picsum.photos/800/600?random=103",
         description: "Magnificent temple complex with stunning architecture. Dedicated to Goddess Meenakshi and Lord Shiva.",
         features: ["Architecture", "Historical", "Darshan", "Prasadam"],
         timings: "5:00 AM - 12:30 PM, 4:00 PM - 9:30 PM",
@@ -235,7 +230,7 @@ const temples = [
         location: "Rameswaram, Tamil Nadu",
         deity: "Lord Ramanathaswamy (Shiva)",
         significance: "One of the 12 Jyotirlinga temples",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ramanathaswamy_Temple.jpg/800px-Ramanathaswamy_Temple.jpg",
+        image: "https://picsum.photos/800/600?random=104",
         description: "Sacred Jyotirlinga temple where Lord Rama worshipped Shiva. Important pilgrimage destination for Hindus.",
         features: ["Jyotirlinga", "Pilgrimage", "Sacred Tanks", "Darshan"],
         timings: "5:00 AM - 1:00 PM, 3:00 PM - 9:00 PM",
@@ -249,7 +244,7 @@ const temples = [
         location: "Guruvayur, Kerala",
         deity: "Lord Krishna (Guruvayurappan)",
         significance: "Famous Krishna temple in Kerala",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tirumala_Temple.jpg/800px-Tirumala_Temple.jpg",
+        image: "https://picsum.photos/800/600?random=105",
         description: "One of the most important Krishna temples in South India. Known as 'Bhooloka Vaikunta' (Heaven on Earth).",
         features: ["Krishna Temple", "Kerala", "Darshan", "Prasadam"],
         timings: "3:00 AM - 9:30 PM",
@@ -263,7 +258,7 @@ const temples = [
         location: "Pathanamthitta, Kerala",
         deity: "Lord Ayyappa",
         significance: "Famous hill shrine temple",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tirumala_Temple.jpg/800px-Tirumala_Temple.jpg",
+        image: "https://picsum.photos/800/600?random=106",
         description: "Sacred hill temple dedicated to Lord Ayyappa. Requires 41 days of penance and pilgrimage during Mandala season.",
         features: ["Hill Temple", "Pilgrimage", "Forest Trek", "Darshan"],
         timings: "Seasonal (Nov - Jan)",
@@ -277,7 +272,7 @@ const temples = [
         location: "Sri Kalahasti, Andhra Pradesh",
         deity: "Lord Kalahasteeswara (Shiva)",
         significance: "One of the Pancha Bhoota Stalam",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tirumala_Temple.jpg/800px-Tirumala_Temple.jpg",
+        image: "https://picsum.photos/800/600?random=107",
         description: "Ancient temple representing Vayu (Air) element. Located near Tirupati, perfect for combined pilgrimage.",
         features: ["Pancha Bhoota", "Near Tirupati", "Darshan", "Rahu-Ketu Puja"],
         timings: "6:00 AM - 9:00 PM",
@@ -291,7 +286,7 @@ const temples = [
         location: "Kanipakam, Andhra Pradesh",
         deity: "Lord Ganesha (Varasiddhi Vinayaka)",
         significance: "Famous Ganesha temple",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tirumala_Temple.jpg/800px-Tirumala_Temple.jpg",
+        image: "https://picsum.photos/800/600?random=108",
         description: "Sacred temple with self-manifested Ganesha idol. The temple tank water is believed to have healing properties.",
         features: ["Ganesha Temple", "Self-Manifested", "Sacred Tank", "Darshan"],
         timings: "4:00 AM - 9:00 PM",
@@ -305,7 +300,7 @@ const temples = [
         location: "Vellore, Tamil Nadu",
         deity: "Goddess Lakshmi",
         significance: "Golden temple with gold-plated structure",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tirumala_Temple.jpg/800px-Tirumala_Temple.jpg",
+        image: "https://picsum.photos/800/600?random=109",
         description: "Magnificent golden temple dedicated to Goddess Lakshmi. Entire structure is gold-plated, creating a stunning visual.",
         features: ["Golden Structure", "Lakshmi Temple", "Modern", "Darshan"],
         timings: "4:00 AM - 8:00 PM",
@@ -319,7 +314,7 @@ const temples = [
         location: "Kanchipuram, Tamil Nadu",
         deity: "Multiple (Vishnu Kanchi & Shiva Kanchi)",
         significance: "City of Thousand Temples",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Meenakshi_Temple_Gopuram.jpg/800px-Meenakshi_Temple_Gopuram.jpg",
+        image: "https://picsum.photos/800/600?random=110",
         description: "Ancient temple city with numerous sacred temples including Ekambareswarar, Kamakshi Amman, Varadaraja Perumal temples.",
         features: ["Multiple Temples", "Historical", "Architecture", "Darshan"],
         timings: "Varies by temple",
@@ -333,7 +328,7 @@ const temples = [
         location: "Mahabalipuram, Tamil Nadu",
         deity: "Lord Shiva & Vishnu",
         significance: "UNESCO World Heritage Site",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ramanathaswamy_Temple.jpg/800px-Ramanathaswamy_Temple.jpg",
+        image: "https://picsum.photos/800/600?random=111",
         description: "Group of 7th-8th century monuments and temples. Famous for Shore Temple, Pancha Rathas, and rock-cut architecture.",
         features: ["UNESCO Site", "Rock Cut", "Historical", "Architecture"],
         timings: "6:00 AM - 6:00 PM",
@@ -347,7 +342,7 @@ const temples = [
         location: "Chidambaram, Tamil Nadu",
         deity: "Lord Nataraja (Shiva as Cosmic Dancer)",
         significance: "One of the Pancha Sabhai Sthalams",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Meenakshi_Temple_Gopuram.jpg/800px-Meenakshi_Temple_Gopuram.jpg",
+        image: "https://picsum.photos/800/600?random=112",
         description: "Famous temple where Shiva is worshipped as Nataraja, the cosmic dancer. Unique architecture with golden roof.",
         features: ["Nataraja", "Golden Roof", "Architecture", "Darshan"],
         timings: "6:00 AM - 12:00 PM, 4:30 PM - 9:00 PM",
