@@ -216,7 +216,7 @@ const temples = [
         location: "Madurai, Tamil Nadu",
         deity: "Goddess Meenakshi & Lord Sundareswarar",
         significance: "One of the most famous temples in Tamil Nadu",
-        image: "https://picsum.photos/800/600?random=103",
+        image: "https://upload.wikimedia.org/wikipedia/commons/g/ga/Galigopuram_of_Meenakshi_Amman_Temple_3.jpg",
         description: "Magnificent temple complex with stunning architecture. Dedicated to Goddess Meenakshi and Lord Shiva.",
         features: ["Architecture", "Historical", "Darshan", "Prasadam"],
         timings: "5:00 AM - 12:30 PM, 4:00 PM - 9:30 PM",
