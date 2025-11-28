@@ -286,7 +286,7 @@ const temples = [
         location: "Kanipakam, Andhra Pradesh",
         deity: "Lord Ganesha (Varasiddhi Vinayaka)",
         significance: "Famous Ganesha temple",
-        image: "https://picsum.photos/800/600?random=108",
+        image: "https://upload.wikimedia.org/wikipedia/commons/7/72/Galipgopuram_of_Kanipakam_temple_%28May_2019%29_10.jpg",
         description: "Sacred temple with self-manifested Ganesha idol. The temple tank water is believed to have healing properties.",
         features: ["Ganesha Temple", "Self-Manifested", "Sacred Tank", "Darshan"],
         timings: "4:00 AM - 9:00 PM",
