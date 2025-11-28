@@ -202,7 +202,7 @@ const temples = [
         location: "Tiruchanur, Tirupati",
         deity: "Goddess Padmavathi",
         significance: "Consort of Lord Venkateswara",
-        image: "https://picsum.photos/800/600?random=102",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Padmavathi_Ammavari_Temple.JPG",
         description: "Beautiful temple dedicated to Goddess Padmavathi, the divine consort of Lord Venkateswara. Located near Tirupati.",
         features: ["Goddess Temple", "Near Tirupati", "Prasadam", "Peaceful"],
         timings: "6:00 AM - 9:00 PM",
