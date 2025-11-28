@@ -202,7 +202,7 @@ const temples = [
         location: "Tiruchanur, Tirupati",
         deity: "Goddess Padmavathi",
         significance: "Consort of Lord Venkateswara",
-        image: `https://picsum.photos/800/600?random=${temple.id}`,
+        image: "https://picsum.photos/800/600?random=102",
         description: "Beautiful temple dedicated to Goddess Padmavathi, the divine consort of Lord Venkateswara. Located near Tirupati.",
         features: ["Goddess Temple", "Near Tirupati", "Prasadam", "Peaceful"],
         timings: "6:00 AM - 9:00 PM",
@@ -954,7 +954,7 @@ function displayTemples() {
     templesGrid.innerHTML = sortedTemples.map(temple => `
         <div class="temple-card ${temple.featured ? 'featured-temple' : ''}">
             ${temple.featured ? '<div class="featured-badge"><i class="fas fa-star"></i> Featured</div>' : ''}
-            <img src="${temple.image}" alt="${temple.name}" class="temple-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600/FF9933/FFFFFF?text=${encodeURIComponent(temple.name)}';">
+            <img src="${temple.image || `https://picsum.photos/800/600?random=${temple.id + 100}`}" alt="${temple.name}" class="temple-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600/FF9933/FFFFFF?text=${encodeURIComponent(temple.name)}';">
             <div class="temple-content">
                 <div class="temple-header">
                     <h3>${temple.name}</h3>
