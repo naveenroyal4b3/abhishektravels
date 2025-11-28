@@ -180,6 +180,12 @@ const destinations = [
 ];
 
 // Temples Data - South India Sacred Temples
+// IMPORTANT: To use your own exact temple images:
+// 1. Upload images to GitHub repo in /images/temples/ folder, OR
+// 2. Use image hosting (Imgur, Cloudinary, etc.), OR  
+// 3. Host on your own server
+// Then replace the 'image' URLs below with your image URLs
+// See HOW_TO_ADD_TEMPLE_IMAGES.md for detailed instructions
 const temples = [
     {
         id: 1,
