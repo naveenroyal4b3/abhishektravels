@@ -1137,6 +1137,19 @@ function openBookingModal(roomId) {
     }
 }
 
+// Generic booking modal opener (for sticky button)
+function openGenericBookingModal() {
+    const bookingModal = document.getElementById('bookingModal');
+    if (bookingModal) {
+        // Clear any previous service selection
+        const serviceNameInput = document.getElementById('modalServiceName');
+        if (serviceNameInput) {
+            serviceNameInput.value = 'General Booking Inquiry';
+        }
+        bookingModal.style.display = 'block';
+    }
+}
+
 closeModal.addEventListener('click', () => {
     bookingModal.style.display = 'none';
 });
