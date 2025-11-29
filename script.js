@@ -957,7 +957,6 @@ function displayTemples() {
             <img src="${temple.image || `https://picsum.photos/400/300?random=${temple.id + 100}`}" 
                  alt="${temple.name} - ${temple.location} - ${temple.deity}" 
                  class="temple-image" 
-                
                  decoding="async"
                  onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300/FF9933/FFFFFF?text=${encodeURIComponent(temple.name)}';">
             <div class="temple-content">
@@ -1009,7 +1008,6 @@ function displayDestinations(state = 'all') {
             <img src="${dest.image}" 
                  alt="${dest.name}, ${dest.state.replace('-', ' ')} - ${dest.description.substring(0, 60)}" 
                  class="destination-image"
-                
                  decoding="async">
             <div class="destination-content">
                 <span class="destination-state">${dest.state.replace('-', ' ').toUpperCase()}</span>
@@ -1073,7 +1071,6 @@ function displayRooms(filterLocation = '', filterCategory = 'all') {
             <img src="${room.image}" 
                  alt="${room.name} - ${room.type} in ${room.location} - ₹${room.price}/night" 
                  class="room-image"
-                
                  decoding="async"
                 >
             <div class="room-content">
@@ -1204,7 +1201,6 @@ function displayPackages() {
             <img src="${pkg.image}" 
                  alt="${pkg.title} - ${pkg.duration} tour package - ${pkg.code}" 
                  class="package-image"
-                
                  decoding="async"
                 >
             <div class="package-content">
@@ -1246,7 +1242,6 @@ function displayVehicles() {
             <img src="${vehicle.image}" 
                  alt="${vehicle.name} - ${vehicle.type} rental for ${vehicle.capacity} passengers" 
                  class="vehicle-image"
-                
                  decoding="async"
                 >
             <div class="vehicle-content">
@@ -1286,7 +1281,6 @@ function displayBikes() {
             <img src="${bike.image}" 
                  alt="${bike.name} - ${bike.type} rental in Tirupati" 
                  class="bike-image"
-                
                  decoding="async"
                 >
             <div class="bike-content">
