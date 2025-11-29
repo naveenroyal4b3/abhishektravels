@@ -7,6 +7,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     
+    <!-- Performance & Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://images.pexels.com">
+    <link rel="dns-prefetch" href="https://upload.wikimedia.org">
+    
     <!-- Primary Meta Tags -->
     <title>Abhishek Travels - South India Travel & Temple Tours | Tirupati Packages</title>
     <meta name="title" content="Abhishek Travels - South India Travel & Temple Tours | Tirupati Packages">
@@ -184,6 +192,14 @@
     }
     </script>
     
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YR8S0ZGFJG"></script>
     <script>
@@ -193,40 +209,50 @@
       gtag('config', 'G-YR8S0ZGFJG');
     </script>
     
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Skip to Content Link (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <div class="logo">
-                    <i class="fas fa-plane"></i>
+                <div class="logo" aria-label="Abhishek Travels Home">
+                    <i class="fas fa-plane" aria-hidden="true"></i>
                     <span>Abhishek Travels</span>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#temples" class="nav-link">Temples</a></li>
-                    <li><a href="#packages" class="nav-link">Packages</a></li>
-                    <li><a href="#car-rentals" class="nav-link">Car Rentals</a></li>
-                    <li><a href="#bike-rentals" class="nav-link">Bike & Scooter</a></li>
-                    <li><a href="#destinations" class="nav-link">Destinations</a></li>
-                    <li><a href="#rooms" class="nav-link">Rooms</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#home" class="nav-link active" aria-label="Go to home section">Home</a></li>
+                    <li><a href="#temples" class="nav-link" aria-label="View temples section">Temples</a></li>
+                    <li><a href="#packages" class="nav-link" aria-label="View tour packages">Packages</a></li>
+                    <li><a href="#car-rentals" class="nav-link" aria-label="View car rentals">Car Rentals</a></li>
+                    <li><a href="#bike-rentals" class="nav-link" aria-label="View bike and scooter rentals">Bike & Scooter</a></li>
+                    <li><a href="#destinations" class="nav-link" aria-label="View destinations">Destinations</a></li>
+                    <li><a href="#rooms" class="nav-link" aria-label="View accommodations">Rooms</a></li>
+                    <li><a href="#about" class="nav-link" aria-label="Learn about us">About</a></li>
+                    <li><a href="#contact" class="nav-link" aria-label="Contact us">Contact</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" role="banner">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Welcome to <strong>Abhishek Travels</strong></h1>
@@ -294,6 +320,9 @@
         </div>
     </section>
 
+    <!-- Main Content -->
+    <main id="main-content">
+    
     <!-- Temples Section -->
     <section id="temples" class="temples">
         <div class="container">
@@ -551,8 +580,20 @@
         </div>
     </section>
 
+    </main>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919912325325?text=Hi, I'm interested in Abhishek Travels services" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+    
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">

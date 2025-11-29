@@ -954,7 +954,12 @@ function displayTemples() {
     templesGrid.innerHTML = sortedTemples.map(temple => `
         <div class="temple-card ${temple.featured ? 'featured-temple' : ''}">
             ${temple.featured ? '<div class="featured-badge"><i class="fas fa-star"></i> Featured</div>' : ''}
-            <img src="${temple.image || `https://picsum.photos/800/600?random=${temple.id + 100}`}" alt="${temple.name}" class="temple-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600/FF9933/FFFFFF?text=${encodeURIComponent(temple.name)}';">
+            <img src="${temple.image || `https://picsum.photos/800/600?random=${temple.id + 100}`}" 
+                 alt="${temple.name} - ${temple.location} - ${temple.deity}" 
+                 class="temple-image" 
+                 loading="lazy"
+                 decoding="async"
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600/FF9933/FFFFFF?text=${encodeURIComponent(temple.name)}';">
             <div class="temple-content">
                 <div class="temple-header">
                     <h3>${temple.name}</h3>
@@ -1001,7 +1006,11 @@ function displayDestinations(state = 'all') {
 
     destinationsGrid.innerHTML = filteredDestinations.map(dest => `
         <div class="destination-card">
-            <img src="${dest.image}" alt="${dest.name}" class="destination-image">
+            <img src="${dest.image}" 
+                 alt="${dest.name}, ${dest.state.replace('-', ' ')} - ${dest.description.substring(0, 60)}" 
+                 class="destination-image"
+                 loading="lazy"
+                 decoding="async">
             <div class="destination-content">
                 <span class="destination-state">${dest.state.replace('-', ' ').toUpperCase()}</span>
                 <h3>${dest.name}</h3>
@@ -1061,7 +1070,11 @@ function displayRooms(filterLocation = '', filterCategory = 'all') {
         <div class="room-card">
             <div class="accommodation-type-badge ${room.official ? 'ttd-official' : ''}">${room.type}${room.official ? ' <i class="fas fa-check-circle"></i>' : ''}</div>
             ${room.official ? '<div class="ttd-badge">TTD Official</div>' : ''}
-            <img src="${room.image}" alt="${room.name}" class="room-image">
+            <img src="${room.image}" 
+                 alt="${room.name} - ${room.type} in ${room.location} - ₹${room.price}/night" 
+                 class="room-image"
+                 loading="lazy"
+                 decoding="async">
             <div class="room-content">
                 <div class="room-header">
                     <div>
@@ -1187,7 +1200,11 @@ function displayPackages() {
     
     packagesGrid.innerHTML = tourPackages.map(pkg => `
         <div class="package-card">
-            <img src="${pkg.image}" alt="${pkg.title}" class="package-image">
+            <img src="${pkg.image}" 
+                 alt="${pkg.title} - ${pkg.duration} tour package - ${pkg.code}" 
+                 class="package-image"
+                 loading="lazy"
+                 decoding="async">
             <div class="package-content">
                 <div class="package-header">
                     <span class="package-code">Package Code: <strong>${pkg.code}</strong></span>
@@ -1224,7 +1241,11 @@ function displayVehicles() {
     
     vehiclesGrid.innerHTML = vehicles.map(vehicle => `
         <div class="vehicle-card">
-            <img src="${vehicle.image}" alt="${vehicle.name}" class="vehicle-image">
+            <img src="${vehicle.image}" 
+                 alt="${vehicle.name} - ${vehicle.type} rental for ${vehicle.capacity} passengers" 
+                 class="vehicle-image"
+                 loading="lazy"
+                 decoding="async">
             <div class="vehicle-content">
                 <h3>${vehicle.name}</h3>
                 <div class="vehicle-pricing">
@@ -1259,7 +1280,11 @@ function displayBikes() {
     bikesGrid.innerHTML = bikes.map(bike => `
         <div class="bike-card">
             <div class="bike-type-badge">${bike.type}</div>
-            <img src="${bike.image}" alt="${bike.name}" class="bike-image">
+            <img src="${bike.image}" 
+                 alt="${bike.name} - ${bike.type} rental in Tirupati" 
+                 class="bike-image"
+                 loading="lazy"
+                 decoding="async">
             <div class="bike-content">
                 <h3>${bike.name}</h3>
                 <p class="bike-description">${bike.description}</p>
@@ -1446,6 +1471,34 @@ function initMobileOptimizations() {
     }
 }
 
+// Lazy Loading Images Handler
+function initLazyLoading() {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.addEventListener('load', () => {
+                        img.classList.add('loaded');
+                    });
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        lazyImages.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        lazyImages.forEach(img => {
+            img.addEventListener('load', () => {
+                img.classList.add('loaded');
+            });
+        });
+    }
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
@@ -1458,6 +1511,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displayTestimonials();
     animateStatistics();
     initMobileOptimizations();
+    initLazyLoading();
     
     // Set footer links
     document.querySelectorAll('.footer-section a[data-state]').forEach(link => {
