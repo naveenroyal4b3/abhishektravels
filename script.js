@@ -954,14 +954,12 @@ function displayTemples() {
     templesGrid.innerHTML = sortedTemples.map(temple => `
         <div class="temple-card ${temple.featured ? 'featured-temple' : ''}">
             ${temple.featured ? '<div class="featured-badge"><i class="fas fa-star"></i> Featured</div>' : ''}
-            <img src="${temple.image || `https://picsum.photos/400/300?random=${temple.id + 100}`}" 
+            <img src="${temple.image || `https://picsum.photos/800/600?random=${temple.id + 100}`}" 
                  alt="${temple.name} - ${temple.location} - ${temple.deity}" 
                  class="temple-image" 
                  loading="lazy"
                  decoding="async"
-                 width="400"
-                 height="300"
-                 onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300/FF9933/FFFFFF?text=${encodeURIComponent(temple.name)}';">
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600/FF9933/FFFFFF?text=${encodeURIComponent(temple.name)}';">
             <div class="temple-content">
                 <div class="temple-header">
                     <h3>${temple.name}</h3>
@@ -1008,13 +1006,11 @@ function displayDestinations(state = 'all') {
 
     destinationsGrid.innerHTML = filteredDestinations.map(dest => `
         <div class="destination-card">
-            <img src="${dest.image.replace('w=800', 'w=400')}" 
+            <img src="${dest.image}" 
                  alt="${dest.name}, ${dest.state.replace('-', ' ')} - ${dest.description.substring(0, 60)}" 
                  class="destination-image"
                  loading="lazy"
-                 decoding="async"
-                 width="400"
-                 height="300">
+                 decoding="async">
             <div class="destination-content">
                 <span class="destination-state">${dest.state.replace('-', ' ').toUpperCase()}</span>
                 <h3>${dest.name}</h3>
@@ -1074,13 +1070,11 @@ function displayRooms(filterLocation = '', filterCategory = 'all') {
         <div class="room-card">
             <div class="accommodation-type-badge ${room.official ? 'ttd-official' : ''}">${room.type}${room.official ? ' <i class="fas fa-check-circle"></i>' : ''}</div>
             ${room.official ? '<div class="ttd-badge">TTD Official</div>' : ''}
-            <img src="${room.image.replace('w=800', 'w=400')}" 
+            <img src="${room.image}" 
                  alt="${room.name} - ${room.type} in ${room.location} - ₹${room.price}/night" 
                  class="room-image"
                  loading="lazy"
-                 decoding="async"
-                 width="400"
-                 height="300">
+                 decoding="async">
             <div class="room-content">
                 <div class="room-header">
                     <div>
@@ -1206,13 +1200,11 @@ function displayPackages() {
     
     packagesGrid.innerHTML = tourPackages.map(pkg => `
         <div class="package-card">
-            <img src="${pkg.image.replace('w=800', 'w=400')}" 
+            <img src="${pkg.image}" 
                  alt="${pkg.title} - ${pkg.duration} tour package - ${pkg.code}" 
                  class="package-image"
                  loading="lazy"
-                 decoding="async"
-                 width="400"
-                 height="300">
+                 decoding="async">
             <div class="package-content">
                 <div class="package-header">
                     <span class="package-code">Package Code: <strong>${pkg.code}</strong></span>
@@ -1249,13 +1241,11 @@ function displayVehicles() {
     
     vehiclesGrid.innerHTML = vehicles.map(vehicle => `
         <div class="vehicle-card">
-            <img src="${vehicle.image.replace('w=800', 'w=400')}" 
+            <img src="${vehicle.image}" 
                  alt="${vehicle.name} - ${vehicle.type} rental for ${vehicle.capacity} passengers" 
                  class="vehicle-image"
                  loading="lazy"
-                 decoding="async"
-                 width="400"
-                 height="300">
+                 decoding="async">
             <div class="vehicle-content">
                 <h3>${vehicle.name}</h3>
                 <div class="vehicle-pricing">
@@ -1290,13 +1280,11 @@ function displayBikes() {
     bikesGrid.innerHTML = bikes.map(bike => `
         <div class="bike-card">
             <div class="bike-type-badge">${bike.type}</div>
-            <img src="${bike.image.replace('w=800', 'w=400').replace('h=600', 'h=300')}" 
+            <img src="${bike.image}" 
                  alt="${bike.name} - ${bike.type} rental in Tirupati" 
                  class="bike-image"
                  loading="lazy"
-                 decoding="async"
-                 width="400"
-                 height="300">
+                 decoding="async">
             <div class="bike-content">
                 <h3>${bike.name}</h3>
                 <p class="bike-description">${bike.description}</p>
@@ -1483,7 +1471,7 @@ function initMobileOptimizations() {
     }
 }
 
-// Lazy Loading Images Handler with Performance Optimization
+// Lazy Loading Images Handler
 function initLazyLoading() {
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     
@@ -1492,35 +1480,12 @@ function initLazyLoading() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
-                    
-                    // Add loading state
-                    img.style.opacity = '0.5';
-                    img.style.transition = 'opacity 0.3s ease';
-                    
-                    // Handle image load
-                    const handleLoad = () => {
+                    img.addEventListener('load', () => {
                         img.classList.add('loaded');
-                        img.style.opacity = '1';
-                    };
-                    
-                    // Handle image error
-                    const handleError = () => {
-                        img.style.opacity = '1';
-                        img.style.background = 'linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)';
-                    };
-                    
-                    if (img.complete) {
-                        handleLoad();
-                    } else {
-                        img.addEventListener('load', handleLoad, { once: true });
-                        img.addEventListener('error', handleError, { once: true });
-                    }
-                    
+                    });
                     observer.unobserve(img);
                 }
             });
-        }, {
-            rootMargin: '50px' // Start loading 50px before image enters viewport
         });
         
         lazyImages.forEach(img => imageObserver.observe(img));
@@ -1529,10 +1494,6 @@ function initLazyLoading() {
         lazyImages.forEach(img => {
             img.addEventListener('load', () => {
                 img.classList.add('loaded');
-                img.style.opacity = '1';
-            });
-            img.addEventListener('error', () => {
-                img.style.opacity = '1';
             });
         });
     }
