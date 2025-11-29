@@ -959,7 +959,6 @@ function displayTemples() {
                  class="temple-image" 
                  loading="lazy"
                  decoding="async"
-                 fetchpriority="low"
                  onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300/FF9933/FFFFFF?text=${encodeURIComponent(temple.name)}';">
             <div class="temple-content">
                 <div class="temple-header">
