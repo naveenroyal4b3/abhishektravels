@@ -2151,3 +2151,275 @@ img[loading="lazy"].loaded {
     }
 }
 
+/* Trust Badges Section */
+.trust-badges {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem 0;
+    margin-top: -1px;
+}
+
+.trust-badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.trust-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-align: center;
+}
+
+.trust-badge i {
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.trust-badge span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Special Offers Banner */
+.special-offers-banner {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 2rem 0;
+    margin-top: -1px;
+}
+
+.offer-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.offer-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+.offer-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.offer-content h3 {
+    color: white;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.offer-content p {
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+}
+
+.offer-btn {
+    background: white;
+    color: #f5576c;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.offer-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.faq {
+    background: var(--light-color);
+    padding: 5rem 0;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-question h4 {
+    margin: 0;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    margin-left: 1rem;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Google Reviews Link */
+.google-reviews-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.google-reviews-link:hover {
+    color: var(--dark-color);
+}
+
+.google-reviews-link i {
+    font-size: 1.2rem;
+}
+
+/* Sticky Booking Buttons */
+.sticky-booking-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+}
+
+.sticky-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.sticky-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sticky-call {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.sticky-whatsapp {
+    background: #25d366;
+}
+
+.sticky-book {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.sticky-btn i {
+    font-size: 1.1rem;
+}
+
+/* Responsive: Sticky Buttons */
+@media (max-width: 768px) {
+    .sticky-booking-btn {
+        bottom: 80px;
+        right: 15px;
+    }
+    
+    .sticky-btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .sticky-btn span {
+        display: none;
+    }
+    
+    .sticky-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .trust-badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .offer-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .offer-btn {
+        width: 100%;
+    }
+    
+    .faq-question {
+        padding: 1rem;
+    }
+    
+    .faq-question h4 {
+        font-size: 1rem;
+    }
+}
+

@@ -1150,6 +1150,7 @@ window.addEventListener('click', (e) => {
 // Booking Form
 bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    trackConversion('submit', 'Form', 'Booking Form', 1);
     const name = document.getElementById('bookingName').value;
     const email = document.getElementById('bookingEmail').value;
     const phone = document.getElementById('bookingPhone').value;
@@ -1180,6 +1181,7 @@ function updatePrice() {
 // Contact Form
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    trackConversion('submit', 'Form', 'Contact Form', 1);
     alert('Thank you for your message! We will get back to you soon.');
     contactForm.reset();
 });
@@ -1411,6 +1413,7 @@ if (bookingForm) {
     bookingForm.onsubmit = null;
     bookingForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        trackConversion('submit', 'Form', 'Booking Form', 1);
         const name = document.getElementById('bookingName').value;
         const email = document.getElementById('bookingEmail').value;
         const phone = document.getElementById('bookingPhone').value;
@@ -1472,6 +1475,106 @@ function initMobileOptimizations() {
 // Lazy loading is handled natively by browser with attribute
 // No custom implementation needed - browser handles it efficiently
 
+// FAQ Accordion Functionality
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                    // Track FAQ interaction
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'faq_open', {
+                            'event_category': 'Engagement',
+                            'event_label': question.querySelector('h4')?.textContent || 'FAQ Question'
+                        });
+                    }
+                }
+            });
+        }
+    });
+}
+
+// Conversion Tracking
+function trackConversion(action, category, label, value) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', action, {
+            'event_category': category,
+            'event_label': label,
+            'value': value
+        });
+    }
+}
+
+// Enhanced Form Submission Tracking
+function enhanceFormTracking() {
+    // Track phone clicks
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', () => {
+            trackConversion('click', 'Contact', 'Phone Call', 1);
+        });
+    });
+    
+    // Track WhatsApp clicks
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        link.addEventListener('click', () => {
+            trackConversion('click', 'Contact', 'WhatsApp', 1);
+        });
+    });
+    
+    // Track package/book button clicks
+    document.querySelectorAll('.btn-primary, .book-btn').forEach(btn => {
+        if (!btn.hasAttribute('data-tracked')) {
+            btn.setAttribute('data-tracked', 'true');
+            btn.addEventListener('click', () => {
+                trackConversion('click', 'CTA', 'Book Now Button', 1);
+            });
+        }
+    });
+    
+    // Track scroll depth (important for engagement)
+    let maxScroll = 0;
+    window.addEventListener('scroll', () => {
+        const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+        if (scrollPercent > maxScroll && scrollPercent % 25 === 0) {
+            maxScroll = scrollPercent;
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'scroll', {
+                    'event_category': 'Engagement',
+                    'event_label': `${scrollPercent}% scroll depth`,
+                    'value': scrollPercent
+                });
+            }
+        }
+    });
+    
+    // Track time on page
+    let timeOnPage = 0;
+    setInterval(() => {
+        timeOnPage += 30;
+        if (timeOnPage === 30 || timeOnPage === 60 || timeOnPage === 120) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'time_on_page', {
+                    'event_category': 'Engagement',
+                    'event_label': `${timeOnPage} seconds`,
+                    'value': timeOnPage
+                });
+            }
+        }
+    }, 30000);
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
@@ -1484,6 +1587,8 @@ document.addEventListener('DOMContentLoaded', () => {
     displayTestimonials();
     animateStatistics();
     initMobileOptimizations();
+    initFAQ();
+    enhanceFormTracking();
     
     // Set footer links
     document.querySelectorAll('.footer-section a[data-state]').forEach(link => {
