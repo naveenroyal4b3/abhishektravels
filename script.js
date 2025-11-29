@@ -1011,7 +1011,7 @@ function displayDestinations(state = 'all') {
                  class="destination-image"
                  loading="lazy"
                  decoding="async"
-                 fetchpriority="low">
+                >
             <div class="destination-content">
                 <span class="destination-state">${dest.state.replace('-', ' ').toUpperCase()}</span>
                 <h3>${dest.name}</h3>
@@ -1076,7 +1076,7 @@ function displayRooms(filterLocation = '', filterCategory = 'all') {
                  class="room-image"
                  loading="lazy"
                  decoding="async"
-                 fetchpriority="low">
+                >
             <div class="room-content">
                 <div class="room-header">
                     <div>
@@ -1207,7 +1207,7 @@ function displayPackages() {
                  class="package-image"
                  loading="lazy"
                  decoding="async"
-                 fetchpriority="low">
+                >
             <div class="package-content">
                 <div class="package-header">
                     <span class="package-code">Package Code: <strong>${pkg.code}</strong></span>
@@ -1249,7 +1249,7 @@ function displayVehicles() {
                  class="vehicle-image"
                  loading="lazy"
                  decoding="async"
-                 fetchpriority="low">
+                >
             <div class="vehicle-content">
                 <h3>${vehicle.name}</h3>
                 <div class="vehicle-pricing">
@@ -1289,7 +1289,7 @@ function displayBikes() {
                  class="bike-image"
                  loading="lazy"
                  decoding="async"
-                 fetchpriority="low">
+                >
             <div class="bike-content">
                 <h3>${bike.name}</h3>
                 <p class="bike-description">${bike.description}</p>
