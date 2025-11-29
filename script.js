@@ -1010,8 +1010,7 @@ function displayDestinations(state = 'all') {
                  alt="${dest.name}, ${dest.state.replace('-', ' ')} - ${dest.description.substring(0, 60)}" 
                  class="destination-image"
                  loading="lazy"
-                 decoding="async"
-                >
+                 decoding="async">
             <div class="destination-content">
                 <span class="destination-state">${dest.state.replace('-', ' ').toUpperCase()}</span>
                 <h3>${dest.name}</h3>
