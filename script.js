@@ -1477,33 +1477,8 @@ function initMobileOptimizations() {
     }
 }
 
-// Lazy Loading Images Handler
-function initLazyLoading() {
-    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-    
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.addEventListener('load', () => {
-                        img.classList.add('loaded');
-                    });
-                    observer.unobserve(img);
-                }
-            });
-        });
-        
-        lazyImages.forEach(img => imageObserver.observe(img));
-    } else {
-        // Fallback for browsers without IntersectionObserver
-        lazyImages.forEach(img => {
-            img.addEventListener('load', () => {
-                img.classList.add('loaded');
-            });
-        });
-    }
-}
+// Lazy loading is handled natively by browser with loading="lazy" attribute
+// No custom implementation needed - browser handles it efficiently
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -1517,7 +1492,6 @@ document.addEventListener('DOMContentLoaded', () => {
     displayTestimonials();
     animateStatistics();
     initMobileOptimizations();
-    initLazyLoading();
     
     // Set footer links
     document.querySelectorAll('.footer-section a[data-state]').forEach(link => {
