@@ -1530,6 +1530,40 @@ function trackConversion(action, category, label, value) {
     }
 }
 
+// Call Tracking - Enhanced for Google Ads
+function trackPhoneCall(source) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'phone_call', {
+            'event_category': 'Contact',
+            'event_label': source || 'Phone Call',
+            'value': 1
+        });
+        // For Google Ads conversion tracking
+        gtag('event', 'conversion', {
+            'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL', // Replace with your conversion ID
+            'event_category': 'Contact',
+            'event_label': source || 'Phone Call'
+        });
+    }
+}
+
+// WhatsApp Click Tracking - Enhanced for Google Ads
+function trackWhatsAppClick(source) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'whatsapp_click', {
+            'event_category': 'Contact',
+            'event_label': source || 'WhatsApp Click',
+            'value': 1
+        });
+        // For Google Ads conversion tracking
+        gtag('event', 'conversion', {
+            'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL', // Replace with your conversion ID
+            'event_category': 'Contact',
+            'event_label': source || 'WhatsApp Click'
+        });
+    }
+}
+
 // Enhanced Form Submission Tracking
 function enhanceFormTracking() {
     // Track phone clicks
