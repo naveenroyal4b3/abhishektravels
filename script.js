@@ -1191,11 +1191,39 @@ function updatePrice() {
     }
 }
 
-// Contact Form
+// Contact Form - Redirect to WhatsApp
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    
+    const name = document.getElementById('contactName')?.value;
+    const email = document.getElementById('contactEmail')?.value;
+    const phone = document.getElementById('contactPhone')?.value;
+    const message = document.getElementById('contactMessage')?.value;
+    
+    if (!name || !email || !phone || !message) {
+        alert('Please fill all fields');
+        return;
+    }
+    
+    // Track conversion
     trackConversion('submit', 'Form', 'Contact Form', 1);
-    alert('Thank you for your message! We will get back to you soon.');
+    
+    // Create WhatsApp message
+    const whatsappMessage = `Hi, I want to contact Abhishek Travels:
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Message: ${message}`;
+    
+    // Open WhatsApp
+    const whatsappUrl = `https://wa.me/919912325325?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+    
+    // Show confirmation
+    alert(`Thank you ${name}! We've opened WhatsApp for you. Please send the message to contact us.`);
+    
+    // Reset form
     contactForm.reset();
 });
 
