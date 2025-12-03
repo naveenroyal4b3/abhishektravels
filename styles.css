@@ -2795,19 +2795,29 @@ img[loading="lazy"].loaded {
 }
 
 .quick-booking-form-inner input,
-.quick-booking-form-inner select {
+.quick-booking-form-inner select,
+.quick-booking-form-inner textarea {
     padding: 0.7rem;
     border: 2px solid var(--border-color);
     border-radius: 8px;
     font-size: 0.95rem;
     transition: border-color 0.3s ease;
+    font-family: inherit;
+    width: 100%;
+}
+
+.quick-booking-form-inner textarea {
+    resize: vertical;
+    min-height: 80px;
 }
 
 .quick-booking-form-inner input:focus,
-.quick-booking-form-inner select:focus {
+.quick-booking-form-inner select:focus,
+.quick-booking-form-inner textarea:focus {
     outline: none;
     border-color: var(--primary-color);
 }
+
 
 .quick-price-display {
     background: var(--light-color);

@@ -1714,10 +1714,30 @@ function initQuickBookingForm() {
         quickPriceDisplay.style.display = 'block';
     }
     
+    // Show/hide notes field based on vehicle selection
+    const quickNotesGroup = document.getElementById('quickNotesGroup');
+    const quickNotes = document.getElementById('quickNotes');
+    
+    function toggleNotesField() {
+        if (quickVehicle?.value === 'other') {
+            quickNotesGroup.style.display = 'block';
+            quickNotes.setAttribute('required', 'required');
+        } else {
+            quickNotesGroup.style.display = 'none';
+            quickNotes.removeAttribute('required');
+            quickNotes.value = '';
+        }
+    }
+    
     // Add event listeners for price calculation
     if (quickPickup) quickPickup.addEventListener('input', calculateQuickPrice);
     if (quickDrop) quickDrop.addEventListener('input', calculateQuickPrice);
-    if (quickVehicle) quickVehicle.addEventListener('change', calculateQuickPrice);
+    if (quickVehicle) {
+        quickVehicle.addEventListener('change', () => {
+            calculateQuickPrice();
+            toggleNotesField();
+        });
+    }
     
     // Form submission
     quickBookingForm.addEventListener('submit', (e) => {
@@ -1729,9 +1749,15 @@ function initQuickBookingForm() {
         const drop = quickDrop?.value;
         const date = quickDate?.value;
         const vehicle = quickVehicle?.value;
+        const notes = quickNotes?.value || '';
         
         if (!name || !phone || !pickup || !drop || !date || !vehicle) {
-            alert('Please fill all fields');
+            alert('Please fill all required fields');
+            return;
+        }
+        
+        if (vehicle === 'other' && !notes.trim()) {
+            alert('Please specify the vehicle type or requirements in the notes field');
             return;
         }
         
@@ -1744,15 +1770,23 @@ function initQuickBookingForm() {
             });
         }
         
-        // Create WhatsApp message
-        const message = `Hi, I want to book Tirupati cab service:
+        // Get vehicle display name
+        const vehicleSelect = document.getElementById('quickVehicle');
+        const vehicleDisplayName = vehicleSelect.options[vehicleSelect.selectedIndex].text;
         
+        // Create WhatsApp message
+        let message = `Hi, I want to book Tirupati cab service:
+
 Name: ${name}
 Phone: ${phone}
 Pickup: ${pickup}
 Drop: ${drop}
 Date: ${date}
-Vehicle: ${vehicle}`;
+Vehicle: ${vehicleDisplayName}`;
+        
+        if (notes.trim()) {
+            message += `\nNotes: ${notes}`;
+        }
         
         const whatsappUrl = `https://wa.me/919912325325?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
@@ -1763,6 +1797,8 @@ Vehicle: ${vehicle}`;
         // Reset form
         quickBookingForm.reset();
         quickPriceDisplay.style.display = 'none';
+        quickNotesGroup.style.display = 'none';
+        quickNotes.removeAttribute('required');
     });
 }
 
