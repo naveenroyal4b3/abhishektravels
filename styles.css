@@ -145,12 +145,21 @@ html {
     background-blend-mode: overlay;
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     color: white;
-    padding: 100px 0 120px;
+    padding: 120px 0 80px;
+}
+
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .hero-overlay {
@@ -165,8 +174,7 @@ html {
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 800px;
-    padding: 0 20px;
+    text-align: left;
     animation: fadeInUp 1s ease;
 }
 
@@ -200,7 +208,7 @@ html {
 .hero-trust-badges {
     display: flex;
     gap: 1.5rem;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-top: 2rem;
 }
@@ -241,8 +249,9 @@ html {
 .hero-buttons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-bottom: 1.5rem;
 }
 
 .scroll-indicator {
@@ -2709,9 +2718,7 @@ img[loading="lazy"].loaded {
 /* Hero Booking Form */
 .hero-booking-form {
     position: relative;
-    margin-top: -80px;
     z-index: 10;
-    padding: 0 1rem;
 }
 
 .quick-booking-card {
@@ -2719,8 +2726,8 @@ img[loading="lazy"].loaded {
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    max-width: 900px;
-    margin: 0 auto;
+    position: sticky;
+    top: 100px;
 }
 
 .quick-booking-card h3 {

@@ -597,80 +597,84 @@
     <!-- Hero Section -->
     <section id="home" class="hero" role="banner">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Tirupati Cab Service | <span class="highlight">Call Now</span></h1>
-            <p class="hero-subtitle">Licensed Travel Agency • 15+ Years Experience • 5000+ Happy Customers</p>
-            <p class="hero-description">Book your Tirumala Tirupati temple visit, car rental, or accommodation. Starting from ₹600/day. Instant booking available!</p>
-            <div class="hero-buttons">
-                <a href="tel:+919912325325" class="btn btn-primary btn-large" onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_call', {'event_category': 'Conversion', 'event_label': 'Hero Call Button', 'value': 1});">
-                    <i class="fas fa-phone"></i> Call Now: +91 99123 25325
-                </a>
-                <a href="https://wa.me/919912325325?text=Hi, I need Tirupati cab service. Please help me book." target="_blank" class="btn btn-secondary btn-large" onclick="if(typeof gtag !== 'undefined') gtag('event', 'whatsapp_click', {'event_category': 'Conversion', 'event_label': 'Hero WhatsApp Button', 'value': 1});">
-                    <i class="fab fa-whatsapp"></i> Book on WhatsApp
-                </a>
-                <a href="#packages" class="btn btn-outline btn-large">
-                    <i class="fas fa-calendar-check"></i> View Packages
-                </a>
-            </div>
-            <div class="hero-trust-badges">
-                <span class="trust-badge-item"><i class="fas fa-shield-alt"></i> Licensed Agency</span>
-                <span class="trust-badge-item"><i class="fas fa-star"></i> 4.9/5 Rating</span>
-                <span class="trust-badge-item"><i class="fas fa-users"></i> 5000+ Customers</span>
-                <span class="trust-badge-item"><i class="fas fa-clock"></i> 24/7 Support</span>
-            </div>
-        </div>
-        <!-- Quick Booking Form -->
-        <div class="hero-booking-form">
-            <div class="container">
-                <div class="quick-booking-card">
-                    <h3><i class="fas fa-calendar-check"></i> Quick Book Your Tirupati Cab Service</h3>
-                    <form id="quickBookingForm" class="quick-booking-form-inner">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label><i class="fas fa-map-marker-alt"></i> Pickup Location</label>
-                                <input type="text" placeholder="Enter pickup location" id="quickPickup" required>
+        <div class="container">
+            <div class="hero-wrapper">
+                <!-- Hero Content (Left Side) -->
+                <div class="hero-content">
+                    <h1>Tirupati Cab Service | <span class="highlight">Call Now</span></h1>
+                    <p class="hero-subtitle">Licensed Travel Agency • 15+ Years Experience • 5000+ Happy Customers</p>
+                    <p class="hero-description">Book your Tirumala Tirupati temple visit, car rental, or accommodation. Starting from ₹600/day. Instant booking available!</p>
+                    <div class="hero-buttons">
+                        <a href="tel:+919912325325" class="btn btn-primary btn-large" onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_call', {'event_category': 'Conversion', 'event_label': 'Hero Call Button', 'value': 1});">
+                            <i class="fas fa-phone"></i> Call Now: +91 99123 25325
+                        </a>
+                        <a href="https://wa.me/919912325325?text=Hi, I need Tirupati cab service. Please help me book." target="_blank" class="btn btn-secondary btn-large" onclick="if(typeof gtag !== 'undefined') gtag('event', 'whatsapp_click', {'event_category': 'Conversion', 'event_label': 'Hero WhatsApp Button', 'value': 1});">
+                            <i class="fab fa-whatsapp"></i> Book on WhatsApp
+                        </a>
+                        <a href="#packages" class="btn btn-outline btn-large">
+                            <i class="fas fa-calendar-check"></i> View Packages
+                        </a>
+                    </div>
+                    <div class="hero-trust-badges">
+                        <span class="trust-badge-item"><i class="fas fa-shield-alt"></i> Licensed Agency</span>
+                        <span class="trust-badge-item"><i class="fas fa-star"></i> 4.9/5 Rating</span>
+                        <span class="trust-badge-item"><i class="fas fa-users"></i> 5000+ Customers</span>
+                        <span class="trust-badge-item"><i class="fas fa-clock"></i> 24/7 Support</span>
+                    </div>
+                </div>
+                
+                <!-- Quick Booking Form (Right Side) -->
+                <div class="hero-booking-form">
+                    <div class="quick-booking-card">
+                        <h3><i class="fas fa-calendar-check"></i> Quick Book Your Tirupati Cab Service</h3>
+                        <form id="quickBookingForm" class="quick-booking-form-inner">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fas fa-map-marker-alt"></i> Pickup Location</label>
+                                    <input type="text" placeholder="Enter pickup location" id="quickPickup" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fas fa-map-marker-alt"></i> Drop Location</label>
+                                    <input type="text" placeholder="Enter drop location" id="quickDrop" required>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label><i class="fas fa-map-marker-alt"></i> Drop Location</label>
-                                <input type="text" placeholder="Enter drop location" id="quickDrop" required>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fas fa-calendar"></i> Travel Date</label>
+                                    <input type="date" id="quickDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fas fa-car"></i> Vehicle Type</label>
+                                    <select id="quickVehicle" required>
+                                        <option value="">Select Vehicle</option>
+                                        <option value="sedan">Sedan (4 persons)</option>
+                                        <option value="ertiga">Ertiga (6 persons)</option>
+                                        <option value="innova">Innova Crysta (7 persons)</option>
+                                        <option value="tempo-12">Tempo Traveller 12 Seater</option>
+                                        <option value="tempo-16">Tempo Traveller 16 Seater</option>
+                                        <option value="bus">Bus (27+ Seater)</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label><i class="fas fa-calendar"></i> Travel Date</label>
-                                <input type="date" id="quickDate" required>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fas fa-user"></i> Your Name</label>
+                                    <input type="text" placeholder="Enter your name" id="quickName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fas fa-phone"></i> Phone Number</label>
+                                    <input type="tel" placeholder="Enter phone number" id="quickPhone" required>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label><i class="fas fa-car"></i> Vehicle Type</label>
-                                <select id="quickVehicle" required>
-                                    <option value="">Select Vehicle</option>
-                                    <option value="sedan">Sedan (4 persons)</option>
-                                    <option value="ertiga">Ertiga (6 persons)</option>
-                                    <option value="innova">Innova Crysta (7 persons)</option>
-                                    <option value="tempo-12">Tempo Traveller 12 Seater</option>
-                                    <option value="tempo-16">Tempo Traveller 16 Seater</option>
-                                    <option value="bus">Bus (27+ Seater)</option>
-                                </select>
+                            <div class="quick-price-display" id="quickPriceDisplay" style="display: none;">
+                                <p><strong>Estimated Price: <span id="quickPriceAmount">₹0</span></strong></p>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label><i class="fas fa-user"></i> Your Name</label>
-                                <input type="text" placeholder="Enter your name" id="quickName" required>
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fas fa-phone"></i> Phone Number</label>
-                                <input type="tel" placeholder="Enter phone number" id="quickPhone" required>
-                            </div>
-                        </div>
-                        <div class="quick-price-display" id="quickPriceDisplay" style="display: none;">
-                            <p><strong>Estimated Price: <span id="quickPriceAmount">₹0</span></strong></p>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fas fa-paper-plane"></i> Get Instant Quote & Book Now
-                        </button>
-                        <p class="form-note"><i class="fas fa-info-circle"></i> We'll confirm your booking within 2 hours</p>
-                    </form>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i> Get Instant Quote & Book Now
+                            </button>
+                            <p class="form-note"><i class="fas fa-info-circle"></i> We'll confirm your booking within 2 hours</p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
