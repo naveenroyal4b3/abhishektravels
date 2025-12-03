@@ -1622,6 +1622,134 @@ function enhanceFormTracking() {
     }, 30000);
 }
 
+// Quick Booking Form Handler
+function initQuickBookingForm() {
+    const quickBookingForm = document.getElementById('quickBookingForm');
+    const quickPickup = document.getElementById('quickPickup');
+    const quickDrop = document.getElementById('quickDrop');
+    const quickDate = document.getElementById('quickDate');
+    const quickVehicle = document.getElementById('quickVehicle');
+    const quickPriceDisplay = document.getElementById('quickPriceDisplay');
+    const quickPriceAmount = document.getElementById('quickPriceAmount');
+    
+    if (!quickBookingForm) return;
+    
+    // Calculate price based on route and vehicle
+    function calculateQuickPrice() {
+        const pickup = quickPickup?.value.toLowerCase().trim() || '';
+        const drop = quickDrop?.value.toLowerCase().trim() || '';
+        const vehicle = quickVehicle?.value || '';
+        
+        if (!pickup || !drop || !vehicle) {
+            quickPriceDisplay.style.display = 'none';
+            return;
+        }
+        
+        // Route distance mapping (in km)
+        const routeDistances = {
+            'tirupati to bangalore': 250,
+            'bangalore to tirupati': 250,
+            'tirupati to chennai': 150,
+            'chennai to tirupati': 150,
+            'tirupati to hyderabad': 550,
+            'hyderabad to tirupati': 550,
+            'tirupati to srikalahasti': 38,
+            'srikalahasti to tirupati': 38,
+            'tirupati to kanipakam': 70,
+            'kanipakam to tirupati': 70,
+            'tirupati to kanchipuram': 120,
+            'kanchipuram to tirupati': 120,
+            'tirupati to mahabalipuram': 180,
+            'mahabalipuram to tirupati': 180,
+            'tirupati to rameshwaram': 550,
+            'rameshwaram to tirupati': 550
+        };
+        
+        const routeKey = `${pickup} to ${drop}`;
+        const reverseRouteKey = `${drop} to ${pickup}`;
+        const distance = routeDistances[routeKey] || routeDistances[reverseRouteKey] || null;
+        
+        // Vehicle base prices (per km for outstation, per day for local)
+        const vehiclePrices = {
+            'sedan': { local: 600, perKm: 8 },
+            'ertiga': { local: 800, perKm: 10 },
+            'innova': { local: 1000, perKm: 12 },
+            'tempo-12': { local: 2000, perKm: 15 },
+            'tempo-16': { local: 2500, perKm: 18 },
+            'bus': { local: 4000, perKm: 25 }
+        };
+        
+        const vehiclePrice = vehiclePrices[vehicle];
+        if (!vehiclePrice) {
+            quickPriceDisplay.style.display = 'none';
+            return;
+        }
+        
+        let price = 0;
+        if (distance && distance > 50) {
+            // Outstation: per km pricing
+            price = distance * vehiclePrice.perKm;
+        } else {
+            // Local: per day pricing
+            price = vehiclePrice.local;
+        }
+        
+        quickPriceAmount.textContent = `₹${price.toLocaleString('en-IN')}`;
+        quickPriceDisplay.style.display = 'block';
+    }
+    
+    // Add event listeners for price calculation
+    if (quickPickup) quickPickup.addEventListener('input', calculateQuickPrice);
+    if (quickDrop) quickDrop.addEventListener('input', calculateQuickPrice);
+    if (quickVehicle) quickVehicle.addEventListener('change', calculateQuickPrice);
+    
+    // Form submission
+    quickBookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('quickName')?.value;
+        const phone = document.getElementById('quickPhone')?.value;
+        const pickup = quickPickup?.value;
+        const drop = quickDrop?.value;
+        const date = quickDate?.value;
+        const vehicle = quickVehicle?.value;
+        
+        if (!name || !phone || !pickup || !drop || !date || !vehicle) {
+            alert('Please fill all fields');
+            return;
+        }
+        
+        // Track conversion
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'submit', {
+                'event_category': 'Form',
+                'event_label': 'Quick Booking Form',
+                'value': 1
+            });
+        }
+        
+        // Create WhatsApp message
+        const message = `Hi, I want to book Tirupati cab service:
+        
+Name: ${name}
+Phone: ${phone}
+Pickup: ${pickup}
+Drop: ${drop}
+Date: ${date}
+Vehicle: ${vehicle}`;
+        
+        const whatsappUrl = `https://wa.me/919912325325?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+        
+        // Show confirmation
+        alert(`Thank you ${name}! We've opened WhatsApp for you. Please send the message to confirm your booking.`);
+        
+        // Reset form
+        quickBookingForm.reset();
+        quickPriceDisplay.style.display = 'none';
+    });
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
@@ -1636,6 +1764,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileOptimizations();
     initFAQ();
     enhanceFormTracking();
+    initQuickBookingForm();
     
     // Set footer links
     document.querySelectorAll('.footer-section a[data-state]').forEach(link => {

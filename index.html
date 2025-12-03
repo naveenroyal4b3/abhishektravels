@@ -579,9 +579,11 @@
                     <li><a href="#car-rentals" class="nav-link" aria-label="View car rentals">Car Rentals</a></li>
                     <li><a href="#bike-rentals" class="nav-link" aria-label="View bike and scooter rentals">Bike & Scooter</a></li>
                     <li><a href="#destinations" class="nav-link" aria-label="View destinations">Destinations</a></li>
-                    <li><a href="#rooms" class="nav-link" aria-label="View accommodations">Rooms</a></li>
-                    <li><a href="#about" class="nav-link" aria-label="Learn about us">About</a></li>
-                    <li><a href="#contact" class="nav-link" aria-label="Contact us">Contact</a></li>
+                            <li><a href="#rooms" class="nav-link" aria-label="View accommodations">Rooms</a></li>
+                            <li><a href="#popular-routes" class="nav-link" aria-label="View popular routes">Routes</a></li>
+                            <li><a href="#blog" class="nav-link" aria-label="Read travel guides">Blog</a></li>
+                            <li><a href="#about" class="nav-link" aria-label="Learn about us">About</a></li>
+                            <li><a href="#contact" class="nav-link" aria-label="Contact us">Contact</a></li>
                 </ul>
                 <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span></span>
@@ -615,6 +617,61 @@
                 <span class="trust-badge-item"><i class="fas fa-star"></i> 4.9/5 Rating</span>
                 <span class="trust-badge-item"><i class="fas fa-users"></i> 5000+ Customers</span>
                 <span class="trust-badge-item"><i class="fas fa-clock"></i> 24/7 Support</span>
+            </div>
+        </div>
+        <!-- Quick Booking Form -->
+        <div class="hero-booking-form">
+            <div class="container">
+                <div class="quick-booking-card">
+                    <h3><i class="fas fa-calendar-check"></i> Quick Book Your Tirupati Cab Service</h3>
+                    <form id="quickBookingForm" class="quick-booking-form-inner">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-map-marker-alt"></i> Pickup Location</label>
+                                <input type="text" placeholder="Enter pickup location" id="quickPickup" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-map-marker-alt"></i> Drop Location</label>
+                                <input type="text" placeholder="Enter drop location" id="quickDrop" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-calendar"></i> Travel Date</label>
+                                <input type="date" id="quickDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-car"></i> Vehicle Type</label>
+                                <select id="quickVehicle" required>
+                                    <option value="">Select Vehicle</option>
+                                    <option value="sedan">Sedan (4 persons)</option>
+                                    <option value="ertiga">Ertiga (6 persons)</option>
+                                    <option value="innova">Innova Crysta (7 persons)</option>
+                                    <option value="tempo-12">Tempo Traveller 12 Seater</option>
+                                    <option value="tempo-16">Tempo Traveller 16 Seater</option>
+                                    <option value="bus">Bus (27+ Seater)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-user"></i> Your Name</label>
+                                <input type="text" placeholder="Enter your name" id="quickName" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-phone"></i> Phone Number</label>
+                                <input type="tel" placeholder="Enter phone number" id="quickPhone" required>
+                            </div>
+                        </div>
+                        <div class="quick-price-display" id="quickPriceDisplay" style="display: none;">
+                            <p><strong>Estimated Price: <span id="quickPriceAmount">₹0</span></strong></p>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Get Instant Quote & Book Now
+                        </button>
+                        <p class="form-note"><i class="fas fa-info-circle"></i> We'll confirm your booking within 2 hours</p>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -1099,6 +1156,137 @@
                         <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                     </form>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Routes Section -->
+    <section id="popular-routes" class="popular-routes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Tirupati Cab Routes</h2>
+                <p>Book trusted Tirupati cab service for these popular routes. Transparent pricing, experienced drivers, 24/7 availability.</p>
+            </div>
+            <div class="routes-grid">
+                <div class="route-card">
+                    <div class="route-icon"><i class="fas fa-route"></i></div>
+                    <h3>Tirupati to Bangalore</h3>
+                    <p class="route-distance">Distance: 250 km | Time: 4-5 hours</p>
+                    <p class="route-price">Starting from ₹2,000</p>
+                    <a href="tel:+919912325325" class="btn btn-primary btn-sm" onclick="if(typeof gtag !== 'undefined') gtag('event', 'click', {'event_category': 'Route', 'event_label': 'Tirupati to Bangalore'});">Book Now</a>
+                </div>
+                <div class="route-card">
+                    <div class="route-icon"><i class="fas fa-route"></i></div>
+                    <h3>Tirupati to Chennai</h3>
+                    <p class="route-distance">Distance: 150 km | Time: 3-4 hours</p>
+                    <p class="route-price">Starting from ₹1,200</p>
+                    <a href="tel:+919912325325" class="btn btn-primary btn-sm" onclick="if(typeof gtag !== 'undefined') gtag('event', 'click', {'event_category': 'Route', 'event_label': 'Tirupati to Chennai'});">Book Now</a>
+                </div>
+                <div class="route-card">
+                    <div class="route-icon"><i class="fas fa-route"></i></div>
+                    <h3>Tirupati to Hyderabad</h3>
+                    <p class="route-distance">Distance: 550 km | Time: 8-9 hours</p>
+                    <p class="route-price">Starting from ₹4,400</p>
+                    <a href="tel:+919912325325" class="btn btn-primary btn-sm" onclick="if(typeof gtag !== 'undefined') gtag('event', 'click', {'event_category': 'Route', 'event_label': 'Tirupati to Hyderabad'});">Book Now</a>
+                </div>
+                <div class="route-card">
+                    <div class="route-icon"><i class="fas fa-route"></i></div>
+                    <h3>Tirupati to Srikalahasti</h3>
+                    <p class="route-distance">Distance: 38 km | Time: 1 hour</p>
+                    <p class="route-price">Starting from ₹600</p>
+                    <a href="tel:+919912325325" class="btn btn-primary btn-sm" onclick="if(typeof gtag !== 'undefined') gtag('event', 'click', {'event_category': 'Route', 'event_label': 'Tirupati to Srikalahasti'});">Book Now</a>
+                </div>
+                <div class="route-card">
+                    <div class="route-icon"><i class="fas fa-route"></i></div>
+                    <h3>Tirupati to Kanipakam</h3>
+                    <p class="route-distance">Distance: 70 km | Time: 1.5 hours</p>
+                    <p class="route-price">Starting from ₹600</p>
+                    <a href="tel:+919912325325" class="btn btn-primary btn-sm" onclick="if(typeof gtag !== 'undefined') gtag('event', 'click', {'event_category': 'Route', 'event_label': 'Tirupati to Kanipakam'});">Book Now</a>
+                </div>
+                <div class="route-card">
+                    <div class="route-icon"><i class="fas fa-route"></i></div>
+                    <h3>Tirupati to Kanchipuram</h3>
+                    <p class="route-distance">Distance: 120 km | Time: 2-3 hours</p>
+                    <p class="route-price">Starting from ₹960</p>
+                    <a href="tel:+919912325325" class="btn btn-primary btn-sm" onclick="if(typeof gtag !== 'undefined') gtag('event', 'click', {'event_category': 'Route', 'event_label': 'Tirupati to Kanchipuram'});">Book Now</a>
+                </div>
+                <div class="route-card">
+                    <div class="route-icon"><i class="fas fa-route"></i></div>
+                    <h3>Tirupati to Mahabalipuram</h3>
+                    <p class="route-distance">Distance: 180 km | Time: 3-4 hours</p>
+                    <p class="route-price">Starting from ₹1,440</p>
+                    <a href="tel:+919912325325" class="btn btn-primary btn-sm" onclick="if(typeof gtag !== 'undefined') gtag('event', 'click', {'event_category': 'Route', 'event_label': 'Tirupati to Mahabalipuram'});">Book Now</a>
+                </div>
+                <div class="route-card">
+                    <div class="route-icon"><i class="fas fa-route"></i></div>
+                    <h3>Tirupati to Rameswaram</h3>
+                    <p class="route-distance">Distance: 550 km | Time: 9-10 hours</p>
+                    <p class="route-price">Starting from ₹4,400</p>
+                    <a href="tel:+919912325325" class="btn btn-primary btn-sm" onclick="if(typeof gtag !== 'undefined') gtag('event', 'click', {'event_category': 'Route', 'event_label': 'Tirupati to Rameswaram'});">Book Now</a>
+                </div>
+            </div>
+            <div class="routes-cta">
+                <p>Need a different route? <a href="tel:+919912325325">Call us</a> or <a href="https://wa.me/919912325325?text=Hi, I need cab service for a different route" target="_blank">WhatsApp us</a> for custom quotes!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Travel Guides & Tips</h2>
+                <p>Expert travel guides, tips, and information to make your Tirupati journey smooth and memorable.</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&q=75" alt="Complete Guide to Tirupati Cab Service" decoding="async">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Travel Guide</span>
+                        <h3><a href="#blog">Complete Guide to Tirupati Cab Service - Prices, Booking, Tips</a></h3>
+                        <p>Everything you need to know about booking Tirupati cab service. Learn about pricing, booking process, vehicle options, and insider tips for the best experience.</p>
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 2024</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                        </div>
+                        <a href="#blog" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/2901209/pexels-photo-2901209.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&q=75" alt="Best Tirupati Taxi Service Guide" decoding="async">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Travel Tips</span>
+                        <h3><a href="#blog">Best Tirupati Taxi Service - How to Choose the Right One</a></h3>
+                        <p>Learn how to choose the best Tirupati taxi service for your needs. Compare services, check pricing, verify credentials, and ensure a safe journey.</p>
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 2024</span>
+                            <span><i class="fas fa-clock"></i> 4 min read</span>
+                        </div>
+                        <a href="#blog" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/2901215/pexels-photo-2901215.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&q=75" alt="Tirumala Tirupati Temple Tour Guide" decoding="async">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Temple Guide</span>
+                        <h3><a href="#blog">Tirumala Tirupati Temple Tour Guide - Complete Travel Guide</a></h3>
+                        <p>Complete guide to visiting Tirumala Tirupati temple. Learn about darshan types, booking process, transportation, accommodation, and essential tips for pilgrims.</p>
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 2024</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <a href="#blog" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="blog-cta">
+                <a href="#blog" class="btn btn-outline">View All Travel Guides</a>
             </div>
         </div>
     </section>
