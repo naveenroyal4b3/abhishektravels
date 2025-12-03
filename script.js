@@ -1674,9 +1674,19 @@ function initQuickBookingForm() {
             'sedan': { local: 600, perKm: 8 },
             'ertiga': { local: 800, perKm: 10 },
             'innova': { local: 1000, perKm: 12 },
+            'swift-dzire': { local: 600, perKm: 8 },
+            'toyota-fortuner': { local: 1200, perKm: 14 },
+            'mahindra-xylo': { local: 900, perKm: 11 },
             'tempo-12': { local: 2000, perKm: 15 },
             'tempo-16': { local: 2500, perKm: 18 },
-            'bus': { local: 4000, perKm: 25 }
+            'tempo-20': { local: 3000, perKm: 20 },
+            'urbania-12': { local: 2200, perKm: 16 },
+            'urbania-16': { local: 2700, perKm: 19 },
+            'bus-27': { local: 4000, perKm: 25 },
+            'bus-40': { local: 5000, perKm: 30 },
+            'bus-45': { local: 5500, perKm: 32 },
+            'bike': { local: 600, perKm: 6 },
+            'other': { local: 0, perKm: 0 } // Will show "Contact for price"
         };
         
         const vehiclePrice = vehiclePrices[vehicle];
@@ -1686,6 +1696,12 @@ function initQuickBookingForm() {
         }
         
         let price = 0;
+        if (vehicle === 'other') {
+            quickPriceAmount.textContent = 'Contact for Price';
+            quickPriceDisplay.style.display = 'block';
+            return;
+        }
+        
         if (distance && distance > 50) {
             // Outstation: per km pricing
             price = distance * vehiclePrice.perKm;
