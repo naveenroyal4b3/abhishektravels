@@ -5,4 +5,4 @@ Allow: /
 # Disallow: /admin/
 # Disallow: /private/
 
-Sitemap: https://naveenroyal4b3.github.io/abhishektravels/sitemap.xml
+Sitemap: https://abhishektravels.org/sitemap.xml

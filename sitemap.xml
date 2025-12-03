@@ -1,55 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://naveenroyal4b3.github.io/abhishektravels/</loc>
+    <loc>https://abhishektravels.org/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <lastmod>2024-12-20</lastmod>
   </url>
   <url>
-    <loc>https://naveenroyal4b3.github.io/abhishektravels/#temples</loc>
+    <loc>https://abhishektravels.org/#temples</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2024-12-20</lastmod>
   </url>
   <url>
-    <loc>https://naveenroyal4b3.github.io/abhishektravels/#packages</loc>
+    <loc>https://abhishektravels.org/#packages</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <lastmod>2024-12-20</lastmod>
   </url>
   <url>
-    <loc>https://naveenroyal4b3.github.io/abhishektravels/#car-rentals</loc>
+    <loc>https://abhishektravels.org/#car-rentals</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2024-12-20</lastmod>
   </url>
   <url>
-    <loc>https://naveenroyal4b3.github.io/abhishektravels/#bike-rentals</loc>
+    <loc>https://abhishektravels.org/#bike-rentals</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2024-12-20</lastmod>
   </url>
   <url>
-    <loc>https://naveenroyal4b3.github.io/abhishektravels/#destinations</loc>
+    <loc>https://abhishektravels.org/#destinations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2024-12-20</lastmod>
   </url>
   <url>
-    <loc>https://naveenroyal4b3.github.io/abhishektravels/#rooms</loc>
+    <loc>https://abhishektravels.org/#rooms</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <lastmod>2024-12-20</lastmod>
   </url>
   <url>
-    <loc>https://naveenroyal4b3.github.io/abhishektravels/#about</loc>
+    <loc>https://abhishektravels.org/#about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2024-12-20</lastmod>
   </url>
   <url>
-    <loc>https://naveenroyal4b3.github.io/abhishektravels/#contact</loc>
+    <loc>https://abhishektravels.org/#contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2024-12-20</lastmod>
+  </url>
+  <url>
+    <loc>https://abhishektravels.org/#faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2024-12-20</lastmod>
