@@ -1399,10 +1399,27 @@ function animateStatistics() {
                 const timer = setInterval(() => {
                     current += increment;
                     if (current >= target) {
-                        entry.target.textContent = target;
+                        // Format numbers: 10000 -> 10k+, 15 -> 15+, 50 -> 50+, 24 -> 24x7
+                        let displayText = target;
+                        if (target === 10000) {
+                            displayText = '10k+';
+                        } else if (target === 15 || target === 50) {
+                            displayText = target + '+';
+                        } else if (target === 24) {
+                            displayText = '24x7';
+                        }
+                        entry.target.textContent = displayText;
                         clearInterval(timer);
                     } else {
-                        entry.target.textContent = Math.floor(current);
+                        let displayText = Math.floor(current);
+                        if (target === 10000 && current >= 1000) {
+                            displayText = Math.floor(current / 1000) + 'k+';
+                        } else if (target === 15 || target === 50) {
+                            displayText = Math.floor(current) + '+';
+                        } else if (target === 24) {
+                            displayText = '24x7';
+                        }
+                        entry.target.textContent = displayText;
                     }
                 }, 16);
                 
