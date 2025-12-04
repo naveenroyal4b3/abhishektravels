@@ -1741,6 +1741,13 @@ input, select, textarea {
     }
 }
 
+/* Hide hamburger menu on desktop */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none !important;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
