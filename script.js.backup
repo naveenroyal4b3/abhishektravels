@@ -1,0 +1,596 @@
+// WORKING VERSION - Abhishek Travels Script
+console.log('🚀 Starting Abhishek Travels Script...');
+
+// Destinations Data - South India (simplified)
+const destinations = [
+    {
+        name: "Bangalore",
+        state: "karnataka",
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=400&q=75",
+        description: "The Silicon Valley of India, known for its gardens, parks, and vibrant tech culture.",
+        features: ["Tech Hub", "Gardens", "Nightlife"]
+    },
+    {
+        name: "Mysore",
+        state: "karnataka", 
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=400&q=75",
+        description: "Famous for the magnificent Mysore Palace and rich cultural heritage.",
+        features: ["Palace", "Heritage", "Culture"]
+    },
+    {
+        name: "Coorg",
+        state: "karnataka",
+        image: "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=400&q=75",
+        description: "Scotland of India, known for coffee plantations and misty hills.",
+        features: ["Coffee", "Hills", "Nature"]
+    }
+];
+
+// Temples Data - South India Sacred Temples
+const temples = [
+    {
+        id: 1,
+        name: "Tirumala Venkateswara Temple",
+        location: "Tirumala, Andhra Pradesh",
+        deity: "Lord Venkateswara (Balaji)",
+        significance: "One of the richest and most visited temples in the world",
+        image: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Tirumala_Anand_nilayam09832.jpg",
+        description: "The most sacred Vaishnavite temple dedicated to Lord Venkateswara. Millions of devotees visit annually seeking blessings and fulfillment of wishes.",
+        features: ["Most Visited", "Rich Temple", "Darshan Available", "Prasadam", "Accommodation"],
+        timings: "2:30 AM - 1:30 AM (Next Day)",
+        special: "Free Darshan, Special Entry, VIP Darshan available",
+        category: "vaishnavite",
+        featured: true
+    },
+    {
+        id: 2,
+        name: "Padmavathi Temple",
+        location: "Tiruchanur, Tirupati",
+        deity: "Goddess Padmavathi",
+        significance: "Consort of Lord Venkateswara",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Padmavathi_Ammavari_Temple.JPG",
+        description: "Beautiful temple dedicated to Goddess Padmavathi, the divine consort of Lord Venkateswara. Located near Tirupati.",
+        features: ["Goddess Temple", "Near Tirupati", "Prasadam", "Peaceful"],
+        timings: "6:00 AM - 9:00 PM",
+        special: "Visit after Tirumala Darshan",
+        category: "vaishnavite",
+        featured: false
+    },
+    {
+        id: 3,
+        name: "Meenakshi Amman Temple",
+        location: "Madurai, Tamil Nadu",
+        deity: "Goddess Meenakshi & Lord Sundareswarar",
+        significance: "One of the most famous temples in Tamil Nadu",
+        image: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Corridor_of_Meenakshi_Amman_Temple.jpg",
+        description: "Magnificent temple complex with stunning architecture. Dedicated to Goddess Meenakshi and Lord Shiva.",
+        features: ["Architecture", "Historical", "Darshan", "Prasadam"],
+        timings: "5:00 AM - 12:30 PM, 4:00 PM - 9:30 PM",
+        special: "Thousand Pillar Hall, Golden Lotus Tank",
+        category: "shaivite",
+        featured: true
+    },
+    {
+        id: 4,
+        name: "Ramanathaswamy Temple",
+        location: "Rameswaram, Tamil Nadu",
+        deity: "Lord Ramanathaswamy (Shiva)",
+        significance: "One of the 12 Jyotirlinga temples",
+        image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Rameshawaram_temple_view_from_the_sea.jpg",
+        description: "Sacred Jyotirlinga temple where Lord Rama worshipped Shiva. Important pilgrimage destination for Hindus.",
+        features: ["Jyotirlinga", "Pilgrimage", "Sacred Tanks", "Darshan"],
+        timings: "5:00 AM - 1:00 PM, 3:00 PM - 9:00 PM",
+        special: "22 Sacred Wells (Theerthams) for ritual bath",
+        category: "shaivite",
+        featured: true
+    },
+    {
+        id: 5,
+        name: "Guruvayur Temple",
+        location: "Guruvayur, Kerala",
+        deity: "Lord Krishna (Guruvayurappan)",
+        significance: "Famous Krishna temple in Kerala",
+        image: "https://upload.wikimedia.org/wikipedia/commons/0/04/009392022_Guruvayur_temple%2C_Kerala_004.jpg",
+        description: "One of the most important Krishna temples in South India. Known as 'Bhooloka Vaikunta' (Heaven on Earth).",
+        features: ["Krishna Temple", "Kerala", "Darshan", "Prasadam"],
+        timings: "3:00 AM - 9:30 PM",
+        special: "Elephant sanctuary nearby",
+        category: "vaishnavite",
+        featured: false
+    },
+    {
+        id: 6,
+        name: "Sabarimala Temple",
+        location: "Pathanamthitta, Kerala",
+        deity: "Lord Ayyappa",
+        significance: "Famous hill shrine temple",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Sabarimala_temple_during_Periyar_butterfly_survey_at_Sabarimala%2C_2014_%2812%29.jpg",
+        description: "Sacred hill temple dedicated to Lord Ayyappa. Requires 41 days of penance and pilgrimage during Mandala season.",
+        features: ["Hill Temple", "Pilgrimage", "Forest Trek", "Darshan"],
+        timings: "Seasonal (Nov - Jan)",
+        special: "Mandala Makaravilakku Festival",
+        category: "shaivite",
+        featured: true
+    },
+    {
+        id: 7,
+        name: "Sri Kalahasti Temple",
+        location: "Sri Kalahasti, Andhra Pradesh",
+        deity: "Lord Kalahasteeswara (Shiva)",
+        significance: "One of the Pancha Bhoota Stalam",
+        image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Srikalahasti_temple_and_Hill.jpg",
+        description: "Ancient temple representing Vayu (Air) element. Located near Tirupati, perfect for combined pilgrimage.",
+        features: ["Pancha Bhoota", "Near Tirupati", "Darshan", "Rahu-Ketu Puja"],
+        timings: "6:00 AM - 9:00 PM",
+        special: "Famous for Rahu-Ketu Dosha Nivarana",
+        category: "shaivite",
+        featured: false
+    },
+    {
+        id: 8,
+        name: "Kanipakam Temple",
+        location: "Kanipakam, Andhra Pradesh",
+        deity: "Lord Ganesha (Varasiddhi Vinayaka)",
+        significance: "Famous Ganesha temple",
+        image: "https://upload.wikimedia.org/wikipedia/commons/7/72/Galipgopuram_of_Kanipakam_temple_%28May_2019%29_10.jpg",
+        description: "Sacred temple with self-manifested Ganesha idol. The temple tank water is believed to have healing properties.",
+        features: ["Ganesha Temple", "Self-Manifested", "Sacred Tank", "Darshan"],
+        timings: "4:00 AM - 9:00 PM",
+        special: "Water from temple tank never dries",
+        category: "ganesha",
+        featured: false
+    },
+    {
+        id: 9,
+        name: "Golden Temple (Sripuram)",
+        location: "Vellore, Tamil Nadu",
+        deity: "Goddess Lakshmi",
+        significance: "Golden temple with gold-plated structure",
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/69/Sripuram_Temple_Full_View.jpg",
+        description: "Magnificent golden temple dedicated to Goddess Lakshmi. Entire structure is gold-plated, creating a stunning visual.",
+        features: ["Golden Structure", "Lakshmi Temple", "Modern", "Darshan"],
+        timings: "4:00 AM - 8:00 PM",
+        special: "Entire temple covered in gold",
+        category: "vaishnavite",
+        featured: true
+    },
+    {
+        id: 10,
+        name: "Kanchipuram Temples",
+        location: "Kanchipuram, Tamil Nadu",
+        deity: "Multiple (Vishnu Kanchi & Shiva Kanchi)",
+        significance: "City of Thousand Temples",
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/32/Kailasanathar_Temple._Kanchipuram%2C_TamilNadu.jpg",
+        description: "Ancient temple city with numerous sacred temples including Ekambareswarar, Kamakshi Amman, Varadaraja Perumal temples.",
+        features: ["Multiple Temples", "Historical", "Architecture", "Darshan"],
+        timings: "Varies by temple",
+        special: "Famous for silk sarees and temple architecture",
+        category: "multiple",
+        featured: false
+    },
+    {
+        id: 11,
+        name: "Mahabalipuram Temples",
+        location: "Mahabalipuram, Tamil Nadu",
+        deity: "Lord Shiva & Vishnu",
+        significance: "UNESCO World Heritage Site",
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/83/Mahabalipuram-Shore_Temple-WUS01969.jpg",
+        description: "Group of 7th-8th century monuments and temples. Famous for Shore Temple, Pancha Rathas, and rock-cut architecture.",
+        features: ["UNESCO Site", "Rock Cut", "Historical", "Architecture"],
+        timings: "6:00 AM - 6:00 PM",
+        special: "Shore Temple by the sea",
+        category: "historical",
+        featured: false
+    },
+    {
+        id: 12,
+        name: "Chidambaram Nataraja Temple",
+        location: "Chidambaram, Tamil Nadu",
+        deity: "Lord Nataraja (Shiva as Cosmic Dancer)",
+        significance: "One of the Pancha Sabhai Sthalams",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Temple_Tank_in_Nataraja_Temple%2C_Chidambaram.jpg",
+        description: "Famous temple where Shiva is worshipped as Nataraja, the cosmic dancer. Unique architecture with golden roof.",
+        features: ["Nataraja", "Golden Roof", "Architecture", "Darshan"],
+        timings: "6:00 AM - 12:00 PM, 4:30 PM - 9:00 PM",
+        special: "Golden roof (Kanaka Sabha) and Akasa Lingam",
+        category: "shaivite",
+        featured: false
+    }
+];
+
+// Tour Packages Data
+const tourPackages = [
+    {
+        id: 1,
+        code: "PKG0001",
+        title: "Bangalore City Tour Package",
+        duration: "8 Hours",
+        route: "Vidhana Soudha, Cubbon Park, Lalbagh Botanical Garden, ISKCON Temple",
+        includes: ["Toll Charges", "Parking Fees", "Driver Bata"],
+        price: 2500,
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=400&q=75"
+    },
+    {
+        id: 2,
+        code: "PKG0002", 
+        title: "Mysore Palace & Coorg Package",
+        duration: "1 Day",
+        route: "Mysore Palace, Chamundi Hills, Coorg Coffee Plantations",
+        includes: ["Toll Charges", "Tax & Permit Fees", "Parking Fees", "Driver Bata"],
+        price: 4500,
+        image: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=400&q=75"
+    },
+    {
+        id: 3,
+        code: "PKG0003",
+        title: "Tirupati Darshan Package", 
+        duration: "1 Day",
+        route: "Tirumala Temple, Kapila Theertham, Silathoranam",
+        includes: ["Toll Charges", "Parking Fees", "Driver Bata"],
+        price: 3500,
+        image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=400&q=75"
+    }
+];
+
+// Vehicles Data
+const vehicles = [
+    {
+        id: 1,
+        name: "Etios / Swift Dzire",
+        type: "Sedan",
+        localPrice: 2000,
+        outstationPrice: 15,
+        fuelEfficiency: "10km per 1 liter diesel",
+        capacity: 4,
+        minKm: 300,
+        image: "https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&q=75"
+    },
+    {
+        id: 2,
+        name: "Innova Crysta",
+        type: "SUV",
+        localPrice: 3500,
+        outstationPrice: 20,
+        fuelEfficiency: "8km per 1 liter diesel",
+        capacity: 7,
+        minKm: 300,
+        image: "https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&q=75"
+    },
+    {
+        id: 3,
+        name: "Tempo Traveller",
+        type: "Van",
+        localPrice: 5000,
+        outstationPrice: 25,
+        fuelEfficiency: "6km per 1 liter diesel", 
+        capacity: 12,
+        minKm: 300,
+        image: "https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&q=75"
+    }
+];
+
+// Bikes and Scooters Data  
+const bikes = [
+    {
+        id: 1,
+        name: "Motorcycle / Bike",
+        type: "Bike",
+        localPrice: 800,
+        outstationPrice: 8,
+        fuelEfficiency: "40-50km per 1 liter petrol",
+        capacity: 2,
+        minKm: 100,
+        features: ["Helmet Provided", "Fuel Efficient", "Easy to Ride", "Insurance"],
+        description: "Well-maintained motorcycle perfect for exploring Tirupati and nearby temples.",
+        image: "https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&q=75"
+    },
+    {
+        id: 2,
+        name: "Scooter",
+        type: "Scooter", 
+        localPrice: 600,
+        outstationPrice: 6,
+        fuelEfficiency: "45-55km per 1 liter petrol",
+        capacity: 2,
+        minKm: 100,
+        features: ["Easy to Drive", "Fuel Efficient", "Helmet Provided", "Insurance"],
+        description: "Comfortable scooter ideal for city exploration and short trips.",
+        image: "https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&q=75"
+    }
+];
+
+// Testimonials Data
+const testimonials = [
+    {
+        name: "Rajesh Kumar",
+        date: "15 June 2024",
+        rating: 5,
+        review: "Great experience with Abhishek Travels. The driver was professional and the vehicle was clean and comfortable. Highly recommended!"
+    },
+    {
+        name: "Priya Sharma", 
+        date: "13 June 2024",
+        rating: 5,
+        review: "Excellent service! The driver was extremely kind and friendly. We felt very safe throughout the journey."
+    },
+    {
+        name: "Mohammed Ali",
+        date: "10 June 2024",
+        rating: 5,
+        review: "I had booked a cab for Bangalore to Mysore trip. Our driver was very nice and adjusted everything according to us. Wonderful journey!"
+    }
+];
+
+console.log('✅ All data arrays loaded successfully:');
+console.log('- destinations:', destinations.length);
+console.log('- temples:', temples.length);
+console.log('- tourPackages:', tourPackages.length);
+console.log('- vehicles:', vehicles.length); 
+console.log('- bikes:', bikes.length);
+console.log('- testimonials:', testimonials.length);
+
+// Navigation functionality
+function initNavigation() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+}
+
+// Display functions
+function displayPackages() {
+    const packagesGrid = document.getElementById('packagesGrid');
+    if (!packagesGrid || !tourPackages || tourPackages.length === 0) {
+        console.warn('Packages grid not found or no packages data');
+        return;
+    }
+
+    packagesGrid.innerHTML = tourPackages.map(pkg => `
+        <div class="package-card">
+            <img src="${pkg.image}" alt="${pkg.title}" class="package-image" loading="lazy">
+            <div class="package-content">
+                <h3>${pkg.title}</h3>
+                <p><strong>Duration:</strong> ${pkg.duration}</p>
+                <p><strong>Route:</strong> ${pkg.route}</p>
+                <p><strong>Price:</strong> ₹${pkg.price}</p>
+                <div class="action-buttons">
+                    <a href="tel:+919912325325" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/919912325325?text=Hi, I'm interested in ${encodeURIComponent(pkg.title)} package (${pkg.code}). Please provide more details." target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    console.log('✅ Packages displayed successfully');
+}
+
+function displayVehicles() {
+    const vehiclesGrid = document.getElementById('vehiclesGrid');
+    if (!vehiclesGrid || !vehicles || vehicles.length === 0) {
+        console.warn('Vehicles grid not found or no vehicles data');
+        return;
+    }
+
+    vehiclesGrid.innerHTML = vehicles.map(vehicle => `
+        <div class="vehicle-card">
+            <img src="${vehicle.image}" alt="${vehicle.name}" class="vehicle-image" loading="lazy">
+            <div class="vehicle-content">
+                <h3>${vehicle.name}</h3>
+                <p><strong>Type:</strong> ${vehicle.type}</p>
+                <p><strong>Local:</strong> ₹${vehicle.localPrice}/day</p>
+                <p><strong>Outstation:</strong> ₹${vehicle.outstationPrice}/km</p>
+                <p><strong>Capacity:</strong> ${vehicle.capacity} persons</p>
+                <div class="action-buttons">
+                    <a href="tel:+919912325325" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/919912325325?text=Hi, I need to rent ${encodeURIComponent(vehicle.name)} (${vehicle.type}). Please provide availability and booking details." target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    console.log('✅ Vehicles displayed successfully');
+}
+
+function displayBikes() {
+    const bikesGrid = document.getElementById('bikesGrid');
+    if (!bikesGrid || !bikes || bikes.length === 0) {
+        console.warn('Bikes grid not found or no bikes data');
+        return;
+    }
+
+    bikesGrid.innerHTML = bikes.map(bike => `
+        <div class="bike-card">
+            <img src="${bike.image}" alt="${bike.name}" class="bike-image" loading="lazy">
+            <div class="bike-content">
+                <h3>${bike.name}</h3>
+                <p><strong>Type:</strong> ${bike.type}</p>
+                <p><strong>Local:</strong> ₹${bike.localPrice}/day</p>
+                <p><strong>Outstation:</strong> ₹${bike.outstationPrice}/km</p>
+                <p><strong>Capacity:</strong> ${bike.capacity} persons</p>
+                <div class="action-buttons">
+                    <a href="tel:+919912325325" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/919912325325?text=Hi, I want to rent ${encodeURIComponent(bike.name)} (${bike.type}). Please share availability and rental details." target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    console.log('✅ Bikes displayed successfully');
+}
+
+function displayTestimonials() {
+    const testimonialsGrid = document.getElementById('testimonialsGrid');
+    if (!testimonialsGrid || !testimonials || testimonials.length === 0) {
+        console.warn('Testimonials grid not found or no testimonials data');
+        return;
+    }
+
+    testimonialsGrid.innerHTML = testimonials.map(testimonial => {
+        const stars = '★'.repeat(testimonial.rating) + '☆'.repeat(5 - testimonial.rating);
+        return `
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-author">
+                        <h4>${testimonial.name}</h4>
+                        <span class="testimonial-date">${testimonial.date}</span>
+                    </div>
+                    <div class="testimonial-rating">${stars}</div>
+                </div>
+                <p class="testimonial-review">"${testimonial.review}"</p>
+            </div>
+        `;
+    }).join('');
+    console.log('✅ Testimonials displayed successfully');
+}
+
+// Display Temples
+function displayTemples() {
+    let templesGrid = document.getElementById('templesGrid');
+    if (!templesGrid) {
+        console.error('❌ templesGrid not found!');
+        return;
+    }
+    
+    if (!temples || temples.length === 0) {
+        console.warn('Temples data not found');
+        return;
+    }
+
+    // Sort temples - featured first
+    const sortedTemples = [...temples].sort((a, b) => {
+        if (a.featured && !b.featured) return -1;
+        if (!a.featured && b.featured) return 1;
+        return 0;
+    });
+
+    templesGrid.innerHTML = sortedTemples.map(temple => `
+        <div class="temple-card ${temple.featured ? 'featured-temple' : ''}">
+            ${temple.featured ? '<div class="featured-badge"><i class="fas fa-star"></i> Featured</div>' : ''}
+            <img src="${temple.image || `https://picsum.photos/400/300?random=${temple.id + 100}`}" 
+                 alt="${temple.name} - ${temple.location} - ${temple.deity}" 
+                 class="temple-image" 
+                 loading="lazy"
+                 decoding="async"
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300/FF9933/FFFFFF?text=${encodeURIComponent(temple.name)}';">
+            <div class="temple-content">
+                <div class="temple-header">
+                    <h3>${temple.name}</h3>
+                    <p class="temple-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        ${temple.location}
+                    </p>
+                </div>
+                
+                <div class="temple-details">
+                    <p class="temple-deity">
+                        <i class="fas fa-pray"></i>
+                        <strong>Deity:</strong> ${temple.deity}
+                    </p>
+                    <p class="temple-timings">
+                        <i class="fas fa-clock"></i>
+                        <strong>Timings:</strong> ${temple.timings}
+                    </p>
+                    <p class="temple-special">
+                        <i class="fas fa-star-of-life"></i>
+                        <strong>Special:</strong> ${temple.special}
+                    </p>
+                </div>
+                
+                <p class="temple-description">${temple.description}</p>
+                
+                <div class="temple-features">
+                    ${temple.features.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="tel:+919912325325" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Book Darshan
+                    </a>
+                    <a href="https://wa.me/919912325325?text=Hi, I want to visit ${encodeURIComponent(temple.name)} (${temple.location}). Please provide temple visit package details." target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    console.log('✅ Temples displayed successfully:', sortedTemples.length);
+}
+
+// Statistics Animation
+function animateStatistics() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    console.log('📊 Starting statistics animation for', statNumbers.length, 'elements');
+
+    statNumbers.forEach((stat, index) => {
+        const target = parseInt(stat.getAttribute('data-target')) || 0;
+        console.log(`Animating stat ${index + 1}: target = ${target}`);
+
+        if (target > 0) {
+            let current = 0;
+            const increment = target / 50; // 50 steps for smooth animation
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    stat.textContent = target.toLocaleString('en-IN');
+                    clearInterval(timer);
+                    console.log(`✅ Stat ${index + 1} completed: ${target}`);
+                } else {
+                    stat.textContent = Math.floor(current).toLocaleString('en-IN');
+                }
+            }, 40); // 40ms * 50 = 2 seconds total
+        }
+    });
+}
+
+// Main initialization
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🎯 DOM loaded, initializing...');
+
+    try {
+        // Initialize navigation
+        initNavigation();
+        console.log('✅ Navigation initialized');
+
+        // Display all content
+        displayTemples();
+        displayPackages();
+        displayVehicles(); 
+        displayBikes();
+        displayTestimonials();
+
+        // Animate statistics with delay
+        setTimeout(() => {
+            animateStatistics();
+        }, 500);
+
+        console.log('🎉 All initialization completed successfully!');
+        
+    } catch (error) {
+        console.error('❌ Initialization error:', error);
+    }
+});
+
+console.log('📝 Script loaded and ready!');
