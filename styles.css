@@ -316,6 +316,11 @@ html {
     width: 100%;
 }
 
+.quick-booking-form-inner .btn-block {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+}
+
 .action-buttons {
     display: flex;
     gap: 0.8rem;
@@ -2769,8 +2774,8 @@ img[loading="lazy"].loaded {
 
 .quick-booking-card {
     background: white;
-    border-radius: 15px;
-    padding: 1.5rem;
+    border-radius: 12px;
+    padding: 1rem;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     position: sticky;
     top: 100px;
@@ -2779,8 +2784,8 @@ img[loading="lazy"].loaded {
 
 .quick-booking-card h3 {
     color: var(--primary-color);
-    margin-bottom: 1.2rem;
-    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
     text-align: center;
 }
 
@@ -2791,21 +2796,22 @@ img[loading="lazy"].loaded {
 
 .quick-booking-form-inner .form-row {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-    margin-bottom: 0.8rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .quick-booking-form-inner .form-group {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
 }
 
 .quick-booking-form-inner label {
     font-weight: 600;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
     color: var(--dark-color);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 .quick-booking-form-inner label i {
@@ -2816,10 +2822,10 @@ img[loading="lazy"].loaded {
 .quick-booking-form-inner input,
 .quick-booking-form-inner select,
 .quick-booking-form-inner textarea {
-    padding: 0.7rem;
+    padding: 0.5rem;
     border: 2px solid var(--border-color);
-    border-radius: 8px;
-    font-size: 0.95rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
     transition: border-color 0.3s ease;
     font-family: inherit;
     width: 100%;
@@ -2827,7 +2833,7 @@ img[loading="lazy"].loaded {
 
 .quick-booking-form-inner textarea {
     resize: vertical;
-    min-height: 80px;
+    min-height: 60px;
 }
 
 .quick-booking-form-inner input:focus,
@@ -2840,26 +2846,26 @@ img[loading="lazy"].loaded {
 
 .quick-price-display {
     background: var(--light-color);
-    padding: 0.8rem;
-    border-radius: 8px;
-    margin: 0.8rem 0;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin: 0.5rem 0;
     text-align: center;
 }
 
 .quick-price-display p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .quick-price-display span {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .form-note {
     text-align: center;
-    margin-top: 0.8rem;
-    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
     color: var(--text-color);
 }
 
