@@ -11,9 +11,9 @@ Google Tag Manager (GTM) code has been added to your website, but you need to re
 1. Go to [Google Tag Manager](https://tagmanager.google.com/)
 2. Click "Create Account"
 3. Fill in:
-   - **Account Name**: Abhishek Travels
+   - **Account Name**: Praveen Travels
    - **Country**: India
-   - **Container Name**: Abhishek Travels Website
+   - **Container Name**: Praveen Travels Website
    - **Target Platform**: Web
 4. Click "Create"
 
@@ -69,7 +69,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 ### 5. Test Your Setup
 
 1. In GTM, click **Preview** (top right)
-2. Enter your website URL: `https://abhishektravels.org/`
+2. Enter your website URL: `https://praveentravels.org/`
 3. Click **Connect**
 4. Visit your website - you should see the GTM Preview mode
 5. Test various actions (clicks, page views)

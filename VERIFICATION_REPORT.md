@@ -61,7 +61,7 @@
 - **Status**: ✅ COMPLETE
 - **Location**: `index.html` lines 21-23
 - **Implementation**:
-  - Title: "Tirupati Cab Service | Call Now +91 99123 25325 | Abhishek Travels"
+  - Title: "Tirupati Cab Service | Call Now +91 99123 25325 | Praveen Travels"
   - Description: Optimized with keywords, pricing, phone number
   - Keywords: Comprehensive list
   - Geo tags: Location-specific

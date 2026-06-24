@@ -1,4 +1,4 @@
-# Abhishek Travels - South India Travel Website
+# Praveen Travels - South India Travel Website
 
 A modern, responsive travel website for exploring destinations and booking accommodations across South India.
 
@@ -40,7 +40,7 @@ A modern, responsive travel website for exploring destinations and booking accom
 ## File Structure
 
 ```
-Abhishek Travels/
+Praveen Travels/
 ├── index.html      # Main HTML file
 ├── styles.css      # CSS styling
 ├── script.js       # JavaScript functionality
@@ -78,4 +78,4 @@ You can easily customize:
 
 ## License
 
-This project is created for Abhishek Travels.
+This project is created for Praveen Travels.

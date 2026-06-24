@@ -1,7 +1,7 @@
 # Local SEO Strategy - Rank #1 on Google
 
 ## 🎯 Goal
-Make Abhishek Travels appear as the **FIRST result** when someone searches for:
+Make Praveen Travels appear as the **FIRST result** when someone searches for:
 - "Tirupati cab service"
 - "Tirupati taxi"
 - "Tirupati car rental"
@@ -58,14 +58,14 @@ Make Abhishek Travels appear as the **FIRST result** when someone searches for:
 3. **Complete ALL sections**:
 
    **Business Information:**
-   - ✅ Business Name: "Abhishek Travels"
+   - ✅ Business Name: "Praveen Travels"
    - ✅ Category: "Travel Agency" (Primary)
    - ✅ Additional Categories:
      - "Taxi Service"
      - "Car Rental Agency"
      - "Tour Operator"
    - ✅ Phone: +91 99123 25325
-   - ✅ Website: https://abhishektravels.org/
+   - ✅ Website: https://praveentravels.org/
    - ✅ Address: 20-3-126e, 20-3-126/L1, Sanjay Gandhi Colony, Korlagunta, Tirupati, Andhra Pradesh 517501
    - ✅ Service Area: Tirupati, Bangalore, Chennai, Hyderabad, and all South India
 
@@ -102,7 +102,7 @@ Make Abhishek Travels appear as the **FIRST result** when someone searches for:
 
    **Description:**
    ```
-   Abhishek Travels is a licensed travel agency in Tirupati with 15+ years of experience. 
+   Praveen Travels is a licensed travel agency in Tirupati with 15+ years of experience. 
    We offer Tirupati cab service, taxi service, car rentals, bike rentals, temple tours, 
    and accommodation booking. Starting from ₹600/day for local cabs and ₹8/km for outstation. 
    Serving Tirupati, Bangalore, Chennai, Hyderabad, and all South India destinations. 
@@ -166,7 +166,7 @@ Make Abhishek Travels appear as the **FIRST result** when someone searches for:
 #### Important: NAP Consistency
 - **NAP** = Name, Address, Phone
 - **Ensure EXACT same information** across all directories:
-  - Name: "Abhishek Travels"
+  - Name: "Praveen Travels"
   - Address: "20-3-126e, 20-3-126/L1, Sanjay Gandhi Colony, Korlagunta, Tirupati, Andhra Pradesh 517501"
   - Phone: "+91 99123 25325" or "+919912325325" (be consistent)
 
@@ -313,7 +313,7 @@ Make Abhishek Travels appear as the **FIRST result** when someone searches for:
 ### Set Up Tracking:
 
 1. **Google Search Console**:
-   - Submit sitemap: https://abhishektravels.org/sitemap.xml
+   - Submit sitemap: https://praveentravels.org/sitemap.xml
    - Monitor search performance
    - Track keyword rankings
    - Fix any crawl errors
@@ -399,7 +399,7 @@ Make Abhishek Travels appear as the **FIRST result** when someone searches for:
 
 ## 🔧 Technical Checklist
 
-- ✅ Custom domain (abhishektravels.org)
+- ✅ Custom domain (praveentravels.org)
 - ✅ HTTPS enabled
 - ✅ Mobile-responsive
 - ✅ Fast page load (<3 seconds)

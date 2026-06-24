@@ -145,7 +145,7 @@
 2. **"Best Tirupati Taxi Service - How to Choose the Right One"**
    - Target: "Tirupati taxi service"
    - Comparison with competitors
-   - Why choose Abhishek Travels
+   - Why choose Praveen Travels
 
 3. **"Tirumala Tirupati Temple Tour Guide - Complete Travel Guide"**
    - Target: "Tirumala Tirupati tour"
@@ -306,7 +306,7 @@
 
 ## 📊 Comparison Table
 
-| Feature | Competitor | Abhishek Travels | Action Required |
+| Feature | Competitor | Praveen Travels | Action Required |
 |---------|-----------|------------------|-----------------|
 | **Route Pages** | ✅ 13+ routes | ❌ Need to create | Create 20+ route pages |
 | **Blog Section** | ✅ Active blog | ❌ No blog | Create blog with 20+ posts |

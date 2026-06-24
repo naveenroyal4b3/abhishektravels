@@ -18,8 +18,8 @@ This guide ensures your business appears **FIRST** when customers search for:
 ### **Step 1: Complete Your Business Profile 100%**
 
 #### **Business Name** (MOST IMPORTANT):
-✅ **Current**: "Abhishek Travels"  
-✅ **Optimized**: "Abhishek Travels - Tirupati Cab Service"
+✅ **Current**: "Praveen Travels"  
+✅ **Optimized**: "Praveen Travels - Tirupati Cab Service"
 
 **Why**: Include primary keyword in business name (if allowed by Google)
 
@@ -50,7 +50,7 @@ This guide ensures your business appears **FIRST** when customers search for:
 
 **Write This Description**:
 ```
-Abhishek Travels is a licensed Tirupati cab service and taxi service provider 
+Praveen Travels is a licensed Tirupati cab service and taxi service provider 
 with 15+ years of experience. We offer:
 
 • Tirupati cab service starting from ₹600/day
@@ -260,7 +260,7 @@ cab service Tirupati, taxi service Tirupati, Tirupati travel agency
    **A**: "Yes, all our Tirupati cab service vehicles are fully insured. Safety is our top priority."
 
 8. **Q**: "What payment methods do you accept for Tirupati car rental?"  
-   **A**: "We accept UPI (abhishektravels@ybl), PhonePe, cash, credit/debit cards for Tirupati car rental bookings."
+   **A**: "We accept UPI (praveentravels@ybl), PhonePe, cash, credit/debit cards for Tirupati car rental bookings."
 
 9. **Q**: "Do you offer bike rental in Tirupati?"  
    **A**: "Yes, we offer bike and scooter rentals in Tirupati starting from ₹600/day. Helmets and insurance included."
@@ -292,7 +292,7 @@ cab service Tirupati, taxi service Tirupati, Tirupati travel agency
 
 1. **Send Review Link After Every Service**:
    ```
-   Hi [Customer Name]! Thank you for choosing Abhishek Travels for your 
+   Hi [Customer Name]! Thank you for choosing Praveen Travels for your 
    Tirupati cab service. We'd love your feedback!
    
    Please leave us a review: [Google Reviews Link]
@@ -318,7 +318,7 @@ cab service Tirupati, taxi service Tirupati, Tirupati travel agency
 
 **Review Response Template** (Include Keywords):
 ```
-Thank you [Customer Name] for choosing Abhishek Travels for your 
+Thank you [Customer Name] for choosing Praveen Travels for your 
 Tirupati cab service! We're glad you had a great experience. 
 Looking forward to serving you again! 🙏
 ```
@@ -365,7 +365,7 @@ Looking forward to serving you again! 🙏
 
 **Use EXACT Same Information Everywhere**:
 
-- **Name**: "Abhishek Travels"
+- **Name**: "Praveen Travels"
 - **Address**: "20-3-126e, 20-3-126/L1, Sanjay Gandhi Colony, Korlagunta, Tirupati, Andhra Pradesh 517501"
 - **Phone**: "+91 99123 25325" (use same format everywhere)
 

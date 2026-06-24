@@ -1,6 +1,6 @@
 # How to Publish on GitHub Pages
 
-Follow these steps to publish your Abhishek Travels website on GitHub Pages:
+Follow these steps to publish your Praveen Travels website on GitHub Pages:
 
 ## Step 1: Create a GitHub Account (if you don't have one)
 1. Go to [github.com](https://github.com)
@@ -9,7 +9,7 @@ Follow these steps to publish your Abhishek Travels website on GitHub Pages:
 ## Step 2: Create a New Repository
 1. Click the "+" icon in the top right corner
 2. Select "New repository"
-3. Name your repository (e.g., `abhishek-travels` or `abhishek-travels-website`)
+3. Name your repository (e.g., `praveen-travels` or `praveen-travels-website`)
 4. Make it **Public** (required for free GitHub Pages)
 5. **DO NOT** initialize with README, .gitignore, or license (we already have files)
 6. Click "Create repository"
@@ -29,7 +29,7 @@ git init
 git add .
 
 # Create your first commit
-git commit -m "Initial commit: Abhishek Travels website"
+git commit -m "Initial commit: Praveen Travels website"
 
 # Add your GitHub repository as remote (replace YOUR_USERNAME and REPO_NAME)
 git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git

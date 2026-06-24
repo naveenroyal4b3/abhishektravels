@@ -7,9 +7,9 @@
 
 **Steps**:
 1. Go to https://search.google.com/search-console
-2. Add property: `https://abhishektravels.org`
+2. Add property: `https://praveentravels.org`
 3. Verify ownership (DNS or HTML file)
-4. Submit sitemap: `https://abhishektravels.org/sitemap.xml`
+4. Submit sitemap: `https://praveentravels.org/sitemap.xml`
 5. Request indexing for homepage
 
 **Expected Impact**: Start tracking rankings immediately

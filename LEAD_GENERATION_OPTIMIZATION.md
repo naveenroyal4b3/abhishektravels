@@ -295,7 +295,7 @@ Quick Quote Calculator
 
 **Set Up**:
 - Send SMS after form submission
-- "Hi [Name], your booking request received. We'll call you in 5 minutes. - Abhishek Travels"
+- "Hi [Name], your booking request received. We'll call you in 5 minutes. - Praveen Travels"
 - Send reminder SMS 24 hours before travel date
 - Send thank you SMS after service
 

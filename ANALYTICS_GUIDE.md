@@ -1,8 +1,8 @@
-# Google Analytics Guide for Abhishek Travels
+# Google Analytics Guide for Praveen Travels
 
 ## ✅ Setup Complete!
 
-Your Google Analytics is now tracking visitors to https://abhishektravels.org/
+Your Google Analytics is now tracking visitors to https://praveentravels.org/
 
 **Measurement ID:** `G-YR8S0ZGFJG`
 

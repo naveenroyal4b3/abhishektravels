@@ -5,4 +5,4 @@ Allow: /
 # Disallow: /admin/
 # Disallow: /private/
 
-Sitemap: https://abhishektravels.org/sitemap.xml
+Sitemap: https://praveentravels.org/sitemap.xml

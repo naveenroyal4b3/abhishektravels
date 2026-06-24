@@ -1,4 +1,4 @@
-# Website Pricing Analysis - Abhishek Travels
+# Website Pricing Analysis - Praveen Travels
 
 ## 📊 Website Complexity Assessment
 

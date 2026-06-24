@@ -9,14 +9,14 @@
 1. Go to: https://business.google.com
 2. Sign in with your Google account
 3. Click "Manage now" or "Add your business"
-4. Search for "Abhishek Travels" or "Add a new business"
+4. Search for "Praveen Travels" or "Add a new business"
 5. Complete ALL sections:
-   - Business name: "Abhishek Travels"
+   - Business name: "Praveen Travels"
    - Category: "Travel Agency" (Primary)
    - Additional categories: "Taxi Service", "Car Rental Agency", "Tour Operator"
    - Address: 20-3-126e, 20-3-126/L1, Sanjay Gandhi Colony, Korlagunta, Tirupati, Andhra Pradesh 517501
    - Phone: +91 99123 25325
-   - Website: https://abhishektravels.org/
+   - Website: https://praveentravels.org/
    - Business hours: 24/7 or your actual hours
    - Service area: Tirupati, Bangalore, Chennai, Hyderabad, and all South India
 6. Upload 20+ photos (logo, fleet, office, team)
@@ -39,10 +39,10 @@
 **Steps**:
 1. Go to: https://search.google.com/search-console
 2. Click "Add Property"
-3. Enter: https://abhishektravels.org/
+3. Enter: https://praveentravels.org/
 4. Verify ownership (choose HTML tag method or DNS method)
 5. Once verified, go to "Sitemaps"
-6. Submit: https://abhishektravels.org/sitemap.xml
+6. Submit: https://praveentravels.org/sitemap.xml
 7. Monitor search performance weekly
 
 **Time Required**: 15-20 minutes
@@ -96,7 +96,7 @@
 <a href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK" target="_blank">
 
 <!-- After (example) -->
-<a href="https://g.page/r/AbhishekTravelsTirupati/review" target="_blank">
+<a href="https://g.page/r/PraveenTravelsTirupati/review" target="_blank">
 ```
 
 **Time Required**: 5 minutes
@@ -136,9 +136,9 @@
 
 ### 6. **Social Media URLs** (Verify if Real)
 **Current URLs in Code**:
-- Facebook: https://www.facebook.com/abhishektravels
-- Instagram: https://www.instagram.com/abhishektravels
-- Twitter: https://twitter.com/abhishektravels
+- Facebook: https://www.facebook.com/praveentravels
+- Instagram: https://www.instagram.com/praveentravels
+- Twitter: https://twitter.com/praveentravels
 
 **Action Required**:
 - ✅ If these URLs are correct → No action needed
@@ -179,7 +179,7 @@
    - Add business information
 
 **Important**: Use EXACT same NAP (Name, Address, Phone) everywhere:
-- Name: "Abhishek Travels"
+- Name: "Praveen Travels"
 - Address: "20-3-126e, 20-3-126/L1, Sanjay Gandhi Colony, Korlagunta, Tirupati, Andhra Pradesh 517501"
 - Phone: "+91 99123 25325" or "+919912325325" (be consistent)
 

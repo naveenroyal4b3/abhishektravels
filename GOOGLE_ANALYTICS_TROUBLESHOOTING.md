@@ -9,13 +9,13 @@
 
 ### Issue 1: Domain Configuration Mismatch
 
-**Problem**: Your Google Analytics Stream URL is set to `https://abhishektravels.org`, but:
+**Problem**: Your Google Analytics Stream URL is set to `https://praveentravels.org`, but:
 - If the custom domain isn't fully configured yet, Google Analytics can't verify the tag
-- The actual GitHub Pages URL is `https://naveenroyal4b3.github.io/abhishektravels/`
+- The actual GitHub Pages URL is `https://naveenroyal4b3.github.io/praveentravels/`
 
 **Solution A: Configure Custom Domain (Recommended)**
-1. **Set up DNS for abhishektravels.org:**
-   - Go to your domain registrar (where you bought abhishektravels.org)
+1. **Set up DNS for praveentravels.org:**
+   - Go to your domain registrar (where you bought praveentravels.org)
    - Add DNS records:
      - **Type**: CNAME
      - **Name**: @ (or www)
@@ -24,20 +24,20 @@
 
 2. **Verify in GitHub Pages:**
    - Go to your GitHub repository → Settings → Pages
-   - Under "Custom domain", enter: `abhishektravels.org`
+   - Under "Custom domain", enter: `praveentravels.org`
    - GitHub will verify the domain automatically
 
 3. **Test the domain:**
-   - Visit `https://abhishektravels.org` in your browser
+   - Visit `https://praveentravels.org` in your browser
    - It should load your website
 
 **Solution B: Update Google Analytics Stream URL (Temporary)**
 If you want to test immediately with GitHub Pages URL:
 
 1. Go to Google Analytics → Admin → Data Streams
-2. Click on your stream (Abhishek Travels)
+2. Click on your stream (Praveen Travels)
 3. Click "Edit" or the pencil icon
-4. Change "Website URL" to: `https://naveenroyal4b3.github.io/abhishektravels`
+4. Change "Website URL" to: `https://naveenroyal4b3.github.io/praveentravels`
 5. Save changes
 6. Wait 24-48 hours for data to appear
 
@@ -103,7 +103,7 @@ grep -A 3 "G-YR8S0ZGFJG" index.html
 ```
 
 ### Step 2: Test on Live Site
-1. Visit: `https://naveenroyal4b3.github.io/abhishektravels/` (or your custom domain)
+1. Visit: `https://naveenroyal4b3.github.io/praveentravels/` (or your custom domain)
 2. Open Google Analytics → Reports → Realtime
 3. You should see your visit within 30 seconds
 
@@ -123,9 +123,9 @@ grep -A 3 "G-YR8S0ZGFJG" index.html
 4. Wait 24-48 hours for standard reports
 
 ### Short-term (Domain Setup):
-1. Configure DNS for `abhishektravels.org` to point to GitHub Pages
+1. Configure DNS for `praveentravels.org` to point to GitHub Pages
 2. Verify domain in GitHub Pages settings
-3. Test that `https://abhishektravels.org` loads your site
+3. Test that `https://praveentravels.org` loads your site
 4. Google Analytics should automatically start tracking
 
 ### Long-term (Optimization):

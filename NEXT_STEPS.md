@@ -18,8 +18,8 @@
 2. Sign in with your Google account
 3. If you don't have a container, click "Create Account"
 4. Fill in:
-   - Account Name: "Abhishek Travels" (or your name)
-   - Container Name: "Abhishek Travels Website"
+   - Account Name: "Praveen Travels" (or your name)
+   - Container Name: "Praveen Travels Website"
    - Target Platform: "Web"
 5. Click "Create"
 6. **Copy your Container ID** (format: `GTM-XXXXXXX`)
@@ -58,7 +58,7 @@
 **How to Collect Reviews**:
 1. **After every service**, send customers a WhatsApp message:
    ```
-   Hi! Thank you for choosing Abhishek Travels. 
+   Hi! Thank you for choosing Praveen Travels. 
    We'd love your feedback! Please leave us a review:
    [Your Google Reviews Link]
    
@@ -67,7 +67,7 @@
 
 2. **Add review link to email signatures**:
    ```
-   Abhishek Travels
+   Praveen Travels
    +91 99123 25325
    Leave us a review: [Your Google Reviews Link]
    ```
@@ -138,7 +138,7 @@
    - Add your business listing
 
 **Important**: Use EXACT same information everywhere:
-- Name: "Abhishek Travels"
+- Name: "Praveen Travels"
 - Address: "20-3-126e, 20-3-126/L1, Sanjay Gandhi Colony, Korlagunta, Tirupati, Andhra Pradesh 517501"
 - Phone: "+91 99123 25325" (be consistent - use same format everywhere)
 

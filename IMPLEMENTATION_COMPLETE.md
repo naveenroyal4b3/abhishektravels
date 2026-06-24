@@ -178,9 +178,9 @@ All new features are fully responsive:
 **Location**: Footer social links
 
 **Action**: Update placeholder URLs with actual social media profiles:
-- `https://www.facebook.com/abhishektravels`
-- `https://www.instagram.com/abhishektravels`
-- `https://twitter.com/abhishektravels`
+- `https://www.facebook.com/praveentravels`
+- `https://www.instagram.com/praveentravels`
+- `https://twitter.com/praveentravels`
 
 ---
 

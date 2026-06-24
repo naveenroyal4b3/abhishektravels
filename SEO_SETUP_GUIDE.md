@@ -1,4 +1,4 @@
-# SEO Setup Guide for Abhishek Travels
+# SEO Setup Guide for Praveen Travels
 
 This guide will help you complete the remaining SEO setup steps for your website.
 
@@ -36,7 +36,7 @@ This guide will help you complete the remaining SEO setup steps for your website
 - **Location**: Root directory
 
 ### Design Elements to Include:
-- Abhishek Travels logo/branding
+- Praveen Travels logo/branding
 - Tagline: "South India Travel & Temple Tours"
 - Visual elements: Temple silhouette, South India map, or travel imagery
 - Use saffron devotional theme colors
@@ -60,7 +60,7 @@ This guide will help you complete the remaining SEO setup steps for your website
 ### Example Design:
 ```
 ┌─────────────────────────────────────┐
-│  [Abhishek Travels Logo]            │
+│  [Praveen Travels Logo]            │
 │                                     │
 │  South India Travel & Temple Tours │
 │                                     │
@@ -77,7 +77,7 @@ This guide will help you complete the remaining SEO setup steps for your website
 1. **Sign up/Login**: Go to https://search.google.com/search-console
 2. **Add Property**: 
    - Click "Add Property"
-   - Enter your website URL: `https://naveenroyal4b3.github.io/abhishektravels/`
+   - Enter your website URL: `https://naveenroyal4b3.github.io/praveentravels/`
 3. **Verify Ownership**:
    - Choose HTML file upload method OR
    - HTML tag method (add meta tag to your site)
@@ -96,7 +96,7 @@ This guide will help you complete the remaining SEO setup steps for your website
    - Choose verification method (HTML tag or file upload)
 4. **Submit Sitemap**:
    - Go to "Sitemaps" section
-   - Enter: `https://naveenroyal4b3.github.io/abhishektravels/sitemap.xml`
+   - Enter: `https://naveenroyal4b3.github.io/praveentravels/sitemap.xml`
    - Click "Submit"
 5. **Monitor**: Check indexing status regularly
 
@@ -106,9 +106,9 @@ This guide will help you complete the remaining SEO setup steps for your website
 1. Go to https://analytics.google.com/
 2. Sign in with your Google account
 3. Click "Start measuring"
-4. Create an account name: "Abhishek Travels"
+4. Create an account name: "Praveen Travels"
 5. Set up property:
-   - Property name: "Abhishek Travels Website"
+   - Property name: "Praveen Travels Website"
    - Time zone: (GMT+05:30) India Standard Time
    - Currency: INR (Indian Rupee)
 6. Get your Measurement ID (format: G-XXXXXXXXXX)

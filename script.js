@@ -843,7 +843,7 @@ const testimonials = [
         name: "Rajesh Kumar",
         date: "15 June 2024",
         rating: 5,
-        review: "Great experience with Abhishek Travels. The driver was professional and the vehicle was clean and comfortable. Highly recommended!"
+        review: "Great experience with Praveen Travels. The driver was professional and the vehicle was clean and comfortable. Highly recommended!"
     },
     {
         name: "Priya Sharma",
@@ -1209,7 +1209,7 @@ contactForm.addEventListener('submit', (e) => {
     trackConversion('submit', 'Form', 'Contact Form', 1);
     
     // Create WhatsApp message
-    const whatsappMessage = `Hi, I want to contact Abhishek Travels:
+    const whatsappMessage = `Hi, I want to contact Praveen Travels:
 
 Name: ${name}
 Email: ${email}

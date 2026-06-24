@@ -2,7 +2,7 @@
 
 ## ✅ Issue Resolved!
 
-Images are now loading properly on https://abhishektravels.org/
+Images are now loading properly on https://praveentravels.org/
 
 ---
 

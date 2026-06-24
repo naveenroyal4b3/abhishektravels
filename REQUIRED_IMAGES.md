@@ -52,7 +52,7 @@ The following image files need to be created and placed in the root directory of
 ## Design Tips:
 
 - **Colors**: Use saffron (#FF9933) and white to match your website theme
-- **Logo**: Include "Abhishek Travels" text or "AT" initials
+- **Logo**: Include "Praveen Travels" text or "AT" initials
 - **Symbols**: Travel plane, temple silhouette, or South India map
 - **Keep it simple**: Icons should be recognizable at small sizes
 - **Text**: Minimal text on OG image (logo + tagline only)
@@ -67,9 +67,9 @@ The following image files need to be created and placed in the root directory of
    git push origin main
    ```
 3. Verify they're accessible:
-   - Favicon: https://naveenroyal4b3.github.io/abhishektravels/favicon.ico
-   - Apple icon: https://naveenroyal4b3.github.io/abhishektravels/apple-touch-icon.png
-   - OG image: https://naveenroyal4b3.github.io/abhishektravels/og-image.jpg
+   - Favicon: https://naveenroyal4b3.github.io/praveentravels/favicon.ico
+   - Apple icon: https://naveenroyal4b3.github.io/praveentravels/apple-touch-icon.png
+   - OG image: https://naveenroyal4b3.github.io/praveentravels/og-image.jpg
 
 ## Testing:
 
